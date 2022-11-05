@@ -1,0 +1,776 @@
+<template>
+  <div class="col-12 p-0">
+    <div
+      class="col-12 text-light p-0"
+      style="background-image: url('IMG_7467.jpg'); background-size: cover"
+    >
+      <div class="text-center p-5" style="background-color: rgba(0, 0, 0, 0.6)">
+        <div class="py-5">
+          <h1 class="mt-5 pt-5 my-3">Holidays and entertainment</h1>
+          <h5 class="my-3">Ask us for the amazing</h5>
+          <div class="mt-3">Italy, Rome, Venice, Milan</div>
+          <button
+            class="rounded p-2 text-center mt-3 mb-5 bgmain text-light"
+            style="border: none"
+          >
+            More
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 row m-0 py-4 justify-content-center bgmain">
+      <div class="col-md-2 col-6 d-flex">
+        <div class="mx-2"><i class="fa-solid fa-user"></i></div>
+        <div class="mx-2">
+          <div class="text-light">+500 destinations and places</div>
+          <div style="color: #ababab">
+            The most spectacular and amazing places
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-6 d-flex">
+        <div class="mx-2"><i class="fa-solid fa-user"></i></div>
+        <div class="mx-2">
+          <div class="text-light">Best price guarantee</div>
+          <div style="color: #ababab">
+            The lowest price and the highest quality service
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-6 d-flex">
+        <div class="mx-2"><i class="fa-solid fa-user"></i></div>
+        <div class="mx-2">
+          <div class="text-light">Excellent customer</div>
+          <div style="color: #ababab">
+            The comfort and satisfaction of passengers is our most important
+            mission
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-6 d-flex">
+        <div class="mx-2"><i class="fa-solid fa-user"></i></div>
+        <div class="mx-2">
+          <div class="text-light">Super fast booking</div>
+          <div style="color: #ababab">
+            The best hotels and flights at your disposal
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-12 p-0"
+      style="background-image: url('IMG_7427.jpg'); background-size: cover"
+    >
+      <div
+        class="col-12 py-5 d-flex justify-content-center px-3"
+        style="background-color: rgba(0, 0, 0, 0.5)"
+      >
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'English'"
+        >
+          <input
+            type="text"
+            class="col-9"
+            v-model="country"
+            placeholder="country"
+          />
+          <button class="btn btn-success p-0 col-3" @click="sCountry">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'Arabic'"
+        >
+          <input
+            type="text"
+            class="col-9"
+            v-model="country"
+            placeholder="country"
+          />
+          <button class="btn btn-success p-0 col-3" @click="sCountryAR">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'Spanish'"
+        >
+          <input
+            type="text"
+            class="col-9"
+            v-model="country"
+            placeholder="country"
+          />
+          <button class="btn btn-success p-0 col-3" @click="sCountrySP">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'Farsi'"
+        >
+          <input
+            type="text"
+            class="col-9"
+            v-model="country"
+            placeholder="country"
+          />
+          <button class="btn btn-success p-0 col-3" @click="sCountryFA">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'German'"
+        >
+          <input
+            type="text"
+            class="col-9"
+            v-model="country"
+            placeholder="country"
+          />
+          <button class="btn btn-success p-0 col-3" @click="sCountryGR">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'Chines'"
+        >
+          <input
+            type="text"
+            class="col-9"
+            v-model="country"
+            placeholder="country"
+          />
+          <button class="btn btn-success p-0 col-3" @click="sCountryCH">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'English'"
+        >
+          <input type="text" class="col-9" v-model="city" placeholder="city" />
+          <button class="btn btn-success p-0 col-3" @click="sCity">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'Arabic'"
+        >
+          <input type="text" class="col-9" v-model="city" placeholder="city" />
+          <button class="btn btn-success p-0 col-3" @click="sCityAR">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'Spanish'"
+        >
+          <input type="text" class="col-9" v-model="city" placeholder="city" />
+          <button class="btn btn-success p-0 col-3" @click="sCitySP">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'Farsi'"
+        >
+          <input type="text" class="col-9" v-model="city" placeholder="city" />
+          <button class="btn btn-success p-0 col-3" @click="sCityFA">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'German'"
+        >
+          <input type="text" class="col-9" v-model="city" placeholder="city" />
+          <button class="btn btn-success p-0 col-3" @click="sCityGR">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex border rounded mx-2 p-0 col-4"
+          v-if="$store.state.lang.lang == 'Chines'"
+        >
+          <input type="text" class="col-9" v-model="city" placeholder="city" />
+          <button class="btn btn-success p-0 col-3" @click="sCityCH">
+            search
+          </button>
+        </div>
+        <div
+          class="d-flex mx-2 col-4"
+          v-if="$auth.strategy.token.status().valid() == true"
+        >
+          <button class="btn col-6 btn-info mx-1" @click="sScores">
+            by scores
+          </button>
+          <button class="btn col-6 btn-info mx-1" @click="sTest">
+            by maintest
+          </button>
+        </div>
+        <div
+          class="d-flex mx-2 col-4"
+          v-if="$auth.strategy.token.status().valid() == false"
+        >
+          <button class="btn col-12 btn-info mx-1" @click="sScores">
+            by scores
+          </button>
+        </div>
+      </div>
+      <div
+        class="py-5 col-12 d-flex align-items-center justify-content-between px-0"
+      >
+        <div class="p-5 col-12">
+          <div class="d-flex align-items-center col-12 text-light">
+            <h3>The most popular tour packages</h3>
+            <span class="textorange ml-2 pointer" @click="alltours"
+              >/ Show all tours</span
+            >
+          </div>
+          <div class="row justify-content-between col-12 mt-4">
+            <div
+              class="p-2 col-md-3 col-6"
+              v-for="tour in tours.results"
+              :key="tour.id"
+            >
+              <div
+                class="my-3 my-md-0 rounded bg-light p-0"
+                v-if="$store.state.lang.lang == 'English'"
+              >
+                <img
+                  src="IMG_7421.jpg"
+                  alt=""
+                  class="col-12 h-50 p-0 rounded-top"
+                />
+                <div class="p-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    {{ tour.country_en + "-" + tour.city_en }}
+                  </div>
+                  <h4 class="text-info my-2">
+                    {{ tour.price + " " + tour.pay_with }}
+                  </h4>
+                  <div class="my-2">
+                    <i
+                      class="fa-regular fa-clock-rotate-left text-info mr-2"
+                    ></i
+                    ><span class="text-muted">{{ tour.duration }} days</span>
+                  </div>
+                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                    >more</nuxt-link
+                  >
+                </div>
+              </div>
+              <div
+                class="my-3 my-md-0 rounded bg-light p-0"
+                v-if="$store.state.lang.lang == 'Arabic'"
+              >
+                <img
+                  src="IMG_7421.jpg"
+                  alt=""
+                  class="col-12 h-50 p-0 rounded-top"
+                />
+                <div class="p-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    {{ tour.country_ar + "-" + tour.city_ar }}
+                  </div>
+                  <h4 class="text-info my-2">
+                    {{ tour.price + " " + tour.pay_with }}
+                  </h4>
+                  <div class="my-2">
+                    <i
+                      class="fa-regular fa-clock-rotate-left text-info mr-2"
+                    ></i
+                    ><span class="text-muted">{{ tour.duration }} days</span>
+                  </div>
+                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                    >more</nuxt-link
+                  >
+                </div>
+              </div>
+              <div
+                class="my-3 my-md-0 rounded bg-light p-0"
+                v-if="$store.state.lang.lang == 'Spanish'"
+              >
+                <img
+                  src="IMG_7421.jpg"
+                  alt=""
+                  class="col-12 h-50 p-0 rounded-top"
+                />
+                <div class="p-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    {{ tour.country_sp + "-" + tour.city_sp }}
+                  </div>
+                  <h4 class="text-info my-2">
+                    {{ tour.price + " " + tour.pay_with }}
+                  </h4>
+                  <div class="my-2">
+                    <i
+                      class="fa-regular fa-clock-rotate-left text-info mr-2"
+                    ></i
+                    ><span class="text-muted">{{ tour.duration }} days</span>
+                  </div>
+                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                    >more</nuxt-link
+                  >
+                </div>
+              </div>
+              <div
+                class="my-3 my-md-0 rounded bg-light p-0"
+                v-if="$store.state.lang.lang == 'Farsi'"
+              >
+                <img
+                  src="IMG_7421.jpg"
+                  alt=""
+                  class="col-12 h-50 p-0 rounded-top"
+                />
+                <div class="p-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    {{ tour.country_fa + "-" + tour.city_fa }}
+                  </div>
+                  <h4 class="text-info my-2">
+                    {{ tour.price + " " + tour.pay_with }}
+                  </h4>
+                  <div class="my-2">
+                    <i
+                      class="fa-regular fa-clock-rotate-left text-info mr-2"
+                    ></i
+                    ><span class="text-muted">{{ tour.duration }} days</span>
+                  </div>
+                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                    >more</nuxt-link
+                  >
+                </div>
+              </div>
+              <div
+                class="my-3 my-md-0 rounded bg-light p-0"
+                v-if="$store.state.lang.lang == 'German'"
+              >
+                <img
+                  src="IMG_7421.jpg"
+                  alt=""
+                  class="col-12 h-50 p-0 rounded-top"
+                />
+                <div class="p-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    {{ tour.country_gr + "-" + tour.city_gr }}
+                  </div>
+                  <h4 class="text-info my-2">
+                    {{ tour.price + " " + tour.pay_with }}
+                  </h4>
+                  <div class="my-2">
+                    <i
+                      class="fa-regular fa-clock-rotate-left text-info mr-2"
+                    ></i
+                    ><span class="text-muted">{{ tour.duration }} days</span>
+                  </div>
+                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                    >more</nuxt-link
+                  >
+                </div>
+              </div>
+              <div
+                class="my-3 my-md-0 rounded bg-light p-0"
+                v-if="$store.state.lang.lang == 'Chines'"
+              >
+                <img
+                  src="IMG_7421.jpg"
+                  alt=""
+                  class="col-12 h-50 p-0 rounded-top"
+                />
+                <div class="p-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    {{ tour.country_ch + "-" + tour.city_ch }}
+                  </div>
+                  <h4 class="text-info my-2">
+                    {{ tour.price + " " + tour.pay_with }}
+                  </h4>
+                  <div class="my-2">
+                    <i
+                      class="fa-regular fa-clock-rotate-left text-info mr-2"
+                    ></i
+                    ><span class="text-muted">{{ tour.duration }} days</span>
+                  </div>
+                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                    >more</nuxt-link
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5">
+      <div class="d-flex align-items-center">
+        <i class="fa-regular fa-location-dot textmain"></i>
+        <h4 class="mx-2">services</h4>
+      </div>
+      <p class="mt-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Egestas purus
+        viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus
+        aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi
+        porta lorem mollis. Morbi tristique senectus et netus. Mattis
+        pellentesque id nibh tortor id aliquet lectus proin. Sapien faucibus et
+        molestie ac feugiat sed lectus vestibulum. Ullamcorper velit sed
+        ullamcorper morbi tincidunt ornare massa eget. Dictum varius duis at
+        consectetur lorem. Nisi vitae suscipit tellus mauris a diam maecenas sed
+        enim. Velit ut tortor pretium viverra suspendisse potenti nullam.
+      </p>
+    </div>
+    <div class="row m-0 justify-content-center">
+      <div
+        class="d-flex align-items-end"
+        v-for="service in services.results"
+        :key="service.id"
+        :style="{ backgroundImage: service.image }"
+        style="width: 20%; height: 300px; background-size: cover"
+      >
+        <div class="d-flex col-12 pb-3 text-light justify-content-between">
+          <div>
+            <i class="fa fa-location-dot"></i>
+            {{ service.title }}
+          </div>
+          <span class="textmain">{{ service.inventory }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5 d-flex flex-wrap">
+      <div class="col-md-6 col-12">
+        <h4 class="d-flex align-items-center">
+          <i class="fa-sharp fa-solid fa-list textmain mr-2"></i>
+          <span>List of service categories </span>
+        </h4>
+        <div class="row mt-4 textorange">
+          <div
+            class="col-6 my-2"
+            v-for="category in categories.results"
+            :key="category.id"
+          >
+            <nuxt-link :to="`Category/${category.id}`">
+              {{ category.name }}
+            </nuxt-link>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-12">
+        <h4 class="my-3">
+          <i class="fa fa-envelope textmain mr-2 mb-3"></i>subscribe to
+          newsletter
+        </h4>
+        <div class="text-muted my-3">
+          Benefit from special member discounts with us
+        </div>
+        <div class="row col-12 p-0 justify-content-between my-3 ml-1 ml-md-0">
+          <input
+            type="text"
+            class="col-md-7 my-2 my-md-0 col-12 p-2 px-4 input2"
+            placeholder="your email address"
+            style="background-color: #e3e3e3"
+          />
+          <div
+            class="col-md-4 my-2 my-md-0 col-12 bgorange pointer text-center text-light py-2 input2"
+          >
+            share
+          </div>
+        </div>
+        <div class="d-flex text-muted my-3">
+          <i class="fa-brands mx-2 pointer fa-snapchat"></i>
+          <i class="fa-brands mx-2 pointer fa-instagram"></i>
+          <i class="fa-brands mx-2 pointer fa-twitter"></i>
+          <i class="fa-brands mx-2 pointer fa-skype"></i>
+          <i class="fa-brands mx-2 pointer fa-pinterest-p"></i>
+          <i class="fa-brands mx-2 pointer fa-linkedin-in"></i>
+          <i class="fa-brands mx-2 pointer fa-google-plus-g"></i>
+          <i class="fa-brands mx-2 pointer fa-flickr"></i>
+          <i class="fa-brands mx-2 pointer fa-facebook-f"></i>
+          <i class="fa-solid mx-2 pointer fa-envelope"></i>
+        </div>
+      </div>
+    </div>
+    <div
+      style="background-image: url('IMG_7484.jpg'); background-size: cover"
+      class="py-5"
+    >
+      <div class="container py-5">
+        <div class="col-6">
+          <h4>
+            <span class="text-light mr-2">special discount </span
+            ><span class="textorange">10-30%</span>
+          </h4>
+          <div class="text-light my-3"></div>
+          <div class="text-light my-3">
+            Special offers with the cheapest prices, discounts on tour
+            purchases, hotel reservations, tickets Planes, last minute tours,
+            cheap tickets
+          </div>
+          <button class="btn my-2 text-ceter p-2 px-4 bg-light input2">
+            Go on amazing tours
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5">
+      <div class="d-flex align-items-center">
+        <h4 class="mr-2">
+          <i class="fa-regular mr-2 fa-lightbulb textmain"></i>The latest and
+          newest articles
+        </h4>
+        <!-- <span class="textorange"> / Review all articles</span> -->
+      </div>
+      <div class="d-flex justify-content-between mt-3">
+        <img src="IMG_7345.jpg" alt="" class="rounded" style="width: 24%" />
+        <img src="IMG_7347.jpg" alt="" class="rounded" style="width: 24%" />
+        <img src="IMG_7354.jpg" alt="" class="rounded" style="width: 24%" />
+        <img src="IMG_7474.jpg" alt="" class="rounded" style="width: 24%" />
+      </div>
+    </div>
+    <div class="px-5 d-flex" style="background-color: rgb(107 72 245)">
+      <div
+        class="col-md-4 col-2 text-center py-4 px-5 text-light d-flex align-items-center justify-content-end"
+      >
+        Why book?
+      </div>
+      <div class="col-md-8 col-10 bgmain py-4 d-flex">
+        <div class="d-flex mx-3">
+          <h4 class="mr-2"><i class="fa-solid fa-thumbs-up"></i></h4>
+          <div>
+            <div class="text-light">+40,000 customers</div>
+            <div class="text-light">Comfort and satisfaction of passengers</div>
+          </div>
+        </div>
+        <div class="d-flex mx-3">
+          <h4 class="mr-2"><i class="fa-solid fa-medal"></i></h4>
+          <div>
+            <div class="text-light">Awards won</div>
+            <div class="text-light">Travel tour awards and honors</div>
+          </div>
+        </div>
+        <div class="d-flex mx-3">
+          <h4 class="mr-2"><i class="fa-solid fa-lock"></i></h4>
+          <div>
+            <div class="text-light">Secure payment</div>
+            <div class="text-light">Best price guarantee</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Home",
+  layout: "main",
+  data() {
+    return {
+      toursByCity: "",
+      toursByCountry: "",
+      country: "",
+      city: "",
+    };
+  },
+  async asyncData({ $axios }) {
+    const services = await $axios.$get("/api/home/services/");
+    const servicesCatgories = await $axios.$get(
+      "/api/home/services-catgories/"
+    );
+    const tours = await $axios.$get("/api/home/tours/");
+    const toursByScores = await $axios.$get("/api/home/tours-by-scores/");
+    const categories = await $axios.$get("api/home/services-catgories/");
+    return {
+      services,
+      servicesCatgories,
+      tours,
+      toursByScores,
+      categories,
+    };
+  },
+  methods: {
+    async onSearch() {
+      const toursByCity = await $axios.$get(`/api/home/tours-by-city/`);
+      const toursByCountry = await $axios.$get(`/api/home/tours-by-country/`);
+      this.toursByCity = toursByCity;
+      this.toursByCountry = toursByCountry;
+    },
+    async sCountry() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-country/en/${this.country}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sCountryAR() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-country/ar/${this.country}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sCountryCH() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-country/ch/${this.country}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sCountryFA() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-country/fa/${this.country}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sCountryGR() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-country/gr/${this.country}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sCountrySP() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-country/sp/${this.country}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sCity() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-city/en/${this.city}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sCityAR() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-city/ar/${this.city}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sCityCH() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-city/ch/${this.city}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sCityFA() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-city/fa/${this.city}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sCityGR() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-city/gr/${this.city}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sCitySP() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-city/sp/${this.city}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sScores() {
+      try {
+        const res = await this.$axios.get("api/home/tours-by-scores/");
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async sTest() {
+      try {
+        const res = await this.$axios.get("api/home/tours-by-maintest/");
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async alltours() {
+      try {
+        const res = await this.$axios.$get("/api/home/tours/");
+        this.tours = res;
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+};
+</script>
+<style scoped>
+.input {
+  border: none;
+  background-color: #6c6c6c;
+  color: orange;
+}
+.input::placeholder {
+  color: orange;
+}
+.input2 {
+  border: none;
+  border-radius: 50px;
+}
+</style>
