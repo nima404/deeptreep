@@ -46,13 +46,6 @@
           >
         </ValidationProvider>
         <ValidationProvider v-slot="{ errors }" rules="required">
-          <div class="col-12">service</div>
-          <input type="number" class="col-12" v-model="formData.service" /><span
-            class="text-xs text-danger col-12 p-0"
-            >{{ errors[0] }}</span
-          >
-        </ValidationProvider>
-        <ValidationProvider v-slot="{ errors }" rules="required">
           <div class="col-12">descriptions</div>
           <textarea
             cols="30"
@@ -87,7 +80,6 @@ export default {
         city: "",
         category: "",
         descriptions: "",
-        service: 0,
       },
     };
   },

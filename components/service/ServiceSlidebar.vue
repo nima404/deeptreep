@@ -52,6 +52,15 @@
         </span>
         <span class="ms-1 d-none d-sm-inline-block">services</span>
       </nuxt-link>
+      <button
+        class="py-2 px-4 w-100 right-to-left-animation border-bottom"
+        @click="onSignOut"
+      >
+        <span class="d-block d-sm-inline-block text-center">
+          <i class="fa-solid fa-sign-out"></i>
+        </span>
+        <span class="ms-1 d-none d-sm-inline-block">sign out</span>
+      </button>
     </ul>
   </div>
 </template>
@@ -62,6 +71,12 @@ export default {
 
   data() {
     return {};
+  },
+
+  methods: {
+    async onSignOut() {
+      await this.$auth.logout();
+    },
   },
 };
 </script>

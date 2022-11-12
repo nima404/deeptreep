@@ -13,11 +13,6 @@
           <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
         </ValidationProvider>
         <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
-          <label for="" class="col-12 mt-2">password:</label>
-          <input type="text" class="col-12" v-model="user.password" />
-          <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
-        </ValidationProvider>
-        <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
           <label for="" class="col-12 mt-2">gender:</label>
           <select class="col-12" style="height: 38px" v-model="user.gender">
             <option value="male">male</option>
