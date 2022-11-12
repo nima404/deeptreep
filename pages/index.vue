@@ -62,7 +62,7 @@
       style="background-image: url('IMG_7427.jpg'); background-size: cover"
     >
       <div
-        class="col-12 py-5 d-flex justify-content-center px-3"
+        class="col-12 py-5 row justify-content-center px-3 mx-0"
         style="background-color: rgba(0, 0, 0, 0.5)"
       >
         <div
@@ -76,7 +76,7 @@
             placeholder="country"
           />
           <button class="btn btn-success p-0 col-3" @click="sCountry">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
@@ -90,7 +90,7 @@
             placeholder="country"
           />
           <button class="btn btn-success p-0 col-3" @click="sCountryAR">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
@@ -104,7 +104,7 @@
             placeholder="country"
           />
           <button class="btn btn-success p-0 col-3" @click="sCountrySP">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
@@ -118,7 +118,7 @@
             placeholder="country"
           />
           <button class="btn btn-success p-0 col-3" @click="sCountryFA">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
@@ -132,7 +132,7 @@
             placeholder="country"
           />
           <button class="btn btn-success p-0 col-3" @click="sCountryGR">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
@@ -146,7 +146,7 @@
             placeholder="country"
           />
           <button class="btn btn-success p-0 col-3" @click="sCountryCH">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
@@ -155,7 +155,7 @@
         >
           <input type="text" class="col-9" v-model="city" placeholder="city" />
           <button class="btn btn-success p-0 col-3" @click="sCity">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
@@ -164,7 +164,7 @@
         >
           <input type="text" class="col-9" v-model="city" placeholder="city" />
           <button class="btn btn-success p-0 col-3" @click="sCityAR">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
@@ -173,7 +173,7 @@
         >
           <input type="text" class="col-9" v-model="city" placeholder="city" />
           <button class="btn btn-success p-0 col-3" @click="sCitySP">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
@@ -182,7 +182,7 @@
         >
           <input type="text" class="col-9" v-model="city" placeholder="city" />
           <button class="btn btn-success p-0 col-3" @click="sCityFA">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
@@ -191,7 +191,7 @@
         >
           <input type="text" class="col-9" v-model="city" placeholder="city" />
           <button class="btn btn-success p-0 col-3" @click="sCityGR">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
@@ -200,22 +200,25 @@
         >
           <input type="text" class="col-9" v-model="city" placeholder="city" />
           <button class="btn btn-success p-0 col-3" @click="sCityCH">
-            search
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
         <div
-          class="d-flex mx-2 col-4"
+          class="d-flex mx-2 col-12 justify-content-center mt-3"
           v-if="$auth.strategy.token.status().valid() == true"
         >
-          <button class="btn col-6 btn-info mx-1" @click="sScores">
+          <button class="btn col-4 col-sm-3 btn-info mx-1" @click="sScores">
             by scores
           </button>
-          <button class="btn col-6 btn-info mx-1" @click="sTest">
+          <button class="btn col-4 col-sm-3 btn-info mx-1" @click="sTest">
             by maintest
+          </button>
+          <button class="btn col-4 col-sm-3 btn-info mx-1" @click="nearMe">
+            near me
           </button>
         </div>
         <div
-          class="d-flex mx-2 col-4"
+          class="d-flex mx-2 col-4 mt-3"
           v-if="$auth.strategy.token.status().valid() == false"
         >
           <button class="btn col-12 btn-info mx-1" @click="sScores">
@@ -242,9 +245,10 @@
               <div
                 class="my-3 my-md-0 rounded bg-light p-0"
                 v-if="$store.state.lang.lang == 'English'"
+                style="height: 400px"
               >
                 <img
-                  src="IMG_7421.jpg"
+                  :src="tour.image"
                   alt=""
                   class="col-12 h-50 p-0 rounded-top"
                 />
@@ -269,9 +273,10 @@
               <div
                 class="my-3 my-md-0 rounded bg-light p-0"
                 v-if="$store.state.lang.lang == 'Arabic'"
+                style="height: 400px"
               >
                 <img
-                  src="IMG_7421.jpg"
+                  :src="tour.image"
                   alt=""
                   class="col-12 h-50 p-0 rounded-top"
                 />
@@ -296,9 +301,10 @@
               <div
                 class="my-3 my-md-0 rounded bg-light p-0"
                 v-if="$store.state.lang.lang == 'Spanish'"
+                style="height: 400px"
               >
                 <img
-                  src="IMG_7421.jpg"
+                  :src="tour.image"
                   alt=""
                   class="col-12 h-50 p-0 rounded-top"
                 />
@@ -323,9 +329,10 @@
               <div
                 class="my-3 my-md-0 rounded bg-light p-0"
                 v-if="$store.state.lang.lang == 'Farsi'"
+                style="height: 400px"
               >
                 <img
-                  src="IMG_7421.jpg"
+                  :src="tour.image"
                   alt=""
                   class="col-12 h-50 p-0 rounded-top"
                 />
@@ -350,9 +357,10 @@
               <div
                 class="my-3 my-md-0 rounded bg-light p-0"
                 v-if="$store.state.lang.lang == 'German'"
+                style="height: 400px"
               >
                 <img
-                  src="IMG_7421.jpg"
+                  :src="tour.image"
                   alt=""
                   class="col-12 h-50 p-0 rounded-top"
                 />
@@ -377,9 +385,10 @@
               <div
                 class="my-3 my-md-0 rounded bg-light p-0"
                 v-if="$store.state.lang.lang == 'Chines'"
+                style="height: 400px"
               >
                 <img
-                  src="IMG_7421.jpg"
+                  :src="tour.image"
                   alt=""
                   class="col-12 h-50 p-0 rounded-top"
                 />
@@ -426,18 +435,22 @@
     </div>
     <div class="row m-0 justify-content-center">
       <div
-        class="d-flex align-items-end"
+        class="d-flex align-items-end service"
         v-for="service in services.results"
         :key="service.id"
-        :style="{ backgroundImage: service.image }"
-        style="width: 20%; height: 300px; background-size: cover"
+        :style="{ backgroundImage: `url(${service.image})` }"
       >
-        <div class="d-flex col-12 pb-3 text-light justify-content-between">
-          <div>
+        <div
+          class="d-flex col-12 pb-3 text-light justify-content-between pointer"
+          @click="push(service.id)"
+        >
+          <div class="bg-dark px-2 rounded">
             <i class="fa fa-location-dot"></i>
             {{ service.title }}
           </div>
-          <span class="textmain">{{ service.inventory }}</span>
+          <span class="bg-dark px-2 rounded text-light">{{
+            service.inventory
+          }}</span>
         </div>
       </div>
     </div>
@@ -453,7 +466,7 @@
             v-for="category in categories.results"
             :key="category.id"
           >
-            <nuxt-link :to="`Category/${category.id}`">
+            <nuxt-link :to="`/services?category=${category.name}`">
               {{ category.name }}
             </nuxt-link>
           </div>
@@ -574,7 +587,14 @@ export default {
       toursByCountry: "",
       country: "",
       city: "",
+      userInfo: {},
     };
+  },
+  async mounted() {
+    if (this.$auth.strategy.token.status().valid() == true) {
+      const userInfo = await this.$axios.get("api/usersmodel/user-info/");
+      this.userInfo = userInfo.data.results[0];
+    }
   },
   async asyncData({ $axios }) {
     const services = await $axios.$get("/api/home/services/");
@@ -599,6 +619,19 @@ export default {
       this.toursByCity = toursByCity;
       this.toursByCountry = toursByCountry;
     },
+
+    async nearMe() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-country/en/${this.userInfo.country}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
     async sCountry() {
       try {
         const res = await this.$axios.get(
@@ -743,6 +776,7 @@ export default {
     async sTest() {
       try {
         const res = await this.$axios.get("api/home/tours-by-maintest/");
+        this.tours = res.data;
         console.log(res);
       } catch (error) {
         console.log(error);
@@ -757,10 +791,18 @@ export default {
         console.log(error);
       }
     },
+    push(id) {
+      this.$router.push(`/services/${id}`);
+    },
   },
 };
 </script>
 <style scoped>
+.service {
+  width: 20%;
+  height: 300px;
+  background-size: cover;
+}
 .input {
   border: none;
   background-color: #6c6c6c;
@@ -772,5 +814,15 @@ export default {
 .input2 {
   border: none;
   border-radius: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .service {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .service {
+    width: 50%;
+  }
 }
 </style>

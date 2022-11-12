@@ -20,7 +20,7 @@
       </div>
     </div>
     <div
-      class="col-12 py-5 d-flex justify-content-center px-3"
+      class="col-12 py-5 row justify-content-center px-3 m-0"
       style="background-color: rgba(0, 0, 0, 0.5)"
     >
       <div
@@ -34,7 +34,7 @@
           placeholder="country"
         />
         <button class="btn btn-success p-0 col-3" @click="sCountry">
-          search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div
@@ -48,7 +48,7 @@
           placeholder="country"
         />
         <button class="btn btn-success p-0 col-3" @click="sCountryAR">
-          search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div
@@ -62,7 +62,7 @@
           placeholder="country"
         />
         <button class="btn btn-success p-0 col-3" @click="sCountrySP">
-          search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div
@@ -76,7 +76,7 @@
           placeholder="country"
         />
         <button class="btn btn-success p-0 col-3" @click="sCountryFA">
-          search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div
@@ -90,7 +90,7 @@
           placeholder="country"
         />
         <button class="btn btn-success p-0 col-3" @click="sCountryGR">
-          search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div
@@ -104,7 +104,7 @@
           placeholder="country"
         />
         <button class="btn btn-success p-0 col-3" @click="sCountryCH">
-          search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div
@@ -112,7 +112,9 @@
         v-if="$store.state.lang.lang == 'English'"
       >
         <input type="text" class="col-9" v-model="city" placeholder="city" />
-        <button class="btn btn-success p-0 col-3" @click="sCity">search</button>
+        <button class="btn btn-success p-0 col-3" @click="sCity">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
       <div
         class="d-flex border rounded mx-2 p-0 col-4"
@@ -120,7 +122,7 @@
       >
         <input type="text" class="col-9" v-model="city" placeholder="city" />
         <button class="btn btn-success p-0 col-3" @click="sCityAR">
-          search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div
@@ -129,7 +131,7 @@
       >
         <input type="text" class="col-9" v-model="city" placeholder="city" />
         <button class="btn btn-success p-0 col-3" @click="sCitySP">
-          search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div
@@ -138,7 +140,7 @@
       >
         <input type="text" class="col-9" v-model="city" placeholder="city" />
         <button class="btn btn-success p-0 col-3" @click="sCityFA">
-          search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div
@@ -147,7 +149,7 @@
       >
         <input type="text" class="col-9" v-model="city" placeholder="city" />
         <button class="btn btn-success p-0 col-3" @click="sCityGR">
-          search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div
@@ -156,22 +158,25 @@
       >
         <input type="text" class="col-9" v-model="city" placeholder="city" />
         <button class="btn btn-success p-0 col-3" @click="sCityCH">
-          search
+          <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
       <div
-        class="d-flex mx-2 col-4"
+        class="d-flex mx-2 col-12 justify-content-center mt-3"
         v-if="$auth.strategy.token.status().valid() == true"
       >
-        <button class="btn col-6 btn-info mx-1" @click="sScores">
+        <button class="btn col-4 col-sm-3 btn-info mx-1" @click="sScores">
           by scores
         </button>
-        <button class="btn col-6 btn-info mx-1" @click="sTest">
+        <button class="btn col-4 col-sm-3 btn-info mx-1" @click="sTest">
           by maintest
+        </button>
+        <button class="btn col-4 col-sm-3 btn-info mx-1" @click="nearMe">
+          near me
         </button>
       </div>
       <div
-        class="d-flex mx-2 col-4"
+        class="d-flex mx-2 col-4 mt-3"
         v-if="$auth.strategy.token.status().valid() == false"
       >
         <button class="btn col-12 btn-info mx-1" @click="sScores">
@@ -188,8 +193,9 @@
         <div
           class="my-3 my-md-0 rounded bg-light p-0"
           v-if="$store.state.lang.lang == 'English'"
+          style="height: 400px"
         >
-          <img src="IMG_7421.jpg" alt="" class="col-12 h-50 p-0 rounded-top" />
+          <img :src="tour.image" alt="" class="col-12 h-50 p-0 rounded-top" />
           <div class="p-3">
             <div class="d-flex justify-content-between mb-2">
               {{ tour.country_en + "-" + tour.city_en }}
@@ -209,8 +215,9 @@
         <div
           class="my-3 my-md-0 rounded bg-light p-0"
           v-if="$store.state.lang.lang == 'Arabic'"
+          style="height: 400px"
         >
-          <img src="IMG_7421.jpg" alt="" class="col-12 h-50 p-0 rounded-top" />
+          <img :src="tour.image" alt="" class="col-12 h-50 p-0 rounded-top" />
           <div class="p-3">
             <div class="d-flex justify-content-between mb-2">
               {{ tour.country_ar + "-" + tour.city_ar }}
@@ -230,8 +237,9 @@
         <div
           class="my-3 my-md-0 rounded bg-light p-0"
           v-if="$store.state.lang.lang == 'Spanish'"
+          style="height: 400px"
         >
-          <img src="IMG_7421.jpg" alt="" class="col-12 h-50 p-0 rounded-top" />
+          <img :src="tour.image" alt="" class="col-12 h-50 p-0 rounded-top" />
           <div class="p-3">
             <div class="d-flex justify-content-between mb-2">
               {{ tour.country_sp + "-" + tour.city_sp }}
@@ -251,8 +259,9 @@
         <div
           class="my-3 my-md-0 rounded bg-light p-0"
           v-if="$store.state.lang.lang == 'Farsi'"
+          style="height: 400px"
         >
-          <img src="IMG_7421.jpg" alt="" class="col-12 h-50 p-0 rounded-top" />
+          <img :src="tour.image" alt="" class="col-12 h-50 p-0 rounded-top" />
           <div class="p-3">
             <div class="d-flex justify-content-between mb-2">
               {{ tour.country_fa + "-" + tour.city_fa }}
@@ -272,8 +281,9 @@
         <div
           class="my-3 my-md-0 rounded bg-light p-0"
           v-if="$store.state.lang.lang == 'German'"
+          style="height: 400px"
         >
-          <img src="IMG_7421.jpg" alt="" class="col-12 h-50 p-0 rounded-top" />
+          <img :src="tour.image" alt="" class="col-12 h-50 p-0 rounded-top" />
           <div class="p-3">
             <div class="d-flex justify-content-between mb-2">
               {{ tour.country_gr + "-" + tour.city_gr }}
@@ -293,8 +303,9 @@
         <div
           class="my-3 my-md-0 rounded bg-light p-0"
           v-if="$store.state.lang.lang == 'Chines'"
+          style="height: 400px"
         >
-          <img src="IMG_7421.jpg" alt="" class="col-12 h-50 p-0 rounded-top" />
+          <img :src="tour.image" alt="" class="col-12 h-50 p-0 rounded-top" />
           <div class="p-3">
             <div class="d-flex justify-content-between mb-2">
               {{ tour.country_ch + "-" + tour.city_ch }}
@@ -368,6 +379,7 @@ export default {
       toursByCountry: "",
       country: "",
       city: "",
+      userInfo: {},
     };
   },
   async asyncData({ $axios }) {
@@ -384,6 +396,10 @@ export default {
       this.country = this.$route.query.country;
       this.sCountry();
     }
+    if (this.$auth.strategy.token.status().valid() == true) {
+      const userInfo = await this.$axios.get("api/usersmodel/user-info/");
+      this.userInfo = userInfo.data.results[0];
+    }
   },
   methods: {
     async onSearch() {
@@ -391,6 +407,17 @@ export default {
       const toursByCountry = await $axios.$get(`/api/home/tours-by-country/`);
       this.toursByCity = toursByCity;
       this.toursByCountry = toursByCountry;
+    },
+    async nearMe() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/tours-by-country/en/${this.userInfo.country}/`
+        );
+        console.log(res);
+        this.tours = res.data;
+      } catch (error) {
+        console.log(error);
+      }
     },
     async sCountry() {
       try {
@@ -537,6 +564,7 @@ export default {
       try {
         const res = await this.$axios.get("api/home/tours-by-maintest/");
         console.log(res);
+        this.tours = res.data;
       } catch (error) {
         console.log(error);
       }

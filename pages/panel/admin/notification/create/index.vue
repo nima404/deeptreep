@@ -44,7 +44,7 @@ export default {
   methods: {
     async create() {
       try {
-        const res = this.$axios.post(
+        const res = await this.$axios.post(
           "api/leadersTourManagers/notification-dissatisfaction-create/",
           {
             message: this.message,

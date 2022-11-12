@@ -3,8 +3,8 @@
     class="col-12 d-flex justify-content-center align-items-center bgmain"
     :style="{ height: myHeight }"
   >
-    <div class="col-4 border rounded shadow bg-light p-4">
-      <ValidationObserver ref="form" v-slot="{ handleSubmit }">
+    <div class="col-md-4 col-10 border rounded shadow bg-light p-4">
+      <ValidationObserver ref="form" v-slot="{ handleSubmit }" v-if="!ok">
         <form action="#" @submit.prevent="handleSubmit(confirm)">
           <h3 class="text-center">DEEP TREEP</h3>
           <h5 class="text-center">confirm Email</h5>
@@ -24,6 +24,7 @@
           </div>
         </form>
       </ValidationObserver>
+      <div class="text-success text-center" v-if="ok">email confirmed</div>
     </div>
   </div>
 </template>
@@ -36,6 +37,7 @@ export default {
       myHeight: window.innerHeight + "px",
       email: "",
       code: "",
+      ok: false,
     };
   },
   created() {
@@ -54,6 +56,10 @@ export default {
             code: this.code,
           }
         );
+        this.ok = true;
+        setTimeout(() => {
+          this.$router.push("/panel");
+        }, 2000);
         console.log(res);
       } catch (error) {
         console.log(error);

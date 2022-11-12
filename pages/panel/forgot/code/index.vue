@@ -3,8 +3,8 @@
     class="col-12 d-flex justify-content-center align-items-center bgmain"
     :style="{ height: myHeight }"
   >
-    <div class="col-4 border rounded shadow bg-light p-4">
-      <ValidationObserver ref="form" v-slot="{ handleSubmit }">
+    <div class="col-md-4 col-10 border rounded shadow bg-light p-4">
+      <ValidationObserver ref="form" v-slot="{ handleSubmit }" v-if="!message">
         <form action="#" @submit.prevent="handleSubmit(recovery)">
           <h3 class="text-center">DEEP TREEP</h3>
           <h5 class="text-center">recovery password</h5>
@@ -24,10 +24,11 @@
             <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
           </ValidationProvider>
           <div class="col-12 text-center">
-            <button class="btn btn-success col-3 mt-3">change password</button>
+            <button class="btn btn-success col-3 mt-3">save</button>
           </div>
         </form>
       </ValidationObserver>
+      <div class="text-center text-success" v-if="message">changed</div>
     </div>
   </div>
 </template>
@@ -41,6 +42,7 @@ export default {
       email: "",
       code: "",
       password: "",
+      message: false,
     };
   },
   created() {
@@ -60,6 +62,10 @@ export default {
             password: this.password,
           }
         );
+        this.message = true;
+        setTimeout(() => {
+          this.$router.push("/panel");
+        }, 2000);
         console.log(res);
       } catch (error) {
         console.log(error);

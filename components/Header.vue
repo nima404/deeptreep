@@ -1,207 +1,289 @@
 <template>
-  <div class="nav col-12 pt-3 px-5">
-    <div class="col-12 d-flex d-sm-none mb-2">
-      <i
-        class="fa fa-bars text-light pointer"
-        @click="showMenu = !showMenu"
-      ></i>
-    </div>
-    <div
-      class="d-none flex-column flex-sm-row justify-content-between col-12 d-sm-flex"
-      ref="show"
-    >
-      <div class="d-flex align-items-center mt-3 mt-sm-0 flex-row">
-        <select v-model="lang" class="border rounded px-2 mx-2 pointer">
-          <option value="en">En</option>
-          <option value="gr">Ge</option>
-          <option value="fa">Pe</option>
-          <option value="ch">Ch</option>
-          <option value="sp">Sp</option>
-          <option value="ar">Ar</option>
-        </select>
-        <nuxt-link to="/">
-          <i class="fa-brands fa-instagram textorange mx-2"></i>
-        </nuxt-link>
-        <nuxt-link to="/">
-          <i class="fa-brands fa-twitter textorange mx-2"></i>
-        </nuxt-link>
-        <nuxt-link to="/">
-          <i class="fa-brands fa-skype textorange mx-2"></i>
-        </nuxt-link>
-        <nuxt-link to="/">
-          <i class="fa-brands fa-pinterest-p textorange mx-2"></i>
-        </nuxt-link>
-        <nuxt-link to="/">
-          <i class="fa-brands fa-linkedin-in textorange mx-2 mr-4"></i>
-        </nuxt-link>
-        <div v-if="$auth.strategy.token.status().valid() == false">
-          <i class="fa-solid fa-user textorange ml-2"></i>
-          <nuxt-link to="/panel/signup" class="text-light">sign up</nuxt-link>
+  <div>
+    <div class="nav d-sm-flex d-none col-12 pt-3 px-5">
+      <div
+        class="d-none flex-column flex-sm-row justify-content-between col-12 d-sm-flex"
+        ref="show"
+      >
+        <div class="d-flex align-items-center mt-3 mt-sm-0 flex-row">
+          <select v-model="lang" class="border rounded px-2 mx-2 pointer">
+            <option value="en">En</option>
+            <option value="gr">Ge</option>
+            <option value="fa">Pe</option>
+            <option value="ch">Ch</option>
+            <option value="sp">Sp</option>
+            <option value="ar">Ar</option>
+          </select>
+          <nuxt-link to="/">
+            <i class="fa-brands fa-instagram textorange mx-2"></i>
+          </nuxt-link>
+          <nuxt-link to="/">
+            <i class="fa-brands fa-twitter textorange mx-2"></i>
+          </nuxt-link>
+          <nuxt-link to="/">
+            <i class="fa-brands fa-skype textorange mx-2"></i>
+          </nuxt-link>
+          <nuxt-link to="/">
+            <i class="fa-brands fa-pinterest-p textorange mx-2"></i>
+          </nuxt-link>
+          <nuxt-link to="/">
+            <i class="fa-brands fa-linkedin-in textorange mx-2 mr-4"></i>
+          </nuxt-link>
+          <div v-if="$auth.strategy.token.status().valid() == false">
+            <i class="fa-solid fa-user textorange ml-2"></i>
+            <nuxt-link to="/panel/signup" class="text-light">sign up</nuxt-link>
+          </div>
+          <div
+            class="ml-4"
+            v-if="$auth.strategy.token.status().valid() == false"
+          >
+            <i class="fa fa-lock textorange ml-2"></i>
+            <nuxt-link to="/panel" class="text-light">login</nuxt-link>
+          </div>
+          <nuxt-link
+            to="/panel/tourist"
+            class="btn btn-info"
+            v-if="
+              $auth.strategy.token.status().valid() == true &&
+              userInfo.rele == 'rourist'
+            "
+            >panel</nuxt-link
+          >
+          <nuxt-link
+            to="/panel/touristLeader"
+            class="btn btn-info"
+            v-if="
+              $auth.strategy.token.status().valid() == true &&
+              userInfo.role == 'tour-leader'
+            "
+            >panel</nuxt-link
+          >
+          <nuxt-link
+            to="/panel/admin"
+            class="btn btn-info"
+            v-if="
+              $auth.strategy.token.status().valid() == true &&
+              userInfo.role == 'leader-tour-manager'
+            "
+            >panel</nuxt-link
+          >
+          <nuxt-link
+            to="/panel/service"
+            class="btn btn-info"
+            v-if="
+              $auth.strategy.token.status().valid() == true &&
+              userInfo.role == 'service'
+            "
+            >panel</nuxt-link
+          >
         </div>
-        <div class="ml-4" v-if="$auth.strategy.token.status().valid() == false">
-          <i class="fa fa-lock textorange ml-2"></i>
-          <nuxt-link to="/panel" class="text-light">login</nuxt-link>
+        <div class="d-flex text-light">
+          <div class="mr-4"><i class="fa fa-phone mr-2"></i>09121992129</div>
+          <div><i class="fa fa-envelope mr-2"></i>dotweb@info.com</div>
         </div>
-        <nuxt-link
-          to="/panel/tourist"
-          class="btn btn-info"
-          v-if="
-            $auth.strategy.token.status().valid() == true &&
-            userInfo.role == 'tourist'
-          "
-          >panel</nuxt-link
-        >
-        <nuxt-link
-          to="/panel/touristLeader"
-          class="btn btn-info"
-          v-if="
-            $auth.strategy.token.status().valid() == true &&
-            userInfo.role == 'tour-leader'
-          "
-          >panel</nuxt-link
-        >
-        <nuxt-link
-          to="/panel/admin"
-          class="btn btn-info"
-          v-if="
-            $auth.strategy.token.status().valid() == true &&
-            userInfo.role == 'leader-tour-manager'
-          "
-          >panel</nuxt-link
-        >
-        <nuxt-link
-          to="/panel/service"
-          class="btn btn-info"
-          v-if="
-            $auth.strategy.token.status().valid() == true &&
-            userInfo.role == 'service'
-          "
-          >panel</nuxt-link
-        >
       </div>
-      <div class="d-flex text-light">
-        <div class="mr-4"><i class="fa fa-phone mr-2"></i>09121992129</div>
-        <div><i class="fa fa-envelope mr-2"></i>dotweb@info.com</div>
-      </div>
-    </div>
 
-    <div
-      class="col-12 d-none justify-content-center text-light thirdNav mt-3 d-sm-flex"
-      ref="show"
-    >
-      <nuxt-link to="/" class="px-2 pb-3 text-light">Home</nuxt-link>
-      <nuxt-link to="/tor" class="px-2 pb-3 text-light">Tours</nuxt-link>
-      <!-- <nuxt-link to="/category" class="px-2 pb-3 text-light"
+      <div
+        class="col-12 d-none justify-content-center text-light thirdNav mt-3 d-sm-flex"
+        ref="show"
+      >
+        <nuxt-link to="/" class="px-2 pb-3 text-light">Home</nuxt-link>
+        <nuxt-link to="/tor" class="px-2 pb-3 text-light">Tours</nuxt-link>
+        <!-- <nuxt-link to="/category" class="px-2 pb-3 text-light"
         >category</nuxt-link
       > -->
-      <nuxt-link to="/galery" class="px-2 pb-3 text-light">Galery</nuxt-link>
-      <!-- <nuxt-link to="/pricetable" class="px-2 pb-3 text-light"
+        <nuxt-link to="/galery" class="px-2 pb-3 text-light">Galery</nuxt-link>
+        <!-- <nuxt-link to="/pricetable" class="px-2 pb-3 text-light"
         >pricetable</nuxt-link
       > -->
-      <nuxt-link to="/services" class="px-2 pb-3 text-light"
-        >Services</nuxt-link
-      >
-      <!-- <nuxt-link to="/weblog" class="px-2 pb-3 text-light">weblog</nuxt-link> -->
-      <nuxt-link to="/about" class="px-2 pb-3 text-light">About</nuxt-link>
+        <nuxt-link to="/services" class="px-2 pb-3 text-light"
+          >Services</nuxt-link
+        >
+        <span
+          class="px-2 pb-3 text-light"
+          style="overflow: visible; z-index: 3"
+        >
+          <div class="pointer" @click="cateMenu = !cateMenu">
+            Services Categories <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div
+            class="cateMenu px-0"
+            v-if="cateMenu && $auth.strategy.token.status().valid() == false"
+          >
+            <div
+              class="cateI px-2 col-12 text-light"
+              v-for="cate in categories"
+              :key="cate.id"
+              @click="push(cate.name)"
+            >
+              {{ cate.name }}
+            </div>
+          </div>
+          <div
+            class="cateMenu2 px-0"
+            v-if="cateMenu && $auth.strategy.token.status().valid() == true"
+          >
+            <div
+              class="cateI px-2 col-12 text-light"
+              v-for="cate in categories"
+              :key="cate.id"
+              @click="push(cate.name)"
+            >
+              {{ cate.name }}
+            </div>
+          </div>
+        </span>
+        <!-- <nuxt-link to="/weblog" class="px-2 pb-3 text-light">weblog</nuxt-link> -->
+        <nuxt-link to="/about" class="px-2 pb-3 text-light">About</nuxt-link>
+      </div>
     </div>
     <!--secmenu-->
-    <div
-      class="d-flex flex-column flex-sm-row justify-content-between col-12 d-sm-none"
-      v-if="showMenu"
-    >
-      <div class="d-flex align-items-center my-3 my-sm-0 flex-row">
-        <select v-model="lang" class="border rounded px-2 mr-2 pointer">
-          <option value="en">En</option>
-          <option value="gr">Ge</option>
-          <option value="fa">Pe</option>
-          <option value="ch">Ch</option>
-          <option value="sp">Sp</option>
-          <option value="ar">Ar</option>
-        </select>
-        <nuxt-link to="/">
-          <i class="fa-brands fa-instagram textorange mx-2"></i>
-        </nuxt-link>
-        <nuxt-link to="/">
-          <i class="fa-brands fa-twitter textorange mx-2"></i>
-        </nuxt-link>
-        <nuxt-link to="/">
-          <i class="fa-brands fa-skype textorange mx-2"></i>
-        </nuxt-link>
-        <nuxt-link to="/">
-          <i class="fa-brands fa-pinterest-p textorange mx-2"></i>
-        </nuxt-link>
-        <nuxt-link to="/">
-          <i class="fa-brands fa-linkedin-in textorange mx-2 mr-4"></i>
-        </nuxt-link>
-        <div v-if="$auth.strategy.token.status().valid() == false">
-          <i class="fa-solid fa-user textorange ml-2"></i>
-          <nuxt-link to="/panel/signup" class="text-light">sign up</nuxt-link>
-        </div>
-        <div class="ml-4" v-if="$auth.strategy.token.status().valid() == false">
-          <i class="fa fa-lock textorange ml-2"></i>
-          <nuxt-link to="/panel" class="text-light">login</nuxt-link>
-        </div>
-        <nuxt-link
-          to="/panel/tourist"
-          class="btn btn-info"
-          v-if="
-            $auth.strategy.token.status().valid() == true &&
-            userInfo.role == 'tourist'
-          "
-          >panel</nuxt-link
-        >
-        <nuxt-link
-          to="/panel/touristLeader"
-          class="btn btn-info"
-          v-if="
-            $auth.strategy.token.status().valid() == true &&
-            userInfo.role == 'tour-leader'
-          "
-          >panel</nuxt-link
-        >
-        <nuxt-link
-          to="/panel/admin"
-          class="btn btn-info"
-          v-if="
-            $auth.strategy.token.status().valid() == true &&
-            userInfo.role == 'leader-tour-manager'
-          "
-          >panel</nuxt-link
-        >
-        <nuxt-link
-          to="/panel/service"
-          class="btn btn-info"
-          v-if="
-            $auth.strategy.token.status().valid() == true &&
-            userInfo.role == 'service'
-          "
-          >panel</nuxt-link
-        >
-      </div>
-      <div class="d-flex text-light">
-        <div class="mr-4"><i class="fa fa-phone mr-2"></i>09121992129</div>
-        <div><i class="fa fa-envelope mr-2"></i>dotweb@info.com</div>
-      </div>
-    </div>
-
-    <div
-      class="col-12 d-flex justify-content-center text-light thirdNav mt-3 d-sm-none"
-      v-if="showMenu"
-    >
-      <nuxt-link to="/" class="px-2 pb-3 text-light">Home</nuxt-link>
-      <nuxt-link to="/tor" class="px-2 pb-3 text-light">Tours</nuxt-link>
-      <!-- <nuxt-link to="/category" class="px-2 pb-3 text-light"
-        >category</nuxt-link
-      > -->
-      <nuxt-link to="/galery" class="px-2 pb-3 text-light">Galery</nuxt-link>
-      <!-- <nuxt-link to="/pricetable" class="px-2 pb-3 text-light"
-        >pricetable</nuxt-link
-      > -->
-      <nuxt-link to="/services" class="px-2 pb-3 text-light"
-        >Services</nuxt-link
+    <div class="d-sm-none" :class="{ nav3: showMenu }">
+      <div
+        class="col-12 nav2 py-3 mx-0 pr-5 d-flex justify-content-between"
+        v-if="!showMenu"
       >
-      <!-- <nuxt-link to="/weblog" class="px-2 pb-3 text-light">weblog</nuxt-link> -->
-      <nuxt-link to="/about" class="px-2 pb-3 text-light">About</nuxt-link>
+        <div class="col-12 d-flex d-sm-none mb-2">
+          <i
+            class="fa fa-bars text-light pointer"
+            @click="showMenu = true"
+            style="font-size: 2rem"
+          ></i>
+        </div>
+        <img
+          src="favicon.ico"
+          alt=""
+          style="position: absolute; right: 20px"
+          width="30px"
+        />
+      </div>
+      <div
+        class="d-flex flex-column flex-sm-row justify-content-between col-12 d-sm-none"
+        v-if="showMenu"
+      >
+        <div class="col-12 d-flex d-sm-none mb-2 mt-3">
+          <span
+            class="text-light pointer"
+            @click="showMenu = false"
+            style="font-size: 2rem"
+            >X</span
+          >
+        </div>
+        <div class="d-flex my-3 flex-column">
+          <select v-model="lang" class="border rounded px-2 mr-2 pointer">
+            <option value="en">En</option>
+            <option value="gr">Ge</option>
+            <option value="fa">Pe</option>
+            <option value="ch">Ch</option>
+            <option value="sp">Sp</option>
+            <option value="ar">Ar</option>
+          </select>
+
+          <div class="d-flex my-3 justify-content-between pr-2">
+            <div v-if="$auth.strategy.token.status().valid() == false">
+              <i class="fa-solid fa-user textorange ml-2"></i>
+              <nuxt-link to="/panel/signup" class="text-light"
+                >sign up</nuxt-link
+              >
+            </div>
+            <div
+              class="ml-4"
+              v-if="$auth.strategy.token.status().valid() == false"
+            >
+              <i class="fa fa-lock textorange ml-2"></i>
+              <nuxt-link to="/panel" class="text-light">login</nuxt-link>
+            </div>
+            <nuxt-link
+              to="/panel/tourist"
+              class="btn btn-info"
+              v-if="
+                $auth.strategy.token.status().valid() == true &&
+                userInfo.role == 'tourist'
+              "
+              >panel</nuxt-link
+            >
+            <nuxt-link
+              to="/panel/touristLeader"
+              class="btn btn-info"
+              v-if="
+                $auth.strategy.token.status().valid() == true &&
+                userInfo.role == 'tour-leader'
+              "
+              >panel</nuxt-link
+            >
+            <nuxt-link
+              to="/panel/admin"
+              class="btn btn-info"
+              v-if="
+                $auth.strategy.token.status().valid() == true &&
+                userInfo.role == 'leader-tour-manager'
+              "
+              >panel</nuxt-link
+            >
+            <nuxt-link
+              to="/panel/service"
+              class="btn btn-info"
+              v-if="
+                $auth.strategy.token.status().valid() == true &&
+                userInfo.role == 'service'
+              "
+              >panel</nuxt-link
+            >
+          </div>
+        </div>
+        <nuxt-link to="/" class="px-2 pb-3 text-light">Home</nuxt-link>
+        <nuxt-link to="/tor" class="px-2 pb-3 text-light">Tours</nuxt-link>
+        <nuxt-link to="/galery" class="px-2 pb-3 text-light">Galery</nuxt-link>
+        <nuxt-link to="/services" class="px-2 pb-3 text-light"
+          >Services</nuxt-link
+        >
+        <div
+          class="px-2 pb-3 text-light"
+          style="overflow: visible; z-index: 3; max-height: 150px !important"
+        >
+          <div class="pointer" @click="cateMenu = !cateMenu">
+            Categories <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div
+            class="px-0"
+            style="overflow-y: scroll; max-height: 130px"
+            v-if="cateMenu"
+          >
+            <div
+              class="cateI px-2 col-12 text-light"
+              v-for="cate in categories"
+              :key="cate.id"
+              @click="push(cate.name)"
+            >
+              {{ cate.name }}
+            </div>
+          </div>
+        </div>
+        <nuxt-link to="/about" class="px-2 pb-3 text-light mb-3"
+          >About</nuxt-link
+        >
+        <div class="d-flex text-light justify-content-between">
+          <div class="mr-4"><i class="fa fa-phone mr-2"></i>09121992129</div>
+          <div><i class="fa fa-envelope mr-2"></i>dotweb@info.com</div>
+        </div>
+        <div class="d-flex justify-content-between mt-3">
+          <nuxt-link to="/">
+            <i class="fa-brands fa-instagram textorange mx-2"></i>
+          </nuxt-link>
+          <nuxt-link to="/">
+            <i class="fa-brands fa-twitter textorange mx-2"></i>
+          </nuxt-link>
+          <nuxt-link to="/">
+            <i class="fa-brands fa-skype textorange mx-2"></i>
+          </nuxt-link>
+          <nuxt-link to="/">
+            <i class="fa-brands fa-pinterest-p textorange mx-2"></i>
+          </nuxt-link>
+          <nuxt-link to="/">
+            <i class="fa-brands fa-linkedin-in textorange mx-2 mr-4"></i>
+          </nuxt-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -215,6 +297,8 @@ export default {
       lang: "en",
       showMenu: false,
       userInfo: {},
+      cateMenu: false,
+      categories: {},
     };
   },
 
@@ -223,6 +307,8 @@ export default {
       const userInfo = await this.$axios.get("api/usersmodel/user-info/");
       this.userInfo = userInfo.data.results[0];
     }
+    const categories = await this.$axios.get("api/home/services-catgories/");
+    this.categories = categories.data.results;
   },
 
   watch: {
@@ -247,6 +333,11 @@ export default {
       }
     },
   },
+  methods: {
+    push(name) {
+      this.$router.push(`/services?category=${name}`);
+    },
+  },
 };
 </script>
 
@@ -255,6 +346,20 @@ export default {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 2;
+  max-height: 112px;
+}
+
+.nav2 {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 2;
+}
+.nav3 {
+  background: rgba(0, 0, 0);
+  position: fixed;
+  z-index: 2;
+  width: 50%;
+  height: 100%;
 }
 
 .thirdNav div {
@@ -263,6 +368,24 @@ export default {
 .active {
   border-bottom: 3px solid rgb(255, 123, 0);
   cursor: default !important;
+}
+::-webkit-scrollbar {
+  width: 2px;
+}
+.cateMenu {
+  max-height: 200px;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 16px;
+}
+.cateMenu2 {
+  max-height: 200px;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+.cateI:hover {
+  background: rgba(0, 0, 0, 0.6);
 }
 @media only screen and (max-width: 1300px) {
   .secNav {
@@ -273,16 +396,47 @@ export default {
   .secNav {
     margin-left: 5%;
   }
+  .cateMenu {
+    margin-top: 8px;
+  }
+  .cateMenu2 {
+    margin-top: 3px;
+  }
+  .nav {
+    max-height: 80px;
+  }
 }
 @media only screen and (max-width: 700px) {
   .secNav {
     margin-left: 0%;
+  }
+  .cateMenu {
+    margin-top: 14px;
+  }
+  .cateMenu2 {
+    margin-top: 9px;
   }
 }
 @media only screen and (max-width: 700px) {
   .secNav i {
     top: 0;
     margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .nav {
+    max-height: 100px;
+  }
+  .cateMenu {
+    margin-top: 34px;
+  }
+  .cateMenu2 {
+    margin-top: 29px;
+  }
+}
+@media only screen and (max-width: 589px) {
+  .cateMenu {
+    margin-top: 12px;
   }
 }
 @media only screen and (max-width: 575px) {

@@ -3,7 +3,7 @@
     <div
       class="col-12 text-light d-flex justify-content-center align-items-end p-0"
       style="height: 300px; background-size: cover"
-      :style="{ backgroundImage: tourDetail.image }"
+      :style="{ backgroundImage: `url(${tourDetail.image})` }"
     >
       <div class="d-flex justify-content-between container p-0">
         <h2

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-4 px-2 mb-2" v-for="tour in tours.results" :key="tour.id">
       <div class="col-12 border rounded p-0">
-        <img :src="tour.image" class="col-12" />
+        <img :src="tour.image" class="col-12 px-0" style="height: 150px" />
         <div class="col-12 py-2" v-if="$store.state.lang.lang == 'English'">
           <h4>country: {{ tour.country_en }}</h4>
           <h4>city: {{ tour.city_en }}</h4>
@@ -11,9 +11,11 @@
           <div class="col-12">level: {{ tour.level_en }}</div>
           <div class="col-12">services: {{ tour.services_en }}</div>
           <div class="row">
-            <div class="col-4">capacity: {{ tour.capacity }}</div>
-            <div class="col-4">duration: {{ tour.duration }}</div>
-            <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+            <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+            <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+            <div class="col-md-4 col-12">
+              price: {{ tour.price }} {{ tour.pay_with }}
+            </div>
           </div>
           <div class="col-12 text-center">
             <nuxt-link
@@ -31,9 +33,11 @@
           <div class="col-12">level: {{ tour.level_gr }}</div>
           <div class="col-12">services: {{ tour.services_gr }}</div>
           <div class="row">
-            <div class="col-4">capacity: {{ tour.capacity }}</div>
-            <div class="col-4">duration: {{ tour.duration }}</div>
-            <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+            <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+            <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+            <div class="col-md-4 col-12">
+              price: {{ tour.price }} {{ tour.pay_with }}
+            </div>
           </div>
           <div class="col-12 text-center">
             <nuxt-link
@@ -51,9 +55,11 @@
           <div class="col-12">level: {{ tour.level_fa }}</div>
           <div class="col-12">services: {{ tour.services_fa }}</div>
           <div class="row">
-            <div class="col-4">capacity: {{ tour.capacity }}</div>
-            <div class="col-4">duration: {{ tour.duration }}</div>
-            <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+            <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+            <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+            <div class="col-md-4 col-12">
+              price: {{ tour.price }} {{ tour.pay_with }}
+            </div>
           </div>
           <div class="col-12 text-center">
             <nuxt-link
@@ -71,9 +77,11 @@
           <div class="col-12">level: {{ tour.level_ch }}</div>
           <div class="col-12">services: {{ tour.services_ch }}</div>
           <div class="row">
-            <div class="col-4">capacity: {{ tour.capacity }}</div>
-            <div class="col-4">duration: {{ tour.duration }}</div>
-            <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+            <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+            <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+            <div class="col-md-4 col-12">
+              price: {{ tour.price }} {{ tour.pay_with }}
+            </div>
           </div>
           <div class="col-12 text-center">
             <nuxt-link
@@ -91,9 +99,11 @@
           <div class="col-12">level: {{ tour.level_sp }}</div>
           <div class="col-12">services: {{ tour.services_sp }}</div>
           <div class="row">
-            <div class="col-4">capacity: {{ tour.capacity }}</div>
-            <div class="col-4">duration: {{ tour.duration }}</div>
-            <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+            <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+            <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+            <div class="col-md-4 col-12">
+              price: {{ tour.price }} {{ tour.pay_with }}
+            </div>
           </div>
           <div class="col-12 text-center">
             <nuxt-link
@@ -111,9 +121,11 @@
           <div class="col-12">level: {{ tour.level_ar }}</div>
           <div class="col-12">services: {{ tour.services_ar }}</div>
           <div class="row">
-            <div class="col-4">capacity: {{ tour.capacity }}</div>
-            <div class="col-4">duration: {{ tour.duration }}</div>
-            <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+            <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+            <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+            <div class="col-md-4 col-12">
+              price: {{ tour.price }} {{ tour.pay_with }}
+            </div>
           </div>
           <div class="col-12 text-center">
             <nuxt-link
@@ -175,14 +187,21 @@ export default {
   name: "tours",
   layout: "touristLeader",
   async asyncData({ $axios }) {
-    const tours = await $axios.$get("/api/toursLeaders/tours/", {
-      headers: {
-        Authorization: "token a79df83fc25c7e2270af15f27479abcdcb4399cd",
-      },
-    });
+    const tours = await $axios.$get("/api/toursLeaders/tours/");
     return {
       tours,
     };
+  },
+  methods: {
+    async nextprev(id) {
+      try {
+        const res = await this.axios.get(id);
+        this.tours = res;
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>

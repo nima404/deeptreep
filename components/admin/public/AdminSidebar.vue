@@ -52,7 +52,7 @@
         </span>
         <span class="ms-1 d-none d-sm-inline-block">create score</span>
       </nuxt-link>
-      <nuxt-link
+      <!-- <nuxt-link
         to="/panel/admin/picture"
         class="py-2 px-4 w-100 right-to-left-animation border-bottom"
       >
@@ -60,7 +60,7 @@
           <i class="fa-solid fa-plus"></i>
         </span>
         <span class="ms-1 d-none d-sm-inline-block">create picture</span>
-      </nuxt-link>
+      </nuxt-link> -->
     </ul>
   </div>
 </template>

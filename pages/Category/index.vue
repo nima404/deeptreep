@@ -1,16 +1,6 @@
 <template>
   <div style="background-color: #e3e3e3">
-    <div
-      class="col-12 text-light pb-5 d-flex justify-content-center align-items-center"
-      style="height: 500px; background-size: cover"
-      :style="{ backgroundImage: detail.results.image }"
-    >
-      <div class="container">
-        <h5 class="text-light">Category</h5>
-        <h1>{{ detail.results.name }}</h1>
-      </div>
-    </div>
-    <div class="container py-5">
+    <div class="container" style="padding-top: 200px">
       <div class="row">
         <div class="mb-4 col-12 px-0">The latest tours</div>
         <div class="row mx-0 p-2 col-12">
@@ -85,17 +75,41 @@
 export default {
   name: "category",
   layout: "main",
-  middleware: ["auth"],
+
+  data() {
+    return {
+      detail: "",
+      name: "",
+    };
+  },
+
+  mounted() {
+    console.log(this.$route.query.category);
+    if (this.$route.query.category != undefined) {
+      this.name = this.$route.query.category;
+      this.search();
+    }
+  },
 
   async asyncData({ $axios, params }) {
-    const detail = await $axios.$get(
-      `api/services/category-detail/${params.categoryId}/`
-    );
     const tours = await $axios.$get("api/home/tours/");
     return {
-      detail,
       tours,
     };
+  },
+
+  methods: {
+    async search() {
+      try {
+        const res = await this.$axios.get(
+          `api/home/services-by-category/${this.name}/`
+        );
+        this.detail = res.data.results;
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>

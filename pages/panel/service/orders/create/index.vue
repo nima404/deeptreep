@@ -35,9 +35,9 @@ export default {
 
   data() {
     return {
-      count,
-      cart,
-      service,
+      count: 0,
+      cart: 0,
+      service: 0,
     };
   },
 

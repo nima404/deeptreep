@@ -17,6 +17,15 @@
         <span class="ms-1 d-none d-sm-inline-block">profile</span>
       </nuxt-link>
       <nuxt-link
+        to="/panel/touristLeader/users"
+        class="py-2 px-4 w-100 right-to-left-animation border-bottom"
+      >
+        <span class="d-block d-sm-inline-block text-center">
+          <i class="fa-solid fa-users"></i>
+        </span>
+        <span class="ms-1 d-none d-sm-inline-block">users</span>
+      </nuxt-link>
+      <nuxt-link
         to="/panel/touristLeader/tours"
         class="py-2 px-4 w-100 right-to-left-animation border-bottom"
       >

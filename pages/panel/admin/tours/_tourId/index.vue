@@ -5,8 +5,8 @@
       v-for="tour in detail.results"
       :key="tour.id"
     >
-      <div class="col-2 d-flex align-items-center">
-        <img :src="tour.image" class="col-12" alt="" />
+      <div class="col-2 px-0 d-flex align-items-center">
+        <img :src="tour.image" class="col-12 px-0" alt="" />
       </div>
       <div
         class="col-10 py-2 d-flex flex-column justify-content-center"
@@ -216,13 +216,58 @@
                 <i class="fa-solid fa-pen"></i>
               </button>
             </nuxt-link>
-            <button class="btn btn-danger" @click="deleteLeader(leader.id)">
+            <button
+              class="btn btn-danger"
+              @click="deleteLeader(leader.tourleader)"
+            >
               <i class="fa-solid fa-trash"></i>
             </button>
           </td>
         </tr>
       </tbody>
     </table>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="leaders.previous != null && leaders.next != null"
+    >
+      <button
+        class="btn btn-info pointer mx-2"
+        @click="nextprev(leaders.previous)"
+      >
+        prev
+      </button>
+      <button class="btn btn-info pointer mx-2" @click="nextprev(leaders.next)">
+        next
+      </button>
+    </div>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="leaders.previous == null && leaders.next == null"
+    >
+      <button class="bg-light mx-2 border rounded">prev</button>
+      <button class="bg-light mx-2 border rounded">next</button>
+    </div>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="leaders.previous != null && leaders.next == null"
+    >
+      <button
+        class="btn btn-info pointer mx-2"
+        @click="nextprev(leaders.previous)"
+      >
+        prev
+      </button>
+      <button class="bg-light mx-2 border rounded">next</button>
+    </div>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="leaders.previous == null && leaders.next != null"
+    >
+      <button class="bg-light mx-2 border rounded">prev</button>
+      <button class="btn btn-info pointer mx-2" @click="nextprev(leaders.next)">
+        next
+      </button>
+    </div>
   </div>
 </template>
 
@@ -257,14 +302,22 @@ export default {
     async deleteLeader(id) {
       try {
         const deleteL = await this.$axios.$delete(
-          `/api/leadersTourManagers/leader-delete/${this.$route.params.tourId}/`,
-          {
-            id: id,
-          }
+          `/api/leadersTourManagers/leader-delete/${this.$route.params.tourId}/${id}/`
         );
-        this.$nuxt.refresh();
+        window.location.reload();
         console.log(deleteL);
-      } catch (error) {}
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    async nextprev(id) {
+      try {
+        const res = await this.axios.get(id);
+        this.tours = res;
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
 };

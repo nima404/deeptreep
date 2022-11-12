@@ -4,7 +4,7 @@
     :style="{ height: myHeight }"
   >
     <div class="col-md-4 col-10 border rounded shadow bg-light p-4">
-      <ValidationObserver ref="form" v-slot="{ handleSubmit }">
+      <ValidationObserver v-if="!message" ref="form" v-slot="{ handleSubmit }">
         <form action="#" @submit.prevent="handleSubmit(login)">
           <h3 class="text-center">DEEP TREEP</h3>
           <h5 class="text-center">login</h5>
@@ -30,16 +30,14 @@
               >forgot password</nuxt-link
             >
           </div>
-          <div v-if="message">
-            <nuxt-link to="/panel/confirmemail" class="text-success"
-              >pls enter here to confirm your email</nuxt-link
-            >
-          </div>
           <div class="col-12 text-center">
             <button class="btn btn-success col-3 mt-3">login</button>
           </div>
         </form>
       </ValidationObserver>
+      <div v-if="message" class="text-success text-center">
+        we send an email for you pls confirm your email
+      </div>
     </div>
   </div>
 </template>
@@ -92,6 +90,9 @@ export default {
               email: this.email,
             }
           );
+          setTimeout(() => {
+            this.$router.push("/panel/confirmemail");
+          }, 2000);
           console.log(res2);
         }
       }

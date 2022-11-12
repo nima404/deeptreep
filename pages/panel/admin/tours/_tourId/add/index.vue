@@ -42,7 +42,7 @@ export default {
             percentage: this.percentage,
           }
         );
-        this.$router.push("/panel/admin/tours");
+        this.$router.push(`/panel/admin/tours/${this.$route.params.tourId}`);
         console.log(res);
       } catch (error) {
         console.log(error);

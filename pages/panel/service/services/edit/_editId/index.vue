@@ -81,9 +81,13 @@ export default {
     async edit() {
       try {
         const bodyFormData = new FormData();
-        for (const property in this.service) {
-          bodyFormData.append(property, this.service[property]);
-        }
+        bodyFormData.append("title", this.service.title);
+        bodyFormData.append("price", this.service.price);
+        bodyFormData.append("inventory", this.service.inventory);
+        bodyFormData.append("country", this.service.country);
+        bodyFormData.append("city", this.service.city);
+        bodyFormData.append("category", this.service.category);
+        bodyFormData.append("descriptions", this.service.discriptions);
         if (this.$refs.fileInput.files[0] != undefined) {
           bodyFormData.append("image", this.$refs.fileInput.files[0]);
         }
@@ -91,7 +95,7 @@ export default {
           `api/services/service-update/${this.$route.params.editId}/`,
           bodyFormData
         );
-        this.$router.push("/panel/service");
+        this.$router.push("/panel/service/services");
         console.log(res);
       } catch (error) {
         console.log(error);

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-4 px-2 mb-2" v-for="tour in tours.results" :key="tour.id">
       <div class="col-12 border rounded p-0">
-        <img :src="tour.image" class="col-12" />
+        <img :src="tour.image" class="col-12 px-0" style="height: 150px" />
         <div class="col-12 py-2" v-if="$store.state.lang.lang == 'English'">
           <h4>country: {{ tour.country_en }}</h4>
           <h4>city: {{ tour.city_en }}</h4>
@@ -183,6 +183,17 @@ export default {
     return {
       tours,
     };
+  },
+  methods: {
+    async nextprev(id) {
+      try {
+        const res = await this.axios.get(id);
+        this.tours = res;
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>

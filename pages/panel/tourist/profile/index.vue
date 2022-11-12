@@ -34,6 +34,10 @@
         <td class="col-12">address:</td>
         <td class="col-12">{{ user.address }}</td>
       </tr>
+      <tr>
+        <td class="col-12">test:</td>
+        <td class="col-12">{{ user.main_test_result }}</td>
+      </tr>
     </table>
     <nuxt-link class="btn btn-info" to="/panel/tourist/profile/edit"
       >edit</nuxt-link

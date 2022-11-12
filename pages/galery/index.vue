@@ -17,7 +17,7 @@
     </div>
     <h2 class="col-12 text-center mt-5">Grid style</h2>
     <p class="col-12 text-center">with Gap</p>
-    <div class="row px-3 justify-content-around mt-4">
+    <div class="row mx-0 px-3 justify-content-around mt-4">
       <img src="IMG_7466.jpg" alt="" style="width: 23%" />
       <img src="IMG_7428.jpg" alt="" style="width: 23%" />
       <img src="IMG_7466.jpg" alt="" style="width: 23%" />
@@ -26,7 +26,7 @@
 
     <h2 class="col-12 text-center mt-5">Grid style</h2>
     <p class="col-12 text-center">without space</p>
-    <div class="row mt-4">
+    <div class="row mx-0 mt-4">
       <img src="IMG_7411.jpg" alt="" class="col-3 p-0" />
       <img src="IMG_7410.jpg" alt="" class="col-3 p-0" />
       <img src="IMG_7411.jpg" alt="" class="col-3 p-0" />
@@ -168,7 +168,7 @@
     </div>
     <h2 class="col-12 text-center pt-5">Vertical gallery</h2>
     <p class="col-12 mb-4 text-center">Subtitle title, hover icon</p>
-    <div class="row justify-content-center">
+    <div class="row mx-0 justify-content-center">
       <img src="IMG_7423.jpg" alt="" class="col-8 my-2" />
       <img src="IMG_7440.jpg" alt="" class="col-8 my-2" />
       <img

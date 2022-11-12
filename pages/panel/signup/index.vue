@@ -4,7 +4,7 @@
     :style="{ height: myHeight }"
   >
     <div class="col-md-4 col-10 border rounded shadow bg-light p-5 my-5">
-      <ValidationObserver ref="form" v-slot="{ handleSubmit }">
+      <ValidationObserver ref="form" v-slot="{ handleSubmit }" v-if="!message">
         <form action="#" @submit.prevent="handleSubmit(register)">
           <h3 class="text-center">DEEP TREEP</h3>
           <h5 class="text-center">register</h5>
@@ -53,7 +53,7 @@
               </div>
             </div>
           </ValidationProvider>
-          <ValidationProvider
+          <!-- <ValidationProvider
             v-slot="{ errors }"
             vid="role"
             rules="required"
@@ -85,12 +85,12 @@
                 next
               </div>
             </div>
-          </ValidationProvider>
+          </ValidationProvider> -->
           <ValidationProvider
             v-slot="{ errors }"
             vid="role"
             rules="required"
-            v-if="step == 4"
+            v-if="step == 3"
           >
             <div>role:</div>
             <select v-model="formdata.role" class="col-12" style="height: 38px">
@@ -121,7 +121,7 @@
             v-slot="{ errors }"
             vid="role"
             rules="required|email"
-            v-if="step == 5"
+            v-if="step == 4"
           >
             <div>email:</div>
             <input type="email" v-model="formdata.email" class="col-12" />
@@ -143,6 +143,39 @@
               </div>
             </div>
           </ValidationProvider>
+
+          <ValidationProvider
+            v-slot="{ errors }"
+            vid="role"
+            rules="required"
+            v-if="step == 5"
+          >
+            <div>password:</div>
+            <input type="password" v-model="formdata.password" class="col-12" />
+            <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
+            <div class="col-12 px-0 mt-3 d-flex justify-content-between">
+              <div
+                class="btn btn-info col-3"
+                v-if="formdata.password != '' && formdata.role == 'tour-leader'"
+                @click="step--"
+              >
+                prev
+              </div>
+              <div
+                class="btn btn-info col-3"
+                v-if="formdata.password != '' && formdata.role == 'tour-leader'"
+                @click="step++"
+              >
+                next
+              </div>
+              <div
+                class="col-12 d-flex justify-content-between mt-3 px-0"
+                v-if="formdata.password != '' && formdata.role != 'tour-leader'"
+              >
+                <button class="btn btn-success col-12">sign up</button>
+              </div>
+            </div>
+          </ValidationProvider>
           <ValidationProvider
             v-slot="{ errors }"
             vid="role"
@@ -157,58 +190,20 @@
               v-model="formdata.address"
             ></textarea>
             <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
-            <div class="col-12 px-0 mt-3 d-flex justify-content-between">
-              <div
-                class="btn btn-info col-3"
-                v-if="formdata.address != ''"
-                @click="step--"
+            <div class="col-12 d-flex justify-content-between mt-3 px-0">
+              <button
+                class="btn btn-success col-12"
+                v-if="formdata.address != '' && step == 6"
               >
-                prev
-              </div>
-              <div
-                class="btn btn-info col-3"
-                v-if="formdata.address != ''"
-                @click="step++"
-              >
-                next
-              </div>
+                sign up
+              </button>
             </div>
           </ValidationProvider>
-          <ValidationProvider
-            v-slot="{ errors }"
-            vid="role"
-            rules="required"
-            v-if="step == 7"
-          >
-            <div>password:</div>
-            <input type="password" v-model="formdata.password" class="col-12" />
-            <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
-            <div class="col-12 px-0 mt-3 d-flex justify-content-between">
-              <div
-                class="btn btn-info col-3"
-                v-if="formdata.password != ''"
-                @click="step--"
-              >
-                prev
-              </div>
-              <div
-                class="btn btn-info col-3"
-                v-if="formdata.password != ''"
-                @click="step++"
-              >
-                next
-              </div>
-            </div>
-          </ValidationProvider>
-          <div v-if="step == 8">image:</div>
-          <input v-if="step == 8" type="file" ref="image" class="col-12 p-0" />
-          <div class="col-12 d-flex justify-content-between mt-3 px-0">
-            <button class="btn btn-success col-12" v-if="step == 8">
-              sign up
-            </button>
-          </div>
         </form>
       </ValidationObserver>
+      <div class="text-center text-success" v-if="message">
+        we send an email for you pls confirm your email
+      </div>
     </div>
   </div>
 </template>
@@ -218,12 +213,13 @@ export default {
   name: "login",
   data() {
     return {
+      message: false,
       step: 1,
       myHeight: window.innerHeight + "px",
       formdata: {
         email: "",
         password: "",
-        gender: "",
+        // gender: "",
         first_name: "",
         last_name: "",
         address: "",
@@ -246,12 +242,22 @@ export default {
         for (const property in this.formdata) {
           bodyFormData.append(property, this.formdata[property]);
         }
-        bodyFormData.append("image", this.$refs.image.files[0]);
         const res = await this.$axios.$post(
           "/api/usersmodel/register/",
           bodyFormData
         );
         console.log(res);
+        this.message = true;
+        const res2 = await this.$axios.post(
+          "api/usersmodel/send-authentication-email/",
+          {
+            email: this.formdata.email,
+          }
+        );
+        console.log(res2);
+        setTimeout(() => {
+          this.$router.push("/panel/confirmemail");
+        }, 2000);
       } catch (error) {
         console.log(error);
       }

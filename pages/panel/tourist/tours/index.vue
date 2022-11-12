@@ -17,7 +17,7 @@
           </div>
           <div class="col-12 text-center">
             <nuxt-link
-              :to="`/panel/tourist/tours/picture`"
+              :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
               >send picture</nuxt-link
             >
@@ -37,7 +37,7 @@
           </div>
           <div class="col-12 text-center">
             <nuxt-link
-              :to="`/panel/tourist/tours/picture`"
+              :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
               >send picture</nuxt-link
             >
@@ -57,7 +57,7 @@
           </div>
           <div class="col-12 text-center">
             <nuxt-link
-              :to="`/panel/tourist/tours/picture`"
+              :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
               >send picture</nuxt-link
             >
@@ -77,7 +77,7 @@
           </div>
           <div class="col-12 text-center">
             <nuxt-link
-              :to="`/panel/tourist/tours/picture`"
+              :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
               >send picture</nuxt-link
             >
@@ -97,7 +97,7 @@
           </div>
           <div class="col-12 text-center">
             <nuxt-link
-              :to="`/panel/tourist/tours/picture`"
+              :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
               >send picture</nuxt-link
             >
@@ -117,7 +117,7 @@
           </div>
           <div class="col-12 text-center">
             <nuxt-link
-              :to="`/panel/tourist/tours/picture`"
+              :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
               >send picture</nuxt-link
             >
@@ -179,6 +179,17 @@ export default {
     return {
       tours,
     };
+  },
+  methods: {
+    async nextprev(id) {
+      try {
+        const res = await this.axios.get(id);
+        this.tours = res;
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>

@@ -31,6 +31,48 @@
         </tr>
       </tbody>
     </table>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="orders.previous != null && orders.next != null"
+    >
+      <button
+        class="btn btn-info pointer mx-2"
+        @click="nextprev(orders.previous)"
+      >
+        prev
+      </button>
+      <button class="btn btn-info pointer mx-2" @click="nextprev(orders.next)">
+        next
+      </button>
+    </div>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="orders.previous == null && orders.next == null"
+    >
+      <button class="bg-light mx-2 border rounded">prev</button>
+      <button class="bg-light mx-2 border rounded">next</button>
+    </div>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="orders.previous != null && orders.next == null"
+    >
+      <button
+        class="btn btn-info pointer mx-2"
+        @click="nextprev(orders.previous)"
+      >
+        prev
+      </button>
+      <button class="bg-light mx-2 border rounded">next</button>
+    </div>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="orders.previous == null && orders.next != null"
+    >
+      <button class="bg-light mx-2 border rounded">prev</button>
+      <button class="btn btn-info pointer mx-2" @click="nextprev(orders.next)">
+        next
+      </button>
+    </div>
   </div>
 </template>
 
@@ -53,14 +95,21 @@ export default {
           `api/services/order-delete/${id}/`
         );
         console.log(res);
-        this.$router.push("/panel/service");
+        window.location.reload();
       } catch (error) {
         console.log(error);
       }
     },
-  },
-  mounted() {
-    console.log(orders);
+
+    async nextprev(id) {
+      try {
+        const res = await this.axios.get(id);
+        this.categories = res;
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>

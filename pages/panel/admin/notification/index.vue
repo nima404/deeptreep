@@ -1,8 +1,10 @@
 <template>
   <div>
-    <nuxt-link to="create" class="btn btn-success mb-3"
+    <!-- <nuxt-link
+      to="/panel/admin/notification/create"
+      class="btn btn-success mb-3"
       >create notification</nuxt-link
-    >
+    > -->
     <table class="table">
       <thead>
         <tr>
@@ -40,6 +42,54 @@
         </tr>
       </tbody>
     </table>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="notifications.previous != null && notifications.next != null"
+    >
+      <button
+        class="btn btn-info pointer mx-2"
+        @click="nextprev(notifications.previous)"
+      >
+        prev
+      </button>
+      <button
+        class="btn btn-info pointer mx-2"
+        @click="nextprev(notifications.next)"
+      >
+        next
+      </button>
+    </div>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="notifications.previous == null && notifications.next == null"
+    >
+      <button class="bg-light mx-2 border rounded">prev</button>
+      <button class="bg-light mx-2 border rounded">next</button>
+    </div>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="notifications.previous != null && notifications.next == null"
+    >
+      <button
+        class="btn btn-info pointer mx-2"
+        @click="nextprev(notifications.previous)"
+      >
+        prev
+      </button>
+      <button class="bg-light mx-2 border rounded">next</button>
+    </div>
+    <div
+      class="row mx-0 col-12 justify-content-center my-3"
+      v-if="notifications.previous == null && notifications.next != null"
+    >
+      <button class="bg-light mx-2 border rounded">prev</button>
+      <button
+        class="btn btn-info pointer mx-2"
+        @click="nextprev(notifications.next)"
+      >
+        next
+      </button>
+    </div>
   </div>
 </template>
 
@@ -55,6 +105,17 @@ export default {
     return {
       notifications,
     };
+  },
+  methods: {
+    async nextprev(id) {
+      try {
+        const res = await this.axios.get(id);
+        this.notifications = res;
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>

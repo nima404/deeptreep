@@ -5,8 +5,8 @@
       v-for="tour in detail.results"
       :key="tour.id"
     >
-      <div class="col-2 d-flex align-items-center">
-        <img :src="tour.image" class="col-12" alt="" />
+      <div class="col-2 d-flex align-items-center px-0">
+        <img :src="tour.image" class="col-12 px-0" alt="" />
       </div>
       <div
         class="col-10 py-2 d-flex flex-column justify-content-center"
@@ -21,9 +21,11 @@
         <div>transportation: {{ tour.transportation_en }}</div>
         <div>level: {{ tour.level_en }}</div>
         <div class="row">
-          <div class="col-4">capacity: {{ tour.capacity }}</div>
-          <div class="col-4">duration: {{ tour.duration }}</div>
-          <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+          <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+          <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+          <div class="col-md-4 col-12">
+            price: {{ tour.price }} {{ tour.pay_with }}
+          </div>
         </div>
       </div>
       <div
@@ -39,9 +41,11 @@
         <div>transportation: {{ tour.transportation_gr }}</div>
         <div>level: {{ tour.level_gr }}</div>
         <div class="row">
-          <div class="col-4">capacity: {{ tour.capacity }}</div>
-          <div class="col-4">duration: {{ tour.duration }}</div>
-          <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+          <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+          <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+          <div class="col-md-4 col-12">
+            price: {{ tour.price }} {{ tour.pay_with }}
+          </div>
         </div>
       </div>
       <div
@@ -57,9 +61,11 @@
         <div>transportation: {{ tour.transportation_fa }}</div>
         <div>level: {{ tour.level_fa }}</div>
         <div class="row">
-          <div class="col-4">capacity: {{ tour.capacity }}</div>
-          <div class="col-4">duration: {{ tour.duration }}</div>
-          <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+          <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+          <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+          <div class="col-md-4 col-12">
+            price: {{ tour.price }} {{ tour.pay_with }}
+          </div>
         </div>
       </div>
       <div
@@ -75,9 +81,11 @@
         <div>transportation: {{ tour.transportation_ch }}</div>
         <div>level: {{ tour.level_ch }}</div>
         <div class="row">
-          <div class="col-4">capacity: {{ tour.capacity }}</div>
-          <div class="col-4">duration: {{ tour.duration }}</div>
-          <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+          <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+          <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+          <div class="col-md-4 col-12">
+            price: {{ tour.price }} {{ tour.pay_with }}
+          </div>
         </div>
       </div>
       <div
@@ -93,9 +101,11 @@
         <div>transportation: {{ tour.transportation_sp }}</div>
         <div>level: {{ tour.level_sp }}</div>
         <div class="row">
-          <div class="col-4">capacity: {{ tour.capacity }}</div>
-          <div class="col-4">duration: {{ tour.duration }}</div>
-          <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+          <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+          <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+          <div class="col-md-4 col-12">
+            price: {{ tour.price }} {{ tour.pay_with }}
+          </div>
         </div>
       </div>
       <div
@@ -111,9 +121,11 @@
         <div>transportation: {{ tour.transportation_ar }}</div>
         <div>level: {{ tour.level_ar }}</div>
         <div class="row">
-          <div class="col-4">capacity: {{ tour.capacity }}</div>
-          <div class="col-4">duration: {{ tour.duration }}</div>
-          <div class="col-4">price: {{ tour.price }} {{ tour.pay_with }}</div>
+          <div class="col-md-4 col-12">capacity: {{ tour.capacity }}</div>
+          <div class="col-md-4 col-12">duration: {{ tour.duration }}</div>
+          <div class="col-md-4 col-12">
+            price: {{ tour.price }} {{ tour.pay_with }}
+          </div>
         </div>
       </div>
     </div>
@@ -151,6 +163,7 @@ export default {
   data() {
     return {
       tourist: 0,
+      status: true,
     };
   },
   async asyncData({ $axios, params }) {
@@ -182,6 +195,26 @@ export default {
           `api/toursLeaders/tour-add-tourist/${this.$route.params.tourId}/`,
           {
             tourist: this.tourist,
+          }
+        );
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+  watch: {
+    statue() {
+      this.change;
+    },
+  },
+  computed: {
+    async change() {
+      try {
+        const res = await this.$axios.put(
+          `api/toursLeaders/tour-update/${this.$route.params.tourId}/`,
+          {
+            status: this.status,
           }
         );
         console.log(res);

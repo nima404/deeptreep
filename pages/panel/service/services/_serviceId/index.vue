@@ -90,7 +90,7 @@ export default {
           service: this.$route.params.serviceId,
           status: true,
         });
-        this.$router.push("/panel/service/services");
+        window.location.reload();
         console.log(res);
       } catch (error) {
         console.log(error);
