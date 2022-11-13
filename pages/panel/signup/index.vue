@@ -8,51 +8,6 @@
         <form action="#" @submit.prevent="handleSubmit(register)">
           <h3 class="text-center">DEEP TREEP</h3>
           <h5 class="text-center">register</h5>
-          <ValidationProvider
-            v-slot="{ errors }"
-            vid="role"
-            rules="required"
-            v-if="step == 1"
-          >
-            <div>first name:</div>
-            <input type="text" class="col-12" v-model="formdata.first_name" />
-            <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
-            <div class="col-12 px-0 mt-3 d-flex justify-content-end">
-              <div
-                class="btn btn-info col-3"
-                v-if="formdata.first_name != ''"
-                @click="step++"
-              >
-                next
-              </div>
-            </div>
-          </ValidationProvider>
-          <ValidationProvider
-            v-slot="{ errors }"
-            vid="role"
-            rules="required"
-            v-if="step == 2"
-          >
-            <div>last name:</div>
-            <input type="text" class="col-12" v-model="formdata.last_name" />
-            <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
-            <div class="col-12 px-0 mt-3 d-flex justify-content-between">
-              <div
-                class="btn btn-info col-3"
-                v-if="formdata.last_name != ''"
-                @click="step--"
-              >
-                prev
-              </div>
-              <div
-                class="btn btn-info col-3"
-                v-if="formdata.last_name != ''"
-                @click="step++"
-              >
-                next
-              </div>
-            </div>
-          </ValidationProvider>
           <!-- <ValidationProvider
             v-slot="{ errors }"
             vid="role"
@@ -90,7 +45,7 @@
             v-slot="{ errors }"
             vid="role"
             rules="required"
-            v-if="step == 3"
+            v-if="step == 1"
           >
             <div>role:</div>
             <select v-model="formdata.role" class="col-12" style="height: 38px">
@@ -100,14 +55,7 @@
               <option value="service">service</option>
             </select>
             <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
-            <div class="col-12 px-0 mt-3 d-flex justify-content-between">
-              <div
-                class="btn btn-info col-3"
-                v-if="formdata.role != ''"
-                @click="step--"
-              >
-                prev
-              </div>
+            <div class="col-12 px-0 mt-3 d-flex justify-content-end">
               <div
                 class="btn btn-info col-3"
                 v-if="formdata.role != ''"
@@ -121,7 +69,7 @@
             v-slot="{ errors }"
             vid="role"
             rules="required|email"
-            v-if="step == 4"
+            v-if="step == 2"
           >
             <div>email:</div>
             <input type="email" v-model="formdata.email" class="col-12" />
@@ -148,7 +96,7 @@
             v-slot="{ errors }"
             vid="role"
             rules="required"
-            v-if="step == 5"
+            v-if="step == 3"
           >
             <div>password:</div>
             <input type="password" v-model="formdata.password" class="col-12" />
@@ -180,7 +128,7 @@
             v-slot="{ errors }"
             vid="role"
             rules="required"
-            v-if="step == 6"
+            v-if="step == 4"
           >
             <div>address:</div>
             <textarea
@@ -193,7 +141,7 @@
             <div class="col-12 d-flex justify-content-between mt-3 px-0">
               <button
                 class="btn btn-success col-12"
-                v-if="formdata.address != '' && step == 6"
+                v-if="formdata.address != '' && step == 4"
               >
                 sign up
               </button>
@@ -220,8 +168,6 @@ export default {
         email: "",
         password: "",
         // gender: "",
-        first_name: "",
-        last_name: "",
         address: "",
         role: "",
       },
