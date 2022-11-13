@@ -519,11 +519,16 @@ export default {
   },
 
   async asyncData({ $axios }) {
-    const user = await $axios.get("api/usersmodel/user-info/");
-    const test = await $axios.get("/api/psychologicalTesting/maintest/");
+    let user = {};
+    let test = {};
+    try {
+      user = await $axios.get("api/usersmodel/user-info/");
+      test = await $axios.get("/api/psychologicalTesting/maintest/");
+    } catch {}
+
     return {
-      test: test.data.results[0],
-      user: user.data.results[0].id,
+      test: test?.data?.results[0] || {},
+      user: user?.data?.results[0]?.id || {},
     };
   },
   methods: {

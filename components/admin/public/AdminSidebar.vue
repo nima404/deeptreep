@@ -53,7 +53,7 @@
         <span class="ms-1 d-none d-sm-inline-block">create score</span>
       </nuxt-link>
       <button
-        class="py-2 px-4 w-100 right-to-left-animation border-bottom"
+        class="py-2 px-4 w-100 right-to-left-animation border-0 border-bottom text-left bg-transparent"
         @click="onSignOut"
       >
         <span class="d-block d-sm-inline-block text-center">

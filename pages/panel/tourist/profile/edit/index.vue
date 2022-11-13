@@ -66,8 +66,7 @@ export default {
         const bodyFormData = new FormData();
         bodyFormData.append("first_name", this.user.first_name);
         bodyFormData.append("last_name", this.user.last_name);
-        bodyFormData.append("password", this.user.password);
-        bodyFormData.append("gender", this.user.gender);
+        bodyFormData.append("gender", this.user.gender || "");
         bodyFormData.append("role", this.user.role);
         bodyFormData.append("address", this.user.address);
         if (this.$refs.fileInput.files[0] != undefined) {

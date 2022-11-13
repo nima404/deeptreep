@@ -71,13 +71,13 @@ export default {
         console.log(res);
         const userRole = await this.$axios.get("api/usersmodel/user-info/");
         // console.log(userRole);
-        if (userRole.data.results[0].role === "tourist") {
+        if (userRole?.data?.results[0]?.role === "tourist") {
           this.$router.push("/panel/tourist");
-        } else if (userRole.data.results[0].role === "tour-leader") {
+        } else if (userRole?.data?.results[0]?.role === "tour-leader") {
           this.$router.push("/panel/touristLeader");
-        } else if (userRole.data.results[0].role === "leader-tour-manager") {
+        } else if (userRole?.data?.results[0]?.role === "leader-tour-manager") {
           this.$router.push("/panel/admin");
-        } else if (userRole.data.results[0].role === "service") {
+        } else if (userRole?.data?.results[0]?.role === "service") {
           this.$router.push("/panel/service");
         }
       } catch (error) {
