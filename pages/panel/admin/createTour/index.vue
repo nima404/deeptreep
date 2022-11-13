@@ -56,7 +56,7 @@
             <span class="text-xs text-danger">{{ errors[0] }}</span>
           </ValidationProvider>
           <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
-            <div>descriptions:</div>
+            <div>descriptions en:</div>
             <textarea
               id=""
               cols="30"
@@ -67,6 +67,67 @@
             </textarea>
             <span class="text-xs text-danger">{{ errors[0] }}</span>
           </ValidationProvider>
+          <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
+            <div>descriptions gr:</div>
+            <textarea
+              id=""
+              cols="30"
+              rows="5"
+              class="col-12"
+              v-model="tour.descriptions_gr"
+            >
+            </textarea>
+            <span class="text-xs text-danger">{{ errors[0] }}</span>
+          </ValidationProvider>
+          <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
+            <div>descriptions fa:</div>
+            <textarea
+              id=""
+              cols="30"
+              rows="5"
+              class="col-12"
+              v-model="tour.descriptions_fa"
+            >
+            </textarea>
+            <span class="text-xs text-danger">{{ errors[0] }}</span>
+          </ValidationProvider>
+          <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
+            <div>descriptions ch:</div>
+            <textarea
+              id=""
+              cols="30"
+              rows="5"
+              class="col-12"
+              v-model="tour.descriptions_ch"
+            >
+            </textarea>
+            <span class="text-xs text-danger">{{ errors[0] }}</span>
+          </ValidationProvider>
+          <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
+            <div>descriptions sp:</div>
+            <textarea
+              id=""
+              cols="30"
+              rows="5"
+              class="col-12"
+              v-model="tour.descriptions_sp"
+            >
+            </textarea>
+            <span class="text-xs text-danger">{{ errors[0] }}</span>
+          </ValidationProvider>
+          <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
+            <div>descriptions ar:</div>
+            <textarea
+              id=""
+              cols="30"
+              rows="5"
+              class="col-12"
+              v-model="tour.descriptions_ar"
+            >
+            </textarea>
+            <span class="text-xs text-danger">{{ errors[0] }}</span>
+          </ValidationProvider>
+
           <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
             <div>services:</div>
             <textarea
@@ -130,6 +191,11 @@ export default {
     return {
       tour: {
         descriptions_en: "",
+        descriptions_gr: "",
+        descriptions_fa: "",
+        descriptions_ch: "",
+        descriptions_sp: "",
+        descriptions_ar: "",
         transportation_en: "by-air",
         level_en: "silver",
         pay_with: "GBP",
@@ -183,12 +249,6 @@ export default {
         bodyFormData.append("country_fa", this.tour.country_en);
         bodyFormData.append("country_gr", this.tour.country_en);
         bodyFormData.append("country_sp", this.tour.country_en);
-
-        bodyFormData.append("descriptions_ch", this.tour.descriptions_en);
-        bodyFormData.append("descriptions_ar", this.tour.descriptions_en);
-        bodyFormData.append("descriptions_fa", this.tour.descriptions_en);
-        bodyFormData.append("descriptions_gr", this.tour.descriptions_en);
-        bodyFormData.append("descriptions_sp", this.tour.descriptions_en);
 
         if (this.tour.transportation_en == "by-air") {
           bodyFormData.append("transportation_ch", "空运");

@@ -40,10 +40,16 @@
         </ValidationProvider>
         <ValidationProvider v-slot="{ errors }" rules="required">
           <div class="col-12">category</div>
-          <input type="text" class="col-12" v-model="formData.category" /><span
-            class="text-xs text-danger col-12 p-0"
-            >{{ errors[0] }}</span
+
+          <select
+            v-model="formData.category"
+            class="border rounded px-2 pointer col-12 border-dark p-2"
           >
+            <option :value="n.id" v-for="n in categories" :key="n.id">
+              {{ n.name }}
+            </option>
+          </select>
+          <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
         </ValidationProvider>
         <ValidationProvider v-slot="{ errors }" rules="required">
           <div class="col-12">descriptions</div>
@@ -69,6 +75,17 @@
 export default {
   name: "edit",
   layout: "service",
+
+  async asyncData({ $axios }) {
+    let categories = {};
+    try {
+      categories = await $axios.get("api/services/categories/");
+    } catch {}
+    console.log(categories);
+    return {
+      categories: categories?.data?.results || {},
+    };
+  },
 
   data() {
     return {
