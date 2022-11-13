@@ -527,7 +527,7 @@ export default {
     } catch {}
 
     return {
-      test: test?.data?.results[0] || {},
+      test: test?.data?.results[0] || null,
       user: user?.data?.results[0]?.id || {},
     };
   },
@@ -544,6 +544,7 @@ export default {
           bodyFormData
         );
         console.log(res);
+        this.$router.push("/panel/tourist/profile");
       } catch (error) {
         console.log(error);
       }
