@@ -21,16 +21,6 @@
           <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
         </ValidationProvider>
         <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
-          <label for="" class="col-12 mt-2">role:</label>
-          <select class="col-12" style="height: 38px" v-model="user.role">
-            <option value="tourist">tourist</option>
-            <option value="tour-leader">tour leader</option>
-            <option value="leader-tour-manager">leader tour manager</option>
-            <option value="service">service</option>
-          </select>
-          <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
-        </ValidationProvider>
-        <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
           <label for="" class="col-12 mt-2">address:</label>
           <textarea
             type="text"
@@ -67,7 +57,6 @@ export default {
         bodyFormData.append("first_name", this.user.first_name);
         bodyFormData.append("last_name", this.user.last_name);
         bodyFormData.append("gender", this.user.gender || "");
-        bodyFormData.append("role", this.user.role);
         bodyFormData.append("address", this.user.address);
         if (this.$refs.fileInput.files[0] != undefined) {
           bodyFormData.append("image", this.$refs.fileInput.files[0]);

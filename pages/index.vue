@@ -5,16 +5,75 @@
       style="background-image: url('IMG_7467.jpg'); background-size: cover"
     >
       <div class="text-center p-5" style="background-color: rgba(0, 0, 0, 0.6)">
-        <div class="py-5">
-          <h1 class="mt-5 pt-5 my-3">Holidays and entertainment</h1>
-          <h5 class="my-3">Ask us for the amazing</h5>
-          <div class="mt-3">Italy, Rome, Venice, Milan</div>
-          <button
-            class="rounded p-2 text-center mt-3 mb-5 bgmain text-light"
-            style="border: none"
-          >
-            More
-          </button>
+        <div class="row py-5 mt-5">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
+              <img
+                class="card-img-top"
+                src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
+              <img
+                class="card-img-top"
+                src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
+              <img
+                class="card-img-top"
+                src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
+              <img
+                class="card-img-top"
+                src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
