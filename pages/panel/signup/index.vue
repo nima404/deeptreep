@@ -50,7 +50,7 @@
             <div>role:</div>
             <select v-model="formdata.role" class="col-12" style="height: 38px">
               <option value="tourist">tourist</option>
-              <option value="tour-leader">tour leader</option>
+              <option value="tour-leader">tour guide</option>
               <option value="leader-tour-manager">leader tour manager</option>
               <option value="service">service</option>
             </select>

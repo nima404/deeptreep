@@ -3,11 +3,11 @@
     <ValidationObserver ref="form" v-slot="{ handleSubmit }">
       <form action="#" @submit.prevent="handleSubmit(sendTiket)">
         <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
-          <div>tourleader:</div>
+          <div>tour guide:</div>
           <input type="number" class="col-12" v-model="tourleader" />
           <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
         </ValidationProvider>
-        <div class="text-danger" v-if="message">invalid tourleader id</div>
+        <div class="text-danger" v-if="message">invalid tour guide id</div>
         <button class="btn btn-success mt-3">send</button>
       </form>
     </ValidationObserver>

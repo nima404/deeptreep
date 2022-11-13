@@ -11,7 +11,7 @@
           <th>#</th>
           <th>date</th>
           <th>tourist</th>
-          <th>tourleader</th>
+          <th>tour guide</th>
           <th>message</th>
         </tr>
       </thead>

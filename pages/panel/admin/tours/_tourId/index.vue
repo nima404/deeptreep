@@ -197,7 +197,7 @@
         <tr>
           <th>#</th>
           <th>tour</th>
-          <th>tour leader</th>
+          <th>tour guide</th>
           <th>percentage</th>
           <th>function</th>
         </tr>
