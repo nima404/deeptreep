@@ -159,6 +159,7 @@
 <script>
 export default {
   name: "login",
+  layout: "main",
   data() {
     return {
       message: false,
@@ -178,11 +179,32 @@ export default {
     window.addEventListener("resize", this.myEventHandler);
   },
 
+  // async mounted() {
+  //   try {
+  //     await this.$recaptcha.init();
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // },
+
+  //   beforeDestroy() {
+  //   this.$recaptcha.destroy()
+  // }
+
   methods: {
     myEventHandler(e) {
       this.myHeight = window.innerHeight + "px";
     },
     async register() {
+      // try {
+      //   const token = await this.$recaptcha.execute('login')
+      //   console.log('ReCaptcha token:', token)
+
+      //   // send token to server alongside your form data
+
+      // } catch (error) {
+      //   console.log('Login error:', error)
+      // }
       try {
         const bodyFormData = new FormData();
         for (const property in this.formdata) {

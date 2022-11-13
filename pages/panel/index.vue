@@ -44,6 +44,7 @@
 
 <script>
 export default {
+  layout: "main",
   name: "login",
   data() {
     return {
@@ -56,11 +57,31 @@ export default {
   created() {
     window.addEventListener("resize", this.myEventHandler);
   },
+  // async mounted() {
+  //   try {
+  //     await this.$recaptcha.init();
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // },
+
+  //   beforeDestroy() {
+  //   this.$recaptcha.destroy()
+  // }
   methods: {
     myEventHandler(e) {
       this.myHeight = window.innerHeight + "px";
     },
     async login() {
+      // try {
+      //   const token = await this.$recaptcha.execute('login')
+      //   console.log('ReCaptcha token:', token)
+
+      //   // send token to server alongside your form data
+
+      // } catch (error) {
+      //   console.log('Login error:', error)
+      // }
       try {
         const res = await this.$auth.loginWith("local", {
           data: {
