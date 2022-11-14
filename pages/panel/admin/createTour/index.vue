@@ -247,7 +247,7 @@
           </ValidationProvider>
           <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
             <div>leaders:</div>
-            <input type="number" class="col-12" v-model="tour.leaders" />
+            <input type="text" class="col-12" v-model="tour.leaders" />
             <span class="text-xs text-danger">{{ errors[0] }}</span>
           </ValidationProvider>
 
@@ -321,10 +321,19 @@ export default {
   },
   methods: {
     async create() {
+      const newTour = {
+        ...this.tour,
+        leaders: this.tour.leaders.split(",").map((item) => +item),
+      };
       try {
         const bodyFormData = new FormData();
-        for (const property in this.tour) {
-          bodyFormData.append(property, this.tour[property]);
+
+        for (let property in newTour) {
+          Array.isArray(newTour[property])
+            ? newTour[property].forEach((value) =>
+                bodyFormData.append(property, value)
+              )
+            : bodyFormData.append(property, newTour[property]);
         }
 
         bodyFormData.append("image", this.$refs.image.files[0]);

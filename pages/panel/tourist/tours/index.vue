@@ -1,6 +1,10 @@
 <template>
   <div class="row">
-    <div class="col-4 px-2 mb-2" v-for="tour in tours.results" :key="tour.id">
+    <div
+      class="col-12 col-sm-4 col-lg-3 px-2 mb-2"
+      v-for="tour in tours.results"
+      :key="tour.id"
+    >
       <div class="col-12 border rounded p-0">
         <img :src="tour.image" class="col-12" />
         <div class="col-12 py-2" v-if="$store.state.lang.lang == 'English'">
@@ -19,7 +23,7 @@
             <nuxt-link
               :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
-              >send picture</nuxt-link
+              >detail</nuxt-link
             >
           </div>
         </div>
@@ -39,7 +43,7 @@
             <nuxt-link
               :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
-              >send picture</nuxt-link
+              >detail</nuxt-link
             >
           </div>
         </div>
@@ -59,7 +63,7 @@
             <nuxt-link
               :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
-              >send picture</nuxt-link
+              >detail</nuxt-link
             >
           </div>
         </div>
@@ -79,7 +83,7 @@
             <nuxt-link
               :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
-              >send picture</nuxt-link
+              >detail</nuxt-link
             >
           </div>
         </div>
@@ -99,7 +103,7 @@
             <nuxt-link
               :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
-              >send picture</nuxt-link
+              >detail</nuxt-link
             >
           </div>
         </div>
@@ -119,7 +123,7 @@
             <nuxt-link
               :to="`/panel/tourist/tours/${tour.id}`"
               class="button px-3 pb-1"
-              >send picture</nuxt-link
+              >detail</nuxt-link
             >
           </div>
         </div>

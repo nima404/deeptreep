@@ -2,7 +2,7 @@
   <div class="shadow h-100">
     <ul class="d-flex flex-column p-0 w-100">
       <li class="text-center py-3 border-bottom bgmain text-light">
-        <h3>DEEP TREEP</h3>
+        <h3 class="h6">DEEP TREEP</h3>
       </li>
       <nuxt-link
         to="/panel/touristLeader/profile"

@@ -2,7 +2,7 @@
   <div class="h-100 shadow">
     <ul class="d-flex flex-column p-0 w-100 text-dark">
       <li class="text-center py-3 border-bottom bgmain text-light">
-        <h3>DEEP TREEP</h3>
+        <h3 class="h6">DEEP TREEP</h3>
       </li>
       <nuxt-link
         to="/panel/tourist/profile"
@@ -30,15 +30,6 @@
           <i class="fa-regular fa-ticket"></i>
         </span>
         <span class="ms-1 d-none d-sm-inline-block">tikets</span>
-      </nuxt-link>
-      <nuxt-link
-        to="/panel/tourist/score"
-        class="py-2 px-4 w-100 right-to-left-animation border-bottom"
-      >
-        <span class="d-block d-sm-inline-block text-center">
-          <i class="fa-regular fa-star"></i>
-        </span>
-        <span class="ms-1 d-none d-sm-inline-block">score</span>
       </nuxt-link>
       <nuxt-link
         to="/panel/tourist/test"
