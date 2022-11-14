@@ -664,18 +664,14 @@ export default {
   },
   async asyncData({ $axios }) {
     const services = await $axios.$get("/api/home/services/");
-    const servicesCatgories = await $axios.$get(
-      "/api/home/services-catgories/"
-    );
+    const categories = await $axios.$get("api/home/services-catgories/");
     const tours = await $axios.$get("/api/home/tours/");
     const toursByScores = await $axios.$get("/api/home/tours-by-scores/");
-    const categories = await $axios.$get("api/home/services-catgories/");
     return {
       services,
-      servicesCatgories,
       tours,
-      toursByScores,
       categories,
+      toursByScores,
     };
   },
   methods: {

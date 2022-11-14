@@ -99,40 +99,9 @@
         <nuxt-link to="/services" class="px-2 pb-3 text-light"
           >Services</nuxt-link
         >
-        <span
-          class="px-2 pb-3 text-light"
-          style="overflow: visible; z-index: 3"
+        <nuxt-link to="/service-category" class="px-2 pb-3 text-light"
+          >Service categories</nuxt-link
         >
-          <div class="pointer" @click="cateMenu = !cateMenu">
-            Services Categories <i class="fa-solid fa-angle-down"></i>
-          </div>
-          <div
-            class="cateMenu px-0"
-            v-if="cateMenu && $auth.strategy.token.status().valid() == false"
-          >
-            <div
-              class="cateI px-2 col-12 text-light"
-              v-for="cate in categories"
-              :key="cate.id"
-              @click="push(cate.name)"
-            >
-              {{ cate.name }}
-            </div>
-          </div>
-          <div
-            class="cateMenu2 px-0"
-            v-if="cateMenu && $auth.strategy.token.status().valid() == true"
-          >
-            <div
-              class="cateI px-2 col-12 text-light"
-              v-for="cate in categories"
-              :key="cate.id"
-              @click="push(cate.name)"
-            >
-              {{ cate.name }}
-            </div>
-          </div>
-        </span>
         <!-- <nuxt-link to="/weblog" class="px-2 pb-3 text-light">weblog</nuxt-link> -->
         <nuxt-link to="/about" class="px-2 pb-3 text-light">About</nuxt-link>
       </div>
@@ -237,28 +206,9 @@
         <nuxt-link to="/services" class="px-2 pb-3 text-light"
           >Services</nuxt-link
         >
-        <div
-          class="px-2 pb-3 text-light"
-          style="overflow: visible; z-index: 3; max-height: 150px !important"
+        <nuxt-link to="/service-category" class="px-2 pb-3 text-light"
+          >Service categories</nuxt-link
         >
-          <div class="pointer" @click="cateMenu = !cateMenu">
-            Categories <i class="fa-solid fa-angle-down"></i>
-          </div>
-          <div
-            class="px-0"
-            style="overflow-y: scroll; max-height: 130px"
-            v-if="cateMenu"
-          >
-            <div
-              class="cateI px-2 col-12 text-light"
-              v-for="cate in categories"
-              :key="cate.id"
-              @click="push(cate.name)"
-            >
-              {{ cate.name }}
-            </div>
-          </div>
-        </div>
         <nuxt-link to="/about" class="px-2 pb-3 text-light mb-3"
           >About</nuxt-link
         >
