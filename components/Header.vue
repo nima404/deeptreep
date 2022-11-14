@@ -28,7 +28,10 @@
         ref="show"
       >
         <div class="d-flex align-items-center mt-3 mt-sm-0 flex-row">
-          <select v-model="lang" class="border rounded px-2 mx-2 pointer">
+          <select
+            v-model="lang"
+            class="border rounded px-2 mx-2 pointer form-control form-control-sm"
+          >
             <option value="en">En</option>
             <option value="gr">Ge</option>
             <option value="fa">Pe</option>
@@ -59,14 +62,17 @@
             class="ml-2"
             v-if="$auth.strategy.token.status().valid() == false"
           >
-            <nuxt-link to="/panel" class="text-light ml-2 btn bgorange">
-              <i class="fa fa-lock"></i>
-              login</nuxt-link
+            <nuxt-link
+              to="/panel"
+              class="text-light ml-2 btn bgorange d-flex justify-content-center align-items-center py-1"
+            >
+              <i class="fa fa-lock mr-2"></i>
+              <span class="ms-2">login</span></nuxt-link
             >
           </div>
           <nuxt-link
             to="/panel/tourist"
-            class="btn btn-info"
+            class="btn bgorange text-light"
             v-if="
               $auth.strategy.token.status().valid() == true &&
               userInfo.rele == 'rourist'
@@ -75,7 +81,7 @@
           >
           <nuxt-link
             to="/panel/touristLeader"
-            class="btn btn-info"
+            class="btn bgorange text-light"
             v-if="
               $auth.strategy.token.status().valid() == true &&
               userInfo.role == 'tour-leader'
@@ -84,7 +90,7 @@
           >
           <nuxt-link
             to="/panel/admin"
-            class="btn btn-info"
+            class="btn bgorange text-light"
             v-if="
               $auth.strategy.token.status().valid() == true &&
               userInfo.role == 'leader-tour-manager'
@@ -93,7 +99,7 @@
           >
           <nuxt-link
             to="/panel/service"
-            class="btn btn-info"
+            class="btn bgorange text-light"
             v-if="
               $auth.strategy.token.status().valid() == true &&
               userInfo.role == 'service'
@@ -140,7 +146,10 @@
           >
         </div>
         <div class="d-flex my-3 flex-column">
-          <select v-model="lang" class="border rounded px-2 mr-2 pointer">
+          <select
+            v-model="lang"
+            class="border rounded px-2 mr-2 pointer form-control form-control-sm"
+          >
             <option value="en">En</option>
             <option value="gr">Ge</option>
             <option value="fa">Pe</option>
@@ -165,7 +174,7 @@
             </div>
             <nuxt-link
               to="/panel/tourist"
-              class="btn btn-info"
+              class="btn bgorange text-light"
               v-if="
                 $auth.strategy.token.status().valid() == true &&
                 userInfo.role == 'tourist'
@@ -174,7 +183,7 @@
             >
             <nuxt-link
               to="/panel/touristLeader"
-              class="btn btn-info"
+              class="btn bgorange text-light"
               v-if="
                 $auth.strategy.token.status().valid() == true &&
                 userInfo.role == 'tour-leader'
@@ -192,7 +201,7 @@
             >
             <nuxt-link
               to="/panel/service"
-              class="btn btn-info"
+              class="btn bgorange text-light"
               v-if="
                 $auth.strategy.token.status().valid() == true &&
                 userInfo.role == 'service'
