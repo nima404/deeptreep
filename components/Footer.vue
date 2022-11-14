@@ -93,8 +93,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-5 col-12 text-muted pb-5">
-        <p class="col-lg-6 col-12">
+      <div class="col-md-5 col-12 text-light pb-5">
+        <p class="col-lg-6 col-12 text-justify">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas
           purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris

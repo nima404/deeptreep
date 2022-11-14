@@ -92,7 +92,9 @@
               <div>inventory: {{ service.inventory }}</div>
               <div>price: {{ service.price }}</div>
             </div>
-            <nuxt-link :to="`services/${service.id}`" class="btn btn-info"
+            <nuxt-link
+              :to="`services/${service.id}`"
+              class="btn text-light bgorange"
               >more</nuxt-link
             >
           </div>
@@ -110,7 +112,9 @@
               <div>inventory: {{ service.inventory }}</div>
               <div>price: {{ service.price }}</div>
             </div>
-            <nuxt-link :to="`services/${service.id}`" class="btn btn-info"
+            <nuxt-link
+              :to="`services/${service.id}`"
+              class="btn text-light bgorange"
               >more</nuxt-link
             >
           </div>

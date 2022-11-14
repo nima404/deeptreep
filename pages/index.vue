@@ -5,8 +5,8 @@
       style="background-image: url('IMG_7467.jpg'); background-size: cover"
     >
       <div class="text-center p-5" style="background-color: rgba(0, 0, 0, 0.6)">
-        <div class="row py-5 mt-5">
-          <div class="col-12 col-sm-6 col-lg-3">
+        <div class="row pt-5 g-5 mt-5 justify-content-center">
+          <div class="col-12 col-lg-4 mb-4">
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"
@@ -19,11 +19,15 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <nuxt-link
+                  to="/"
+                  class="btn text-light bgorange w-100 primary-button"
+                  >Go somewhere</nuxt-link
+                >
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-4 mb-4">
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"
@@ -36,11 +40,15 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <nuxt-link
+                  to="/"
+                  class="btn btn-primary w-100 text-light bgorange primary-button"
+                  >Go somewhere</nuxt-link
+                >
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-4 mb-4">
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"
@@ -53,24 +61,11 @@
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
-              <img
-                class="card-img-top"
-                src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <nuxt-link
+                  to="/"
+                  class="btn text-light bgorange w-100 primary-button"
+                  >Go somewhere</nuxt-link
+                >
               </div>
             </div>
           </div>
@@ -324,7 +319,9 @@
                     ></i
                     ><span class="text-muted">{{ tour.duration }} days</span>
                   </div>
-                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                  <nuxt-link
+                    :to="`/tor/${tour.id}`"
+                    class="btn text-light bgorange"
                     >more</nuxt-link
                   >
                 </div>
@@ -352,7 +349,9 @@
                     ></i
                     ><span class="text-muted">{{ tour.duration }} days</span>
                   </div>
-                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                  <nuxt-link
+                    :to="`/tor/${tour.id}`"
+                    class="btn text-light bgorange"
                     >more</nuxt-link
                   >
                 </div>
@@ -380,7 +379,9 @@
                     ></i
                     ><span class="text-muted">{{ tour.duration }} days</span>
                   </div>
-                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                  <nuxt-link
+                    :to="`/tor/${tour.id}`"
+                    class="btn text-light bgorange"
                     >more</nuxt-link
                   >
                 </div>
@@ -408,7 +409,9 @@
                     ></i
                     ><span class="text-muted">{{ tour.duration }} days</span>
                   </div>
-                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                  <nuxt-link
+                    :to="`/tor/${tour.id}`"
+                    class="btn text-light bgorange"
                     >more</nuxt-link
                   >
                 </div>
@@ -436,7 +439,9 @@
                     ></i
                     ><span class="text-muted">{{ tour.duration }} days</span>
                   </div>
-                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                  <nuxt-link
+                    :to="`/tor/${tour.id}`"
+                    class="btn text-light bgorange"
                     >more</nuxt-link
                   >
                 </div>
@@ -464,7 +469,9 @@
                     ></i
                     ><span class="text-muted">{{ tour.duration }} days</span>
                   </div>
-                  <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+                  <nuxt-link
+                    :to="`/tor/${tour.id}`"
+                    class="btn text-light bgorange"
                     >more</nuxt-link
                   >
                 </div>
@@ -873,6 +880,15 @@ export default {
 .input2 {
   border: none;
   border-radius: 50px;
+}
+
+.primary-button {
+  transition: all 0.3s ease 0s;
+  border: 2px solid rgba(238, 238, 238, 0.468);
+  box-shadow: 0px 15px 20px rgba(255, 123, 0, 0.185) !important;
+}
+.primary-button:hover {
+  transform: translateY(-4px);
 }
 @media only screen and (max-width: 768px) {
   .service {

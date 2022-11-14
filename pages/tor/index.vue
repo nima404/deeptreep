@@ -207,7 +207,7 @@
               <i class="fa-regular fa-clock-rotate-left text-info mr-2"></i
               ><span class="text-muted">{{ tour.duration }} days</span>
             </div>
-            <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+            <nuxt-link :to="`/tor/${tour.id}`" class="btn text-light bgorange"
               >more</nuxt-link
             >
           </div>
@@ -229,7 +229,7 @@
               <i class="fa-regular fa-clock-rotate-left text-info mr-2"></i
               ><span class="text-muted">{{ tour.duration }} days</span>
             </div>
-            <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+            <nuxt-link :to="`/tor/${tour.id}`" class="btn text-light bgorange"
               >more</nuxt-link
             >
           </div>
@@ -251,7 +251,7 @@
               <i class="fa-regular fa-clock-rotate-left text-info mr-2"></i
               ><span class="text-muted">{{ tour.duration }} days</span>
             </div>
-            <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+            <nuxt-link :to="`/tor/${tour.id}`" class="btn text-light bgorange"
               >more</nuxt-link
             >
           </div>
@@ -273,7 +273,7 @@
               <i class="fa-regular fa-clock-rotate-left text-info mr-2"></i
               ><span class="text-muted">{{ tour.duration }} days</span>
             </div>
-            <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+            <nuxt-link :to="`/tor/${tour.id}`" class="btn text-light bgorange"
               >more</nuxt-link
             >
           </div>
@@ -295,7 +295,7 @@
               <i class="fa-regular fa-clock-rotate-left text-info mr-2"></i
               ><span class="text-muted">{{ tour.duration }} days</span>
             </div>
-            <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+            <nuxt-link :to="`/tor/${tour.id}`" class="btn text-light bgorange"
               >more</nuxt-link
             >
           </div>
@@ -317,7 +317,7 @@
               <i class="fa-regular fa-clock-rotate-left text-info mr-2"></i
               ><span class="text-muted">{{ tour.duration }} days</span>
             </div>
-            <nuxt-link :to="`/tor/${tour.id}`" class="btn btn-info"
+            <nuxt-link :to="`/tor/${tour.id}`" class="btn text-light bgorange"
               >more</nuxt-link
             >
           </div>

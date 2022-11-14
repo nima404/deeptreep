@@ -18,7 +18,9 @@
           <td>{{ category.name }}</td>
           <td><img :src="category.image" height="40" alt="" width="" /></td>
           <td>
-            <nuxt-link :to="`categories/${category.id}`" class="btn btn-info"
+            <nuxt-link
+              :to="`categories/${category.id}`"
+              class="btn text-light bgorange"
               >more</nuxt-link
             >
           </td>
