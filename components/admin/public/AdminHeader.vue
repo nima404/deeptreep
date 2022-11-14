@@ -4,7 +4,11 @@
   >
     <div class="d-flex align-items-center">
       <div class="profile ml-3 border px-0">
-        <img :src="userInfo.image" alt="" class="col-12 px-0" />
+        <img
+          :src="userInfo.image || '/default.jpg'"
+          alt=""
+          class="col-12 px-0"
+        />
       </div>
       <div>{{ userInfo.first_name + " " + userInfo.last_name }}</div>
     </div>

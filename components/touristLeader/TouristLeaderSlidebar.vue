@@ -1,10 +1,7 @@
 <template>
-  <div class="text-light bgmain h-100">
+  <div class="shadow h-100">
     <ul class="d-flex flex-column p-0 w-100">
-      <li
-        class="text-center py-3 border-bottom"
-        style="background-color: black"
-      >
+      <li class="text-center py-3 border-bottom bgmain text-light">
         <h3>DEEP TREEP</h3>
       </li>
       <nuxt-link
@@ -73,8 +70,7 @@ export default {
 </script>
 
 <style scoped>
-li,
 span {
-  color: white !important;
+  color: black !important;
 }
 </style>

@@ -98,9 +98,28 @@
             rules="required"
             v-if="step == 3"
           >
-            <div>password:</div>
-            <input type="password" v-model="formdata.password" class="col-12" />
-            <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
+            <div class="mb-2">
+              <div>password:</div>
+              <input
+                type="password"
+                v-model="formdata.password"
+                class="col-12"
+              />
+              <span class="text-xs text-danger col-12 p-0">{{
+                errors[0]
+              }}</span>
+            </div>
+            <div>
+              <div>confrim password:</div>
+              <input
+                type="password"
+                v-model="formdata.confrimPassword"
+                class="col-12"
+              />
+              <span class="text-xs text-danger col-12 p-0">{{
+                errors[0]
+              }}</span>
+            </div>
             <div class="col-12 px-0 mt-3 d-flex justify-content-between">
               <div
                 class="btn btn-info col-3"
@@ -169,6 +188,7 @@ export default {
         email: "",
         password: "",
         // gender: "",
+        confrimPassword: "",
         address: "",
         role: "",
       },
@@ -205,6 +225,9 @@ export default {
       // } catch (error) {
       //   console.log('Login error:', error)
       // }
+      if (this.formdata.password !== this.formdata.confrimPassword) {
+        return;
+      }
       try {
         const bodyFormData = new FormData();
         for (const property in this.formdata) {

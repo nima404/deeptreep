@@ -30,7 +30,7 @@
 <script>
 export default {
   name: "score",
-  layout: "admin",
+  layout: "tourist",
 
   data() {
     return {

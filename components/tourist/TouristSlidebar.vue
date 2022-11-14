@@ -1,10 +1,7 @@
 <template>
-  <div class="text-light bgmain h-100">
-    <ul class="d-flex flex-column p-0 w-100">
-      <li
-        class="text-center py-3 border-bottom"
-        style="background-color: black"
-      >
+  <div class="h-100 shadow">
+    <ul class="d-flex flex-column p-0 w-100 text-dark">
+      <li class="text-center py-3 border-bottom bgmain text-light">
         <h3>DEEP TREEP</h3>
       </li>
       <nuxt-link
@@ -33,6 +30,15 @@
           <i class="fa-regular fa-ticket"></i>
         </span>
         <span class="ms-1 d-none d-sm-inline-block">tikets</span>
+      </nuxt-link>
+      <nuxt-link
+        to="/panel/tourist/score"
+        class="py-2 px-4 w-100 right-to-left-animation border-bottom"
+      >
+        <span class="d-block d-sm-inline-block text-center">
+          <i class="fa-regular fa-star"></i>
+        </span>
+        <span class="ms-1 d-none d-sm-inline-block">score</span>
       </nuxt-link>
       <nuxt-link
         to="/panel/tourist/test"
@@ -73,8 +79,7 @@ export default {
 </script>
 
 <style scoped>
-li,
 span {
-  color: white !important;
+  color: black !important;
 }
 </style>
