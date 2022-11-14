@@ -2,10 +2,30 @@
   <div class="col-12 p-0">
     <div
       class="col-12 text-light p-0"
+      :style="`
+        background-image: url('IMG_7467.jpg');
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.6);`"
+    >
+      <div class="pt-5">
+        <div class="pt-5">
+          <h5 class="px-5 pt-5 m-0 pb-2 text-center text-success">
+            For the first time in the world, We are delivering hyper-
+            personalised travel itineraries that perfectly match your interest,
+            style and psychology.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-12 text-light p-0"
       style="background-image: url('IMG_7467.jpg'); background-size: cover"
     >
-      <div class="text-center p-5" style="background-color: rgba(0, 0, 0, 0.6)">
-        <div class="row pt-5 g-5 mt-5 justify-content-center">
+      <div
+        class="text-center px-5 pb-5"
+        style="background-color: rgba(0, 0, 0, 0.6)"
+      >
+        <div class="row pt-5 g-5 justify-content-center">
           <div class="col-12 col-lg-4 mb-4">
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
@@ -618,21 +638,21 @@
       </div>
       <div class="col-md-8 col-10 bgmain py-4 d-flex">
         <div class="d-flex mx-3">
-          <h4 class="mr-2"><i class="fa-solid fa-thumbs-up"></i></h4>
+          <h4 class="mr-2"><i class="fa-solid fa-thumbs-up text-light"></i></h4>
           <div>
             <div class="text-light">+40,000 customers</div>
             <div class="text-light">Comfort and satisfaction of passengers</div>
           </div>
         </div>
         <div class="d-flex mx-3">
-          <h4 class="mr-2"><i class="fa-solid fa-medal"></i></h4>
+          <h4 class="mr-2"><i class="fa-solid fa-medal text-light"></i></h4>
           <div>
             <div class="text-light">Awards won</div>
             <div class="text-light">Travel tour awards and honors</div>
           </div>
         </div>
         <div class="d-flex mx-3">
-          <h4 class="mr-2"><i class="fa-solid fa-lock"></i></h4>
+          <h4 class="mr-2"><i class="fa-solid fa-lock text-light"></i></h4>
           <div>
             <div class="text-light">Secure payment</div>
             <div class="text-light">Best price guarantee</div>

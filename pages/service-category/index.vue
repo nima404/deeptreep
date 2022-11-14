@@ -9,9 +9,9 @@
     >
       <div class="pt-5">
         <div class="pt-5">
-          <h2 class="px-5 pt-5 m-0 pb-5">
+          <h5 class="px-5 pt-5 m-0 pb-5 text-center text-success">
             We are unique in providing services
-          </h2>
+          </h5>
         </div>
       </div>
     </div>
