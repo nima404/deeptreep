@@ -1,8 +1,30 @@
 <template>
   <div>
-    <div class="nav d-sm-flex d-none col-12 pt-3 px-5">
+    <div class="nav navbar fixed-top d-sm-flex d-none col-12 pt-3 px-5">
       <div
-        class="d-none flex-column flex-sm-row justify-content-between col-12 d-sm-flex"
+        class="d-none justify-content-center text-light thirdNav mt-3 d-sm-flex"
+        ref="show"
+      >
+        <nuxt-link to="/" class="px-2 pb-3 text-light">Home</nuxt-link>
+        <nuxt-link to="/tor" class="px-2 pb-3 text-light">Tours</nuxt-link>
+        <!-- <nuxt-link to="/category" class="px-2 pb-3 text-light"
+        >category</nuxt-link
+      > -->
+        <nuxt-link to="/galery" class="px-2 pb-3 text-light">Galery</nuxt-link>
+        <!-- <nuxt-link to="/pricetable" class="px-2 pb-3 text-light"
+        >pricetable</nuxt-link
+      > -->
+        <nuxt-link to="/services" class="px-2 pb-3 text-light"
+          >Services</nuxt-link
+        >
+        <nuxt-link to="/service-category" class="px-2 pb-3 text-light"
+          >Service categories</nuxt-link
+        >
+        <!-- <nuxt-link to="/weblog" class="px-2 pb-3 text-light">weblog</nuxt-link> -->
+        <nuxt-link to="/about" class="px-2 pb-3 text-light">About</nuxt-link>
+      </div>
+      <div
+        class="d-none flex-column flex-sm-row justify-content-between d-sm-flex flex-wrap"
         ref="show"
       >
         <div class="d-flex align-items-center mt-3 mt-sm-0 flex-row">
@@ -15,30 +37,32 @@
             <option value="ar">Ar</option>
           </select>
           <nuxt-link to="/">
-            <i class="fa-brands fa-instagram textorange mx-2"></i>
+            <i class="fa-brands fa-instagram textorange mx-1"></i>
           </nuxt-link>
           <nuxt-link to="/">
-            <i class="fa-brands fa-twitter textorange mx-2"></i>
+            <i class="fa-brands fa-twitter textorange mx-1"></i>
           </nuxt-link>
           <nuxt-link to="/">
-            <i class="fa-brands fa-skype textorange mx-2"></i>
+            <i class="fa-brands fa-skype textorange mx-1"></i>
           </nuxt-link>
           <nuxt-link to="/">
-            <i class="fa-brands fa-pinterest-p textorange mx-2"></i>
+            <i class="fa-brands fa-pinterest-p textorange mx-1"></i>
           </nuxt-link>
           <nuxt-link to="/">
-            <i class="fa-brands fa-linkedin-in textorange mx-2 mr-4"></i>
+            <i class="fa-brands fa-linkedin-in textorange mx-1 mr-2"></i>
           </nuxt-link>
-          <div v-if="$auth.strategy.token.status().valid() == false">
+          <!-- <div v-if="$auth.strategy.token.status().valid() == false">
             <i class="fa-solid fa-user textorange ml-2"></i>
             <nuxt-link to="/panel/signup" class="text-light">sign up</nuxt-link>
-          </div>
+          </div> -->
           <div
-            class="ml-4"
+            class="ml-2"
             v-if="$auth.strategy.token.status().valid() == false"
           >
-            <i class="fa fa-lock textorange ml-2"></i>
-            <nuxt-link to="/panel" class="text-light">login</nuxt-link>
+            <nuxt-link to="/panel" class="text-light ml-2 btn bgorange">
+              <i class="fa fa-lock"></i>
+              login</nuxt-link
+            >
           </div>
           <nuxt-link
             to="/panel/tourist"
@@ -77,33 +101,10 @@
             >panel</nuxt-link
           >
         </div>
-        <div class="d-flex text-light">
+        <!-- <div class="d-flex text-light" style="font-size: 13px !important">
           <div class="mr-4"><i class="fa fa-phone mr-2"></i>09121992129</div>
           <div><i class="fa fa-envelope mr-2"></i>dotweb@info.com</div>
-        </div>
-      </div>
-
-      <div
-        class="col-12 d-none justify-content-center text-light thirdNav mt-3 d-sm-flex"
-        ref="show"
-      >
-        <nuxt-link to="/" class="px-2 pb-3 text-light">Home</nuxt-link>
-        <nuxt-link to="/tor" class="px-2 pb-3 text-light">Tours</nuxt-link>
-        <!-- <nuxt-link to="/category" class="px-2 pb-3 text-light"
-        >category</nuxt-link
-      > -->
-        <nuxt-link to="/galery" class="px-2 pb-3 text-light">Galery</nuxt-link>
-        <!-- <nuxt-link to="/pricetable" class="px-2 pb-3 text-light"
-        >pricetable</nuxt-link
-      > -->
-        <nuxt-link to="/services" class="px-2 pb-3 text-light"
-          >Services</nuxt-link
-        >
-        <nuxt-link to="/service-category" class="px-2 pb-3 text-light"
-          >Service categories</nuxt-link
-        >
-        <!-- <nuxt-link to="/weblog" class="px-2 pb-3 text-light">weblog</nuxt-link> -->
-        <nuxt-link to="/about" class="px-2 pb-3 text-light">About</nuxt-link>
+        </div> -->
       </div>
     </div>
     <!--secmenu-->

@@ -74,7 +74,7 @@
     </div>
     <div class="col-12 row m-0 py-4 justify-content-center bgmain">
       <div class="col-md-2 col-6 d-flex">
-        <div class="mx-2"><i class="fa-solid fa-user"></i></div>
+        <div class="mx-2 text-light"><i class="fa-solid fa-user"></i></div>
         <div class="mx-2">
           <div class="text-light">+500 destinations and places</div>
           <div style="color: #ababab">
@@ -83,7 +83,7 @@
         </div>
       </div>
       <div class="col-md-2 col-6 d-flex">
-        <div class="mx-2"><i class="fa-solid fa-user"></i></div>
+        <div class="mx-2 text-light"><i class="fa-solid fa-user"></i></div>
         <div class="mx-2">
           <div class="text-light">Best price guarantee</div>
           <div style="color: #ababab">
@@ -92,7 +92,7 @@
         </div>
       </div>
       <div class="col-md-2 col-6 d-flex">
-        <div class="mx-2"><i class="fa-solid fa-user"></i></div>
+        <div class="mx-2 text-light"><i class="fa-solid fa-user"></i></div>
         <div class="mx-2">
           <div class="text-light">Excellent customer</div>
           <div style="color: #ababab">
@@ -102,7 +102,7 @@
         </div>
       </div>
       <div class="col-md-2 col-6 d-flex">
-        <div class="mx-2"><i class="fa-solid fa-user"></i></div>
+        <div class="mx-2 text-light"><i class="fa-solid fa-user"></i></div>
         <div class="mx-2">
           <div class="text-light">Super fast booking</div>
           <div style="color: #ababab">
