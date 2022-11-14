@@ -15,7 +15,7 @@
     <div class="d-flex">
       <select
         v-model="lang"
-        class="border rounded px-2 mx-2 pointer"
+        class="border rounded px-2 mx-2 pointer form-control form-control-sm"
         style="background-color: #f3f3f3"
       >
         <option value="en">English</option>

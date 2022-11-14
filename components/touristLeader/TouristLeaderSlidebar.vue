@@ -40,6 +40,15 @@
         </span>
         <span class="ms-1 d-none d-sm-inline-block">tikets</span>
       </nuxt-link>
+      <nuxt-link
+        to="/panel/touristLeader/education"
+        class="py-2 px-4 w-100 right-to-left-animation border-bottom"
+      >
+        <span class="d-block d-sm-inline-block text-center">
+          <i class="fa-regular fa-film"></i>
+        </span>
+        <span class="ms-1 d-none d-sm-inline-block">education</span>
+      </nuxt-link>
       <button
         class="py-2 px-4 w-100 right-to-left-animation border-0 border-bottom text-left bg-transparent"
         @click="onSignOut"
