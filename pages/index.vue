@@ -9,11 +9,14 @@
       "
     >
       <div
-        class="h-100 pb-5 pt-3 d-flex justify-content-end align-items-center"
+        class="h-100 pb-5 pt-3 d-flex justify-content-center align-items-center"
         style="background-color: rgba(0, 0, 0, 0.4)"
       >
-        <div class="container d-flex justify-content-end">
-          <div class="col-6">
+        <div class="container d-flex justify-content-center">
+          <div
+            class="col-12 col-sm-6 rounded p-5"
+            style="background-color: rgba(0, 0, 0, 0.4)"
+          >
             <h1>Deep treep</h1>
             <h5>
               For the first time in the world, We are delivering hyper-
@@ -25,12 +28,9 @@
       </div>
     </div>
     <div class="col-12 text-light p-0">
-      <div
-        class="text-center px-5 pb-5"
-        style="background-color: rgba(0, 0, 0, 0.6)"
-      >
-        <div class="row pt-5 g-5 justify-content-center">
-          <div class="col-6 col-sm-5 mb-4">
+      <div class="text-center px-1 px-sm-5 pb-5">
+        <div class="row pt-5 g-5 no-gutters justify-content-center">
+          <div class="col-6 col-sm-5 px-1 mb-4">
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"
@@ -51,7 +51,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 col-sm-5 mb-4">
+          <div class="col-6 col-sm-5 px-1 mb-4">
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"

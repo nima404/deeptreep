@@ -26,6 +26,7 @@
 <script>
 export default {
   name: "forgot",
+  layout: "auth",
   data() {
     return {
       myHeight: window.innerHeight + "px",

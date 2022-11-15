@@ -8,39 +8,7 @@
         <form action="#" @submit.prevent="handleSubmit(register)">
           <h3 class="text-center">DEEP TREEP</h3>
           <h5 class="text-center">register</h5>
-          <!-- <ValidationProvider
-            v-slot="{ errors }"
-            vid="role"
-            rules="required"
-            v-if="step == 3"
-          >
-            <div>gender:</div>
-            <select
-              v-model="formdata.gender"
-              class="col-12"
-              style="height: 38px"
-            >
-              <option value="male">male</option>
-              <option value="female">female</option>
-            </select>
-            <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
-            <div class="col-12 px-0 mt-3 d-flex justify-content-between">
-              <div
-                class="btn btn-info col-3"
-                v-if="formdata.gender != ''"
-                @click="step--"
-              >
-                prev
-              </div>
-              <div
-                class="btn btn-info col-3"
-                v-if="formdata.gender != ''"
-                @click="step++"
-              >
-                next
-              </div>
-            </div>
-          </ValidationProvider> -->
+
           <ValidationProvider
             v-slot="{ errors }"
             vid="role"
@@ -77,14 +45,14 @@
             <div class="col-12 px-0 mt-3 d-flex justify-content-between">
               <div
                 class="btn btn-info col-3"
-                v-if="formdata.email != ''"
+                v-if="!Object.keys(errors).length"
                 @click="step--"
               >
                 prev
               </div>
               <div
                 class="btn btn-info col-3"
-                v-if="formdata.email != ''"
+                v-if="!Object.keys(errors).length"
                 @click="step++"
               >
                 next
@@ -95,7 +63,8 @@
           <ValidationProvider
             v-slot="{ errors }"
             vid="role"
-            rules="required"
+            name="password"
+            rules="required|min:4"
             v-if="step == 3"
           >
             <div class="mb-2">
@@ -116,21 +85,32 @@
                 v-model="formdata.confrimPassword"
                 class="col-12"
               />
-              <span class="text-xs text-danger col-12 p-0">{{
-                errors[0]
-              }}</span>
+              <span
+                class="text-xs text-danger col-12 p-0"
+                v-show="formdata.confrimPassword !== formdata.password"
+              >
+                not same
+              </span>
             </div>
             <div class="col-12 px-0 mt-3 d-flex justify-content-between">
               <div
                 class="btn btn-info col-3"
-                v-if="formdata.password != '' && formdata.role == 'tour-leader'"
+                v-if="
+                  formdata.confrimPassword === formdata.password &&
+                  !Object.keys(errors).length &&
+                  formdata.role == 'tour-leader'
+                "
                 @click="step--"
               >
                 prev
               </div>
               <div
                 class="btn btn-info col-3"
-                v-if="formdata.password != '' && formdata.role == 'tour-leader'"
+                v-if="
+                  formdata.confrimPassword === formdata.password &&
+                  !Object.keys(errors).length &&
+                  formdata.role == 'tour-leader'
+                "
                 @click="step++"
               >
                 next

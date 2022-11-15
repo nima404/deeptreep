@@ -32,6 +32,7 @@
 <script>
 export default {
   name: "confirmemail",
+  layout: "auth",
   data() {
     return {
       myHeight: window.innerHeight + "px",

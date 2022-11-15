@@ -17,7 +17,12 @@
             <input type="email" v-model="email" class="col-12" />
             <span class="text-xs text-danger">{{ errors[0] }}</span>
           </ValidationProvider>
-          <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
+          <ValidationProvider
+            v-slot="{ errors }"
+            vid="role"
+            rules="required|min:4"
+            name="password"
+          >
             <div>Password:</div>
             <input type="password" v-model="password" class="col-12" />
             <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
