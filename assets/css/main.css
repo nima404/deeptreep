@@ -16,6 +16,11 @@
 * {
   line-height: 2rem;
 }
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
 a {
   text-decoration: none !important;
 }

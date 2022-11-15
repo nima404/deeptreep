@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="nav navbar fixed-top d-sm-flex d-none col-12 pt-3 px-5">
+    <div class="nav navbar fixed-top d-md-flex d-none col-12 pt-3 px-5">
       <div
-        class="d-none justify-content-center text-light thirdNav mt-3 d-sm-flex"
+        class="d-none justify-content-center text-light thirdNav mt-3 d-md-flex"
         ref="show"
       >
         <nuxt-link to="/" class="px-2 pb-3 text-light">Home</nuxt-link>
@@ -24,7 +24,7 @@
         <nuxt-link to="/about" class="px-2 pb-3 text-light">About</nuxt-link>
       </div>
       <div
-        class="d-none flex-column flex-sm-row justify-content-between d-sm-flex flex-wrap"
+        class="d-none flex-column flex-sm-row justify-content-between d-md-flex flex-wrap"
         ref="show"
       >
         <div class="d-flex align-items-center mt-3 mt-sm-0 flex-row">
@@ -114,12 +114,12 @@
       </div>
     </div>
     <!--secmenu-->
-    <div class="d-sm-none" :class="{ nav3: showMenu }">
+    <div class="d-md-none" :class="{ nav3: showMenu }">
       <div
         class="col-12 nav2 py-3 mx-0 pr-5 d-flex justify-content-between"
         v-if="!showMenu"
       >
-        <div class="col-12 d-flex d-sm-none mb-2">
+        <div class="col-12 d-flex d-md-none mb-2">
           <i
             class="fa fa-bars text-light pointer"
             @click="showMenu = true"
@@ -134,10 +134,10 @@
         />
       </div>
       <div
-        class="d-flex flex-column flex-sm-row justify-content-between col-12 d-sm-none"
+        class="d-flex flex-column flex-sm-row justify-content-between col-12 d-md-none"
         v-if="showMenu"
       >
-        <div class="col-12 d-flex d-sm-none mb-2 mt-3">
+        <div class="col-12 d-flex d-md-none mb-2 mt-3">
           <span
             class="text-light pointer"
             @click="showMenu = false"

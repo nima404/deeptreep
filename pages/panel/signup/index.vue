@@ -178,7 +178,7 @@
 <script>
 export default {
   name: "login",
-  layout: "main",
+  layout: "auth",
   data() {
     return {
       message: false,

@@ -2,52 +2,35 @@
   <div class="col-12 p-0">
     <div
       class="col-12 text-light p-0"
-      :style="`
+      style="
         background-image: url('IMG_7467.jpg');
+        height: 700px;
         background-size: cover;
-        background-color: rgba(0, 0, 0, 0.6);`"
+      "
     >
-      <div class="pt-5">
-        <div class="pt-5">
-          <h5 class="px-5 pt-5 m-0 pb-2 text-center text-success">
-            For the first time in the world, We are delivering hyper-
-            personalised travel itineraries that perfectly match your interest,
-            style and psychology.
-          </h5>
+      <div
+        class="h-100 pb-5 pt-3 d-flex justify-content-end align-items-center"
+        style="background-color: rgba(0, 0, 0, 0.4)"
+      >
+        <div class="container d-flex justify-content-end">
+          <div class="col-6">
+            <h1>Deep treep</h1>
+            <h5>
+              For the first time in the world, We are delivering hyper-
+              personalised travel itineraries that perfectly match your
+              interest, style and psychology.
+            </h5>
+          </div>
         </div>
       </div>
     </div>
-    <div
-      class="col-12 text-light p-0"
-      style="background-image: url('IMG_7467.jpg'); background-size: cover"
-    >
+    <div class="col-12 text-light p-0">
       <div
         class="text-center px-5 pb-5"
         style="background-color: rgba(0, 0, 0, 0.6)"
       >
         <div class="row pt-5 g-5 justify-content-center">
-          <div class="col-12 col-lg-4 mb-4">
-            <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
-              <img
-                class="card-img-top"
-                src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <nuxt-link
-                  to="/"
-                  class="btn text-light bgorange w-100 primary-button"
-                  >Go somewhere</nuxt-link
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-4 mb-4">
+          <div class="col-6 col-sm-5 mb-4">
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"
@@ -68,7 +51,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-4 mb-4">
+          <div class="col-6 col-sm-5 mb-4">
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"
