@@ -48,8 +48,12 @@
       class="row mx-0 col-12 justify-content-center my-3"
       v-if="categories.previous == null && categories.next == null"
     >
-      <button class="bg-light mx-2 border rounded">prev</button>
-      <button class="bg-light mx-2 border rounded">next</button>
+      <button class="bg-light mx-2 border rounded">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+      <button class="bg-light mx-2 border rounded">
+        <i class="fa fa-chevron-right"></i>
+      </button>
     </div>
     <div
       class="row mx-0 col-12 justify-content-center my-3"
@@ -61,13 +65,17 @@
       >
         prev
       </button>
-      <button class="bg-light mx-2 border rounded">next</button>
+      <button class="bg-light mx-2 border rounded">
+        <i class="fa fa-chevron-right"></i>
+      </button>
     </div>
     <div
       class="row mx-0 col-12 justify-content-center my-3"
       v-if="categories.previous == null && categories.next != null"
     >
-      <button class="bg-light mx-2 border rounded">prev</button>
+      <button class="bg-light mx-2 border rounded">
+        <i class="fa fa-chevron-left"></i>
+      </button>
       <button
         class="btn btn-info pointer mx-2"
         @click="nextprev(categories.next)"

@@ -218,8 +218,8 @@
           <div
             class="d-flex text-muted border-bottom justify-content-between py-4"
           >
-            <div class="pointer">prev</div>
-            <div class="pointer">next</div>
+            <div class="pointer"><i class="fa fa-chevron-left"></i></div>
+            <div class="pointer"><i class="fa fa-chevron-right"></i></div>
           </div>
           <div class="my-5 p-5" style="background-color: #d9d9d9">
             <h5 class="text-center mb-4">Post reply</h5>
