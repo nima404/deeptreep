@@ -1,32 +1,32 @@
 <template>
   <div>
-    <table class="table">
-      <thead>
-        <tr class="text-center">
-          <th>#</th>
-          <th>first name</th>
-          <th>last name</th>
-          <th>main test result</th>
-          <th>function</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="user in users.results" :key="user.id" class="text-center">
-          <td>{{ user.id }}</td>
-          <td v-if="first_name == null">-</td>
-          <td v-else>{{ user.first_name  }}</td>
-          <td v-if="last_name == null">-</td>
-          <td v-else>{{ user.last_name }}</td>
-          <td v-if="last_name == null">-</td>
-          <td v-else>{{ user.main_test_results }}</td>
-          <td>
-            <nuxt-link :to="`tiket/${user.id}`" class="btn btn-success"
+    <div class="row">
+      <div
+        class="col-12 col-sm-6 col-lg-4"
+        v-for="user in users.results"
+        :key="user.id"
+      >
+        <div class="card mb-3">
+          <img
+            :src="user.image || '/default.jpg'"
+            class="card-img-top"
+            alt="profile"
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">
+              {{ user.first_name || "" }}
+              {{ user.last_name || "" }}
+            </h5>
+            <div class="card-text">
+              test: {{ user.main_test_results || "-" }}
+            </div>
+            <nuxt-link :to="`tiket/${user.id}`" class="btn btn-primary w-100"
               >messages</nuxt-link
             >
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </div>
+        </div>
+      </div>
+    </div>
     <div
       class="row mx-0 col-12 justify-content-center my-3"
       v-if="users.previous != null && users.next != null"
