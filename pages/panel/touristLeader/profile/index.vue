@@ -12,11 +12,11 @@
       </tr>
       <tr>
         <td class="col-12">first name:</td>
-        <td class="col-12">{{ user.first_name }}</td>
+        <td class="col-12">{{ user.first_name || "" }}</td>
       </tr>
       <tr>
         <td class="col-12">last name:</td>
-        <td class="col-12">{{ user.last_name }}</td>
+        <td class="col-12">{{ user.last_name || "" }}</td>
       </tr>
       <tr>
         <td class="col-12">gender:</td>

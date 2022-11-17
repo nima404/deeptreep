@@ -14,7 +14,7 @@
         <tr v-for="user in users.results" :key="user.id" class="text-center">
           <td>{{ user.id }}</td>
           <td v-if="first_name == null">-</td>
-          <td v-else>{{ user.first_name }}</td>
+          <td v-else>{{ user.first_name  }}</td>
           <td v-if="last_name == null">-</td>
           <td v-else>{{ user.last_name }}</td>
           <td v-if="last_name == null">-</td>
