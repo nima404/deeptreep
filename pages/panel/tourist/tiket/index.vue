@@ -5,30 +5,27 @@
         >send tiket</nuxt-link
       >
     </div>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>date</th>
-          <th>tourist</th>
-          <th>tour guide</th>
-          <th>message</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="tiket in tikets.results" :key="tiket.id">
-          <td>{{ tiket.id }}</td>
-          <td>{{ tiket.date.split("T")[0] }}</td>
-          <td>{{ tiket.tourist }}</td>
-          <td>{{ tiket.tourleader }}</td>
-          <td>
-            <nuxt-link :to="`tiket/${tiket.id}`" class="btn btn-success"
-              >messages</nuxt-link
-            >
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="card mb-2 border-0"
+      v-for="tiket in tikets.results"
+      :key="tiket.id"
+    >
+      <nuxt-link
+        :to="`tiket/${tiket.id}`"
+        class="d-flex justify-content-center align-items-center text-dark"
+      >
+        <img
+          src="/default.jpg"
+          alt="profile"
+          class="rounded-circle img-thumbnail manage-image-size"
+        />
+        <div class="card-body">
+          <h5 class="card-title ml-4">
+            {{ tiket.tourleader || "" }}
+          </h5>
+        </div>
+      </nuxt-link>
+    </div>
     <div
       class="row mx-0 col-12 justify-content-center my-3"
       v-if="tikets.previous != null && tikets.next != null"
@@ -106,4 +103,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.manage-image-size {
+  width: 80px;
+  height: 80px;
+}
+</style>
