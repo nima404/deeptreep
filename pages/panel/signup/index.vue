@@ -179,58 +179,56 @@ export default {
     window.addEventListener("resize", this.myEventHandler);
   },
 
-  // async mounted() {
-  //   try {
-  //     await this.$recaptcha.init();
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // },
+  async mounted() {
+    try {
+      await this.$recaptcha.init();
+    } catch (e) {
+      console.error(e);
+    }
+  },
 
-  //   beforeDestroy() {
-  //   this.$recaptcha.destroy()
-  // }
+  beforeDestroy() {
+    this.$recaptcha.destroy();
+  },
 
   methods: {
     myEventHandler(e) {
       this.myHeight = window.innerHeight + "px";
     },
     async register() {
-      // try {
-      //   const token = await this.$recaptcha.execute('login')
-      //   console.log('ReCaptcha token:', token)
-
-      //   // send token to server alongside your form data
-
-      // } catch (error) {
-      //   console.log('Login error:', error)
-      // }
-      if (this.formdata.password !== this.formdata.confrimPassword) {
-        return;
-      }
       try {
-        const bodyFormData = new FormData();
-        for (const property in this.formdata) {
-          bodyFormData.append(property, this.formdata[property]);
+        const token = await this.$recaptcha.execute("login");
+        console.log("ReCaptcha token:", token);
+
+        if (this.formdata.password !== this.formdata.confrimPassword) {
+          return;
         }
-        const res = await this.$axios.$post(
-          "/api/usersmodel/register/",
-          bodyFormData
-        );
-        console.log(res);
-        this.message = true;
-        const res2 = await this.$axios.post(
-          "api/usersmodel/send-authentication-email/",
-          {
-            email: this.formdata.email,
+        try {
+          const bodyFormData = new FormData();
+          for (const property in this.formdata) {
+            bodyFormData.append(property, this.formdata[property]);
           }
-        );
-        console.log(res2);
-        setTimeout(() => {
-          this.$router.push("/panel/confirmemail");
-        }, 2000);
+          const res = await this.$axios.$post(
+            "/api/usersmodel/register/",
+            bodyFormData
+          );
+          console.log(res);
+          this.message = true;
+          const res2 = await this.$axios.post(
+            "api/usersmodel/send-authentication-email/",
+            {
+              email: this.formdata.email,
+            }
+          );
+          console.log(res2);
+          setTimeout(() => {
+            this.$router.push("/panel/confirmemail");
+          }, 2000);
+        } catch (error) {
+          console.log(error);
+        }
       } catch (error) {
-        console.log(error);
+        console.log("Login error:", error);
       }
     },
   },
