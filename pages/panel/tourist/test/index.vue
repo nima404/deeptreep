@@ -471,22 +471,38 @@
       </div>
       <button class="btn btn-success mt-3" @click="send">send</button>
     </div>
-    <div v-else>
-      <div class="col-12 border-bottom py-2">Q1: {{ test.q1 }}</div>
-      <div class="col-12 border-bottom py-2">Q2: {{ test.q2 }}</div>
-      <div class="col-12 border-bottom py-2">Q3: {{ test.q3 }}</div>
-      <div class="col-12 border-bottom py-2">Q4: {{ test.q4 }}</div>
-      <div class="col-12 border-bottom py-2">Q5: {{ test.q5 }}</div>
-      <div class="col-12 border-bottom py-2">Q6: {{ test.q6 }}</div>
-      <div class="col-12 border-bottom py-2">Q7: {{ test.q7 }}</div>
-      <div class="col-12 border-bottom py-2">Q8: {{ test.q8 }}</div>
-      <div class="col-12 border-bottom py-2">Q9: {{ test.q9 }}</div>
-      <div class="col-12 border-bottom py-2">Q10: {{ test.q10 }}</div>
-      <div class="col-12 border-bottom py-2">Q11: {{ test.q11 }}</div>
-      <div class="col-12 border-bottom py-2">Q12: {{ test.q12 }}</div>
-      <div class="col-12 border-bottom py-2">Q13: {{ test.q13 }}</div>
-      <div class="col-12 border-bottom py-2">Q14: {{ test.q14 }}</div>
-      <div class="col-12 border-bottom py-2">Q15: {{ test.q15 }}</div>
+    <div v-else class="row justify-content-center">
+      <div class="col-12 col-sm-6 col-lg-5">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title">test grade</h5>
+            <p class="card-text">
+              <div class="border-bottom py-2 d-flex justify-content-between"><span>Q1</span> <span>{{ test.q1 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between">
+        <span>Q2</span>
+        <span>{{ test.q2 }}</span>
+      </div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q3</span> <span>{{ test.q3 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q4</span> <span>{{ test.q4 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q5</span> <span>{{ test.q5 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q6</span> <span>{{ test.q6 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q7</span> <span>{{ test.q7 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q8</span> <span>{{ test.q8 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q9</span> <span>{{ test.q9 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q10</span> <span>{{ test.q10 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q11</span> <span>{{ test.q11 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q12</span> <span>{{ test.q12 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q13</span> <span>{{ test.q13 }}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q14</span> <span>{{ test.q14 }}</span></div>
+      <div class="py-2 d-flex justify-content-between"><span>Q15</span> <span>{{ test.q15 }}</span></div>
+            </p>
+          </div>
+        </div>
+        <button class="btn btn-danger mt-3 w-100" @click="onTestAgain">test again</button>
+
+      </div>
+
+      
     </div>
   </div>
 </template>
@@ -532,6 +548,17 @@ export default {
     };
   },
   methods: {
+    async onTestAgain(){
+      try {
+        const res = await this.$axios.delete(
+          "/api/psychologicalTesting/maintest-delete/",
+        );
+        console.log(res);
+        this.$router.push("/panel/tourist/profile");
+      } catch (error) {
+        console.log(error);
+      }
+    },
     async send() {
       try {
         const bodyFormData = new FormData();
