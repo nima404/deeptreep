@@ -17,14 +17,41 @@
       <div class="col-6">
         <h2>Your desired title</h2>
         <p class="mt-4 text-muted">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas
-          purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris
-          rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed
-          euismod nisi porta lorem mollis. Morbi tristique senectus et netus.
-          Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien
-          faucibus et molestie ac feugiat sed lectus vestibulum. Ullamcorper
-          velit sed ullamcorper morbi tincidunt ornare massa eget. Dictum varius
+          The travel industry has undoubtedly boomed in the last decade, and the
+          way people travel is almost unrecognisable from the early 20th
+          century. The tourism and travel sector is experiencing a period of
+          continuous progression and unprecedented advancement due to digital
+          transformation. This exposure to technological advances coupled with
+          developments in traveller maturity and thus expectations has led to
+          personalisation. GlobalData's latest Covid-19 consumer survey found
+          that 53% of global respondents were 'always' and 'often' influenced by
+          how well a product/service is tailored to their personality. Also,
+          travellers need to conduct countless hours of internet research to
+          create a trip for themselves - but with no guarantee of success. Deep
+          Treep aims to make the luxury of personalised travel planning quick,
+          easy, and accessible to all. Deep Treep will be a dedicated tourism
+          application offering an automated bespoke experience that's unique,
+          personalised and memorable and powered by AI, data and expert local
+          guides in the background. The Company's mechanism behind the
+          unparalleled personalisation success would be based on consumer
+          characteristics, preferences, behaviours, and unique individual needs.
+          The Company has designed a questionnaire that combines basic details
+          (like where, when, and how many travellers), characterising the
+          psychological features via Hartman's personality test, prior travel
+          experiences and a visual comparison questionnaire to understand the
+          traveller's taste, style and interests while travelling. The
+          platform's artificial intelligence will evaluate the data gathered and
+          the needs of the travellers to recommend a travel plan to the user.
+          According to each person's tastes, the system will create a report
+          with suggestions for things to do, see, places to stay, dine, go out,
+          shop, stroll, and engage in sports. The user can modify their tour
+          itinerary after speaking with the local guides (for example, swap one
+          experience for another or remove one entirely). one experience for
+          another or remove one entirely). Using its "Deep Touch" feature,
+          travellers can seamlessly get a completely customised itinerary in
+          almost all countries across Asia, Europe, South America, North
+          America, Australia, the Middle East, and Africa, inclusive of tours,
+          experiences, and accommodations.
         </p>
       </div>
       <div class="col-6">
@@ -64,12 +91,41 @@
         <div class="col-md-8 col-12">
           <h3>Your desired title</h3>
           <p class="my-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas
-            purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris
-            rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed
-            euismod nisi porta lorem mollis. Morbi tristique senectus et netus.
-            Mattis pellentesque id nibh tortor id aliquet lectus proin. Sapien
+            Furthermore, the company will also provide companion finder service
+            by introducing travellers to people who intend to travel to the same
+            area at the same time and have the same spirit and goals as them by
+            executing matchmaking technology. "Deep Treep Memorial" service will
+            let travellers capture their travel journey by tour guides by taking
+            photos and videos of passengers. The Company will create its data
+            centre: "Deep Treep Experience", wherein they will collect data from
+            the number of tourists from a city and country based on day, month,
+            season and year. It will also record customer feedback to be
+            accumulated in the dedicated database, which will help the system
+            algorithm perform predictions based on the experiences of similar
+            people. With its mission to deliver a client-centred solution and
+            elevate guests' experience, it will also offer "Deep Treep Courses"
+            to local guides to let them understand the customer's interests and
+            personalities better. It will allow them to provide customers with
+            more accurate travel plans based on their needs, resulting in higher
+            customer satisfaction and higher ratings for the service providers.
+            The Company will primarily target travellers between the ages of 30
+            and 60 (mainly families), and it will also target the travellers
+            from Generation Y or millennial groups who want to understand their
+            travel process better and recognise the value and necessity of
+            guides in the travel process. It will also target tech-savvy local
+            guides who wish to provide a deep travel experience to customers.
+            The Company will also affiliate itself with travel contractors like
+            rental cars, accommodation, entertainment centres, restaurants and
+            bars, shopping centres, and entertainment equipment rentals to offer
+            the ease of a one-stop solution to its customers. Initially, Deep
+            Treep will establish its presence in London by the third quarter of
+            2022. The Company aims to expand the coverage of its application to
+            the global market after setting a strong foothold in the UK market.
+            Amin Kouhafkan (CEO) will oversee the company’s operations in the
+            wake of his rich experience. The founder holds valuable experience,
+            knowledge, and skill in marketing and project management, allowing
+            the company to respond effectively to customer demands and remain
+            agile through a volatile business environment.
           </p>
           <div class="row mx-0">
             <div class="col-6">
@@ -108,7 +164,7 @@
         </div>
       </div>
     </div>
-    <div class="row mx-0">
+    <!-- <div class="row mx-0">
       <div class="col-6 d-flex justify-content-end align-items-center">
         <div class="col-md-6 col-12 text-muted">
           <p class="my-3">
@@ -148,7 +204,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <div style="background-color: #f3f3f3">
       <div class="container">
         <h2 class="text-center pt-5 mb-5">Meet our team members</h2>

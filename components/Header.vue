@@ -127,7 +127,7 @@
           ></i>
         </div>
         <img
-          src="favicon.ico"
+          src="logo.png"
           alt=""
           style="position: absolute; right: 20px"
           width="30px"

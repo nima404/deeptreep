@@ -8,24 +8,24 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q1A1.jpg"
-          @click="formData.Q1 = 'Q1A1'"
+          @click="formData.q1 = 'Q1A1'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q1 == 'Q1A1' }"
+          :class="{ active: formData.q1 == 'Q1A1' }"
         />
         <img
           src="/Q1A2.jpg"
-          @click="formData.Q1 = 'Q1A2'"
+          @click="formData.q1 = 'Q1A2'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q1 == 'Q1A2' }"
+          :class="{ active: formData.q1 == 'Q1A2' }"
         />
         <img
           src="/Q1A3.jpg"
-          @click="formData.Q1 = 'Q1A3'"
+          @click="formData.q1 = 'Q1A3'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q1 == 'Q1A3' }"
+          :class="{ active: formData.q1 == 'Q1A3' }"
         />
       </div>
       <div>
@@ -35,24 +35,24 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q2A1.jpg"
-          @click="formData.Q2 = 'Q2A1'"
+          @click="formData.q2 = 'Q2A1'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q2 == 'Q2A1' }"
+          :class="{ active: formData.q2 == 'Q2A1' }"
         />
         <img
           src="/Q2A2.jpg"
-          @click="formData.Q2 = 'Q2A2'"
+          @click="formData.q2 = 'Q2A2'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q2 == 'Q2A2' }"
+          :class="{ active: formData.q2 == 'Q2A2' }"
         />
         <img
           src="/Q2A3.jpg"
-          @click="formData.Q2 = 'Q2A3'"
+          @click="formData.q2 = 'Q2A3'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q2 == 'Q2A3' }"
+          :class="{ active: formData.q2 == 'Q2A3' }"
         />
       </div>
       <div>
@@ -62,31 +62,31 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q3A1.jpg"
-          @click="formData.Q3 = 'Q3A1'"
+          @click="formData.q3 = 'Q3A1'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q3 == 'Q3A1' }"
+          :class="{ active: formData.q3 == 'Q3A1' }"
         />
         <img
           src="/Q3A2.jpg"
-          @click="formData.Q3 = 'Q3A2'"
+          @click="formData.q3 = 'Q3A2'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q3 == 'Q3A2' }"
+          :class="{ active: formData.q3 == 'Q3A2' }"
         />
         <img
           src="/Q3A3.jpg"
-          @click="formData.Q3 = 'Q3A3'"
+          @click="formData.q3 = 'Q3A3'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q3 == 'Q3A3' }"
+          :class="{ active: formData.q3 == 'Q3A3' }"
         />
         <img
           src="/Q3A4.jpg"
-          @click="formData.Q3 = 'Q3A4'"
+          @click="formData.q3 = 'Q3A4'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q3 == 'Q3A4' }"
+          :class="{ active: formData.q3 == 'Q3A4' }"
         />
       </div>
       <div>
@@ -96,31 +96,31 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q4A1.jpg"
-          @click="formData.Q4 = 'Q4A1'"
+          @click="formData.q4 = 'Q4A1'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q4 == 'Q4A1' }"
+          :class="{ active: formData.q4 == 'Q4A1' }"
         />
         <img
           src="/Q4A2.jpg"
-          @click="formData.Q4 = 'Q4A2'"
+          @click="formData.q4 = 'Q4A2'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q4 == 'Q4A2' }"
+          :class="{ active: formData.q4 == 'Q4A2' }"
         />
         <img
           src="/Q4A3.jpg"
-          @click="formData.Q4 = 'Q4A3'"
+          @click="formData.q4 = 'Q4A3'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q4 == 'Q4A3' }"
+          :class="{ active: formData.q4 == 'Q4A3' }"
         />
         <img
           src="/Q4A4.jpg"
-          @click="formData.Q4 = 'Q4A5'"
+          @click="formData.q4 = 'Q4A5'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q4 == 'Q4A5' }"
+          :class="{ active: formData.q4 == 'Q4A5' }"
         />
       </div>
       <div>
@@ -130,38 +130,38 @@
       <div class="row mt-2 mb-5 justify-content-between">
         <img
           src="/Q5A1.jpg"
-          @click="formData.Q5 = 'Q5A1'"
+          @click="formData.q5 = 'Q5A1'"
           alt=""
           class="col-2 p-2 pointer"
-          :class="{ active: formData.Q5 == 'Q5A1' }"
+          :class="{ active: formData.q5 == 'Q5A1' }"
         />
         <img
           src="/Q5A2.jpg"
-          @click="formData.Q5 = 'Q5A2'"
+          @click="formData.q5 = 'Q5A2'"
           alt=""
           class="col-2 p-2 pointer"
-          :class="{ active: formData.Q5 == 'Q5A2' }"
+          :class="{ active: formData.q5 == 'Q5A2' }"
         />
         <img
           src="/Q5A3.jpg"
-          @click="formData.Q5 = 'Q5A3'"
+          @click="formData.q5 = 'Q5A3'"
           alt=""
           class="col-2 p-2 pointer"
-          :class="{ active: formData.Q5 == 'Q5A3' }"
+          :class="{ active: formData.q5 == 'Q5A3' }"
         />
         <img
           src="/Q5A4.jpg"
-          @click="formData.Q5 = 'Q5A4'"
+          @click="formData.q5 = 'Q5A4'"
           alt=""
           class="col-2 p-2 pointer"
-          :class="{ active: formData.Q5 == 'Q5A4' }"
+          :class="{ active: formData.q5 == 'Q5A4' }"
         />
         <img
           src="/Q5A5.jpg"
-          @click="formData.Q5 = 'Q5A5'"
+          @click="formData.q5 = 'Q5A5'"
           alt=""
           class="col-2 p-2 pointer"
-          :class="{ active: formData.Q5 == 'Q5A5' }"
+          :class="{ active: formData.q5 == 'Q5A5' }"
         />
       </div>
       <div>
@@ -171,31 +171,31 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q6A1.jpg"
-          @click="formData.Q6 = 'Q6A1'"
+          @click="formData.q6 = 'Q6A1'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q6 == 'Q6A1' }"
+          :class="{ active: formData.q6 == 'Q6A1' }"
         />
         <img
           src="/Q6A2.jpg"
-          @click="formData.Q6 = 'Q6A2'"
+          @click="formData.q6 = 'Q6A2'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q6 == 'Q6A2' }"
+          :class="{ active: formData.q6 == 'Q6A2' }"
         />
         <img
           src="/Q6A3.jpg"
-          @click="formData.Q6 = 'Q6A3'"
+          @click="formData.q6 = 'Q6A3'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q6 == 'Q6A3' }"
+          :class="{ active: formData.q6 == 'Q6A3' }"
         />
         <img
           src="/Q6A4.jpg"
-          @click="formData.Q6 = 'Q6A4'"
+          @click="formData.q6 = 'Q6A4'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q6 == 'Q6A4' }"
+          :class="{ active: formData.q6 == 'Q6A4' }"
         />
       </div>
       <div>
@@ -205,31 +205,31 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q7A1.jpg"
-          @click="formData.Q7 = 'Q7A1'"
+          @click="formData.q7 = 'Q7A1'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q7 == 'Q7A1' }"
+          :class="{ active: formData.q7 == 'Q7A1' }"
         />
         <img
           src="/Q7A2.jpg"
-          @click="formData.Q7 = 'Q7A2'"
+          @click="formData.q7 = 'Q7A2'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q7 == 'Q7A2' }"
+          :class="{ active: formData.q7 == 'Q7A2' }"
         />
         <img
           src="/Q7A3.jpg"
-          @click="formData.Q7 = 'Q7A3'"
+          @click="formData.q7 = 'Q7A3'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q7 == 'Q7A3' }"
+          :class="{ active: formData.q7 == 'Q7A3' }"
         />
         <img
           src="/Q7A4.jpg"
-          @click="formData.Q7 = 'Q7A4'"
+          @click="formData.q7 = 'Q7A4'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q7 == 'Q7A4' }"
+          :class="{ active: formData.q7 == 'Q7A4' }"
         />
       </div>
       <div>
@@ -239,24 +239,24 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q8A1.jpg"
-          @click="formData.Q8 = 'Q8A1'"
+          @click="formData.q8 = 'Q8A1'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q8 == 'Q8A1' }"
+          :class="{ active: formData.q8 == 'Q8A1' }"
         />
         <img
           src="/Q8A2.jpg"
-          @click="formData.Q8 = 'Q8A2'"
+          @click="formData.q8 = 'Q8A2'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q8 == 'Q8A2' }"
+          :class="{ active: formData.q8 == 'Q8A2' }"
         />
         <img
           src="/Q8A3.jpg"
-          @click="formData.Q8 = 'Q8A3'"
+          @click="formData.q8 = 'Q8A3'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q8 == 'Q8A3' }"
+          :class="{ active: formData.q8 == 'Q8A3' }"
         />
       </div>
       <div>
@@ -266,31 +266,31 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q9A1.jpg"
-          @click="formData.Q9 = 'Q9A1'"
+          @click="formData.q9 = 'Q9A1'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q9 == 'Q9A1' }"
+          :class="{ active: formData.q9 == 'Q9A1' }"
         />
         <img
           src="/Q9A2.jpg"
-          @click="formData.Q9 = 'Q9A2'"
+          @click="formData.q9 = 'Q9A2'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q9 == 'Q9A2' }"
+          :class="{ active: formData.q9 == 'Q9A2' }"
         />
         <img
           src="/Q9A3.jpg"
-          @click="formData.Q9 = 'Q9A3'"
+          @click="formData.q9 = 'Q9A3'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q9 == 'Q9A3' }"
+          :class="{ active: formData.q9 == 'Q9A3' }"
         />
         <img
           src="/Q9A4.jpg"
-          @click="formData.Q9 = 'Q9A4'"
+          @click="formData.q9 = 'Q9A4'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q9 == 'Q9A4' }"
+          :class="{ active: formData.q9 == 'Q9A4' }"
         />
       </div>
       <div>
@@ -300,31 +300,31 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q10A1.jpg"
-          @click="formData.Q10 = 'Q10A1'"
+          @click="formData.q10 = 'Q10A1'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q10 == 'Q10A1' }"
+          :class="{ active: formData.q10 == 'Q10A1' }"
         />
         <img
           src="/Q10A2.jpg"
-          @click="formData.Q10 = 'Q10A2'"
+          @click="formData.q10 = 'Q10A2'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q10 == 'Q10A2' }"
+          :class="{ active: formData.q10 == 'Q10A2' }"
         />
         <img
           src="/Q10A3.jpg"
-          @click="formData.Q10 = 'Q10A3'"
+          @click="formData.q10 = 'Q10A3'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q10 == 'Q10A3' }"
+          :class="{ active: formData.q10 == 'Q10A3' }"
         />
         <img
           src="/Q10A4.jpg"
-          @click="formData.Q10 = 'Q10A4'"
+          @click="formData.q10 = 'Q10A4'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q10 == 'Q10A4' }"
+          :class="{ active: formData.q10 == 'Q10A4' }"
         />
       </div>
       <div>
@@ -334,31 +334,31 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q11A1.jpg"
-          @click="formData.Q11 = 'Q11A1'"
+          @click="formData.q11 = 'Q11A1'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q11 == 'Q11A1' }"
+          :class="{ active: formData.q11 == 'Q11A1' }"
         />
         <img
           src="/Q11A2.jpg"
-          @click="formData.Q11 = 'Q11A2'"
+          @click="formData.q11 = 'Q11A2'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q11 == 'Q11A2' }"
+          :class="{ active: formData.q11 == 'Q11A2' }"
         />
         <img
           src="/Q11A3.jpg"
-          @click="formData.Q11 = 'Q11A3'"
+          @click="formData.q11 = 'Q11A3'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q11 == 'Q11A3' }"
+          :class="{ active: formData.q11 == 'Q11A3' }"
         />
         <img
           src="/Q11A4.webp"
-          @click="formData.Q11 = 'Q11A4'"
+          @click="formData.q11 = 'Q11A4'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q11 == 'Q11A4' }"
+          :class="{ active: formData.q11 == 'Q11A4' }"
         />
       </div>
       <div>
@@ -368,31 +368,31 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q12A1.webp"
-          @click="formData.Q12 = 'Q12A1'"
+          @click="formData.q12 = 'Q12A1'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q12 == 'Q12A1' }"
+          :class="{ active: formData.q12 == 'Q12A1' }"
         />
         <img
           src="/Q12A2.webp"
-          @click="formData.Q12 = 'Q12A2'"
+          @click="formData.q12 = 'Q12A2'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q12 == 'Q12A2' }"
+          :class="{ active: formData.q12 == 'Q12A2' }"
         />
         <img
           src="/Q12A3.jpg"
-          @click="formData.Q12 = 'Q12A3'"
+          @click="formData.q12 = 'Q12A3'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q12 == 'Q12A3' }"
+          :class="{ active: formData.q12 == 'Q12A3' }"
         />
         <img
           src="/Q12A4.jpg"
-          @click="formData.Q12 = 'Q12A4'"
+          @click="formData.q12 = 'Q12A4'"
           alt=""
           class="col-3 p-2 pointer"
-          :class="{ active: formData.Q12 == 'Q12A4' }"
+          :class="{ active: formData.q12 == 'Q12A4' }"
         />
       </div>
       <div>
@@ -402,24 +402,24 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q13A1.jpg"
-          @click="formData.Q13 = 'Q13A1'"
+          @click="formData.q13 = 'Q13A1'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q13 == 'Q13A1' }"
+          :class="{ active: formData.q13 == 'Q13A1' }"
         />
         <img
           src="/Q13A2.jpg"
-          @click="formData.Q13 = 'Q13A2'"
+          @click="formData.q13 = 'Q13A2'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q13 == 'Q13A2' }"
+          :class="{ active: formData.q13 == 'Q13A2' }"
         />
         <img
           src="/Q13A3.jpg"
-          @click="formData.Q13 = 'Q13A3'"
+          @click="formData.q13 = 'Q13A3'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q13 == 'Q13A3' }"
+          :class="{ active: formData.q13 == 'Q13A3' }"
         />
       </div>
       <div>
@@ -429,24 +429,24 @@
       <div class="row mt-2 mb-5">
         <img
           src="/Q14A1.jpg"
-          @click="formData.Q14 = 'Q14A1'"
+          @click="formData.q14 = 'Q14A1'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q14 == 'Q14A1' }"
+          :class="{ active: formData.q14 == 'Q14A1' }"
         />
         <img
           src="/Q14A2.jpg"
-          @click="formData.Q14 = 'Q14A2'"
+          @click="formData.q14 = 'Q14A2'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q14 == 'Q14A2' }"
+          :class="{ active: formData.q14 == 'Q14A2' }"
         />
         <img
           src="/Q14A3.jpg"
-          @click="formData.Q14 = 'Q14A3'"
+          @click="formData.q14 = 'Q14A3'"
           alt=""
           class="col-4 p-2 pointer"
-          :class="{ active: formData.Q14 == 'Q14A3' }"
+          :class="{ active: formData.q14 == 'Q14A3' }"
         />
       </div>
       <div>
@@ -455,16 +455,16 @@
       </div>
       <div class="row mt-2 mb-5">
         <div
-          @click="formData.Q15 = 'Q15A1'"
+          @click="formData.q15 = 'Q15A1'"
           class="col-6 p-2 pointer"
-          :class="{ active: formData.Q15 == 'Q15A1' }"
+          :class="{ active: formData.q15 == 'Q15A1' }"
         >
           I don&#39;t enjoy being surprised
         </div>
         <div
-          @click="formData.Q15 = 'Q15A2'"
+          @click="formData.q15 = 'Q15A2'"
           class="col-6 p-2 pointer"
-          :class="{ active: formData.Q15 == 'Q15A2' }"
+          :class="{ active: formData.q15 == 'Q15A2' }"
         >
           I enjoy being surprised
         </div>
@@ -515,21 +515,21 @@ export default {
   data() {
     return {
       formData: {
-        Q1: "Q1A1",
-        Q2: "Q2A1",
-        Q3: "Q3A1",
-        Q4: "Q4A1",
-        Q5: "Q5A1",
-        Q6: "Q6A1",
-        Q7: "Q7A1",
-        Q8: "Q8A1",
-        Q9: "Q9A1",
-        Q10: "Q10A1",
-        Q11: "Q11A1",
-        Q12: "Q12A1",
-        Q13: "Q13A1",
-        Q14: "Q14A1",
-        Q15: "Q15A1",
+        q1: "Q1A1",
+        q2: "Q2A1",
+        q3: "Q3A1",
+        q4: "Q4A1",
+        q5: "Q5A1",
+        q6: "Q6A1",
+        q7: "Q7A1",
+        q8: "Q8A1",
+        q9: "Q9A1",
+        q10: "Q10A1",
+        q11: "Q11A1",
+        q12: "Q12A1",
+        q13: "Q13A1",
+        q14: "Q14A1",
+        q15: "Q15A1",
       },
     };
   },
@@ -565,7 +565,6 @@ export default {
         for (const property in this.formData) {
           bodyFormData.append(property, this.formData[property]);
         }
-        bodyFormData.append("user", this.user);
         const res = await this.$axios.post(
           "api/psychologicalTesting/maintest-create/",
           bodyFormData
