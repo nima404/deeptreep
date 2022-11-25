@@ -22,7 +22,7 @@
         >
         <nuxt-link to="/galery" class="px-2 pb-3 text-light">Gallery</nuxt-link>
 
-        <nuxt-link to="/about" class="px-2 pb-3 text-light">About</nuxt-link>
+        <nuxt-link to="/about" class="px-2 pb-3 text-light">About us</nuxt-link>
       </div>
       <div
         class="d-none flex-column flex-sm-row justify-content-between d-md-flex flex-wrap"
@@ -221,7 +221,7 @@
         >
         <nuxt-link to="/galery" class="px-2 pb-3 text-light">Gallery</nuxt-link>
         <nuxt-link to="/about" class="px-2 pb-3 text-light mb-3"
-          >About</nuxt-link
+          >About us</nuxt-link
         >
         <div class="d-flex text-light justify-content-between">
           <div class="mr-4"><i class="fa fa-phone mr-2"></i>09121992129</div>

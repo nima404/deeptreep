@@ -27,6 +27,7 @@
         </div>
       </div>
     </div>
+
     <div class="col-12 text-light p-0">
       <div class="text-center px-1 px-sm-5 pb-5">
         <div class="row pt-5 g-5 no-gutters justify-content-center">
@@ -39,43 +40,45 @@
               />
               <div class="card-body">
                 <h5 class="card-title">Deep touch</h5>
+
                 <p class="card-text">
                   The Company will offer a Deep Touch feature on its website and
                   application which will provide travellers with personalised
-                  travel solutions. Our customers(travellers) must fill out a
-                  questionnaire in several stages, including – 1: Hartman
-                  Questionnaire (which introduces the platform to users' general
-                  psychological characteristics) 2: Descriptive questionnaire of
-                  3 of the best trips the user has ever made and the point of
-                  difference between those trips 3: Descriptive questionnaire of
-                  3 of the worst trips the user has ever made and the weakness
-                  of those trips 4: A visual comparison questionnaire in which
-                  the user is asked which one to choose if they only have one of
-                  the two options. (This questionnaire will seek the user's
-                  better understanding by accurately presenting possible
-                  dualities. Dualities: Passage tour or visiting historical
-                  sites / urban space or nature space/individual or group
-                  entertainment/sports or art / local and healthy food style or
-                  fast food / and more than 20 other dual modes) The artificial
-                  intelligence on the platform will prepare a report based on
-                  the data obtained, allowing them to make more appropriate
-                  travel plans based on the customer's needs. Customers will
-                  have the flexibility of selecting, rejecting, or modifying the
-                  plan designed by the local guides.
+                  travel solutions.
+                  <b-collapse id="text-more-1">
+                    Our customers(travellers) must fill out a questionnaire in
+                    several stages, including – 1: Hartman Questionnaire (which
+                    introduces the platform to users' general psychological
+                    characteristics) 2: Descriptive questionnaire of 3 of the
+                    best trips the user has ever made and the point of
+                    difference between those trips 3: Descriptive questionnaire
+                    of 3 of the worst trips the user has ever made and the
+                    weakness of those trips 4: A visual comparison questionnaire
+                    in which the user is asked which one to choose if they only
+                    have one of the two options. (This questionnaire will seek
+                    the user's better understanding by accurately presenting
+                    possible dualities. Dualities: Passage tour or visiting
+                    historical sites / urban space or nature space/individual or
+                    group entertainment/sports or art / local and healthy food
+                    style or fast food / and more than 20 other dual modes) The
+                    artificial intelligence on the platform will prepare a
+                    report based on the data obtained, allowing them to make
+                    more appropriate travel plans based on the customer's needs.
+                    Customers will have the flexibility of selecting, rejecting,
+                    or modifying the plan designed by the local guides.
+                  </b-collapse>
                 </p>
-                <nuxt-link
-                  to="/"
+
+                <b-button
+                  v-b-toggle.text-more-1
                   class="btn btn-primary w-100 text-light bgorange primary-button"
-                  >more</nuxt-link
+                  >more</b-button
                 >
               </div>
             </div>
           </div>
           <div class="col-6 col-sm-5 px-1 mb-4">
-            <div
-              class="card h-100"
-              style="background-color: rgba(0, 0, 0, 0.6)"
-            >
+            <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"
                 src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
@@ -86,22 +89,27 @@
                 <p class="card-text">
                   Deep Treep will provide its customers with a companion finder
                   feature so that users can meet someone with the same goal and
-                  interest. The companion finder feature will allow travellers,
-                  whether individual travellers or travelling groups (like
-                  families), to connect with other travellers having similar
-                  travelling tastes and preferences. Meeting with new people
-                  having similar travelling preferences will directly impact the
-                  customers' travel experiences, thus leading to higher customer
-                  satisfaction. When a customer chooses the companion finder
-                  option, the app will display the results of the similarity
-                  percentage of their personality, experience, time of travel,
-                  and location. Both parties will have the option of accepting
-                  or rejecting the offer after seeing the results.
+                  interest.
+                  <b-collapse id="text-more-2">
+                    The companion finder feature will allow travellers, whether
+                    individual travellers or travelling groups (like families),
+                    to connect with other travellers having similar travelling
+                    tastes and preferences. Meeting with new people having
+                    similar travelling preferences will directly impact the
+                    customers' travel experiences, thus leading to higher
+                    customer satisfaction. When a customer chooses the companion
+                    finder option, the app will display the results of the
+                    similarity percentage of their personality, experience, time
+                    of travel, and location. Both parties will have the option
+                    of accepting or rejecting the offer after seeing the
+                    results.
+                  </b-collapse>
                 </p>
-                <nuxt-link
-                  to="/"
-                  class="btn text-light bgorange w-100 primary-button"
-                  >more</nuxt-link
+
+                <b-button
+                  v-b-toggle.text-more-2
+                  class="btn btn-primary w-100 text-light bgorange primary-button"
+                  >more</b-button
                 >
               </div>
             </div>
@@ -536,27 +544,7 @@
         enim. Velit ut tortor pretium viverra suspendisse potenti nullam.
       </p>
     </div>
-    <div class="row m-0 justify-content-center">
-      <div
-        class="d-flex align-items-end service"
-        v-for="service in services.results"
-        :key="service.id"
-        :style="{ backgroundImage: `url(${service.image})` }"
-      >
-        <div
-          class="d-flex col-12 pb-3 text-light justify-content-between pointer"
-          @click="push(service.id)"
-        >
-          <div class="bg-dark px-2 rounded">
-            <i class="fa fa-location-dot"></i>
-            {{ service.title }}
-          </div>
-          <span class="bg-dark px-2 rounded text-light">{{
-            service.inventory
-          }}</span>
-        </div>
-      </div>
-    </div>
+    <div class="row m-0 justify-content-center"></div>
     <div class="container py-5 d-flex flex-wrap">
       <div class="col-md-6 col-12">
         <h4 class="d-flex align-items-center">
@@ -920,9 +908,9 @@ export default {
   border: 2px solid rgba(238, 238, 238, 0.468);
   box-shadow: 0px 15px 20px rgba(255, 123, 0, 0.185) !important;
 }
-.primary-button:hover {
+/* .primary-button:hover {
   transform: translateY(-4px);
-}
+} */
 @media only screen and (max-width: 768px) {
   .service {
     width: 25%;
