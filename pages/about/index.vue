@@ -145,46 +145,22 @@
         <h2 class="text-center pt-5 mb-5">Meet our team members</h2>
         <div class="row mx-0 justify-content-around">
           <div class="col-3 m-2 my-4 p-0" style="background-color: white">
-            <img src="IMG_7415.jpg" alt="" class="col-12 p-0" />
-            <div class="p-5 text-center">
-              <div>Alan Cooper</div>
-              <div class="text-muted"></div>
-            </div>
+            <img src="IMG_7415.jpg" alt="" class="col-12 p-0 rounded" />
           </div>
           <div class="col-3 m-2 my-4 p-0" style="background-color: white">
-            <img src="IMG_7414.jpg" alt="" class="col-12 p-0" />
-            <div class="p-5 text-center">
-              <div>Alan Cooper</div>
-              <div class="text-muted">vice chairman</div>
-            </div>
+            <img src="IMG_7414.jpg" alt="" class="col-12 p-0 rounded" />
           </div>
           <div class="col-3 m-2 my-4 p-0" style="background-color: white">
-            <img src="IMG_7413.jpg" alt="" class="col-12 p-0" />
-            <div class="p-5 text-center">
-              <div>Alan Cooper</div>
-              <div class="text-muted">vice chairman</div>
-            </div>
+            <img src="IMG_7413.jpg" alt="" class="col-12 p-0 rounded" />
           </div>
           <div class="col-3 m-2 my-4 p-0" style="background-color: white">
-            <img src="IMG_7428.jpg" alt="" class="col-12 p-0" />
-            <div class="p-5 text-center">
-              <div>Alan Cooper</div>
-              <div class="text-muted">vice chairman</div>
-            </div>
+            <img src="IMG_7428.jpg" alt="" class="col-12 p-0 rounded" />
           </div>
           <div class="col-3 m-2 my-4 p-0" style="background-color: white">
-            <img src="IMG_7440.jpg" alt="" class="col-12 p-0" />
-            <div class="p-5 text-center">
-              <div>Alan Cooper</div>
-              <div class="text-muted">vice chairman</div>
-            </div>
+            <img src="IMG_7440.jpg" alt="" class="col-12 p-0 rounded" />
           </div>
           <div class="col-3 m-2 my-4 p-0" style="background-color: white">
-            <img src="Q3A3.jpg" alt="" class="col-12 p-0" />
-            <div class="p-5 text-center">
-              <div>Alan Cooper</div>
-              <div class="text-muted">vice chairman</div>
-            </div>
+            <img src="Q3A3.jpg" alt="" class="col-12 p-0 rounded" />
           </div>
         </div>
       </div>

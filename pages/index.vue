@@ -655,32 +655,35 @@
         <img src="IMG_7474.jpg" alt="" class="rounded" style="width: 24%" />
       </div>
     </div>
-    <div class="px-5 d-flex" style="background-color: rgb(107 72 245)">
+    <div class="px-5 d-flex" style="background-color: #eee">
       <div
-        class="col-md-4 col-2 text-center py-4 px-5 text-light d-flex align-items-center justify-content-end"
+        class="col-md-4 col-2 text-center py-4 px-5 text-secondary d-flex align-items-center justify-content-end"
       >
         Why book?
       </div>
-      <div class="col-md-8 col-10 bgmain py-4 d-flex">
+      <div
+        class="col-md-8 col-10 py-4 d-flex"
+        style="background-color: rgba(255, 255, 255, 0.5)"
+      >
         <div class="d-flex mx-3">
-          <h4 class="mr-2"><i class="fa-solid fa-thumbs-up text-light"></i></h4>
+          <h4 class="mr-2"><i class="fa-solid fa-thumbs-up text-dark"></i></h4>
           <div>
-            <div class="text-light">+40,000 customers</div>
-            <div class="text-light">Comfort and satisfaction of passengers</div>
+            <div class="text-dark">+40,000 customers</div>
+            <div class="text-dark">Comfort and satisfaction of passengers</div>
           </div>
         </div>
         <div class="d-flex mx-3">
-          <h4 class="mr-2"><i class="fa-solid fa-medal text-light"></i></h4>
+          <h4 class="mr-2"><i class="fa-solid fa-medal text-dark"></i></h4>
           <div>
-            <div class="text-light">Awards won</div>
-            <div class="text-light">Travel tour awards and honors</div>
+            <div class="text-dark">Awards won</div>
+            <div class="text-dark">Travel tour awards and honors</div>
           </div>
         </div>
         <div class="d-flex mx-3">
-          <h4 class="mr-2"><i class="fa-solid fa-lock text-light"></i></h4>
+          <h4 class="mr-2"><i class="fa-solid fa-lock text-dark"></i></h4>
           <div>
-            <div class="text-light">Secure payment</div>
-            <div class="text-light">Best price guarantee</div>
+            <div class="text-dark">Secure payment</div>
+            <div class="text-dark">Best price guarantee</div>
           </div>
         </div>
       </div>
