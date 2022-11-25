@@ -1,31 +1,48 @@
 <template>
   <div>
-    <div class="nav navbar fixed-top d-md-flex d-none col-12 pt-3 px-5">
+    <div
+      class="navbar navbar-light fixed-top navbar-expand-md d-md-flex d-none col-12 pt-3 px-5 nav"
+    >
       <div
-        class="d-none justify-content-center text-light thirdNav mt-3 d-md-flex"
+        class="d-none justify-content-center text-light thirdNav d-md-flex"
         ref="show"
       >
-        <nuxt-link to="/" class="px-2 pb-3 text-light">Home</nuxt-link>
-        <nuxt-link to="/tor" class="px-2 pb-3 text-light">Tours</nuxt-link>
-        <!-- <nuxt-link to="/category" class="px-2 pb-3 text-light"
-        >category</nuxt-link
-      > -->
-        <!-- <nuxt-link to="/pricetable" class="px-2 pb-3 text-light"
-        >pricetable</nuxt-link
-      > -->
-        <nuxt-link to="/service-category" class="px-2 pb-3 text-light"
-          >Service categories</nuxt-link
-        >
-        <!-- <nuxt-link to="/weblog" class="px-2 pb-3 text-light">weblog</nuxt-link> -->
-        <nuxt-link to="/" class="px-2 pb-3 text-light"
-          >Top attractions</nuxt-link
-        >
-        <nuxt-link to="/galery" class="px-2 pb-3 text-light">Gallery</nuxt-link>
+        <nuxt-link class="navbar-brand" to="/">
+          <img src="/logo.png" alt="deep treep" width="70" height="70" />
+        </nuxt-link>
 
-        <nuxt-link to="/about" class="px-2 pb-3 text-light">About us</nuxt-link>
+        <ul class="navbar-nav mr-auto mb-2 mb-md-0">
+          <li class="nav-item d-flex align-items-center">
+            <nuxt-link to="/" class="navbar-brand navbar-brand-style"
+              >Home</nuxt-link
+            >
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <nuxt-link to="/tor" class="navbar-brand navbar-brand-style"
+              >Tours</nuxt-link
+            >
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <nuxt-link
+              to="/top-attractions"
+              class="navbar-brand navbar-brand-style"
+              >Top attractions</nuxt-link
+            >
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <nuxt-link to="/galery" class="navbar-brand navbar-brand-style"
+              >Gallery</nuxt-link
+            >
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <nuxt-link to="/about" class="navbar-brand navbar-brand-style"
+              >About us</nuxt-link
+            >
+          </li>
+        </ul>
       </div>
       <div
-        class="d-none flex-column flex-sm-row justify-content-between d-md-flex flex-wrap"
+        class="d-none flex-column flex-sm-row justify-content-between d-md-flex flex-wrap ml-auto"
         ref="show"
       >
         <div class="d-flex align-items-center mt-3 mt-sm-0 flex-row">
@@ -117,7 +134,7 @@
     <!--secmenu-->
     <div class="d-md-none" :class="{ nav3: showMenu }">
       <div
-        class="col-12 nav2 py-3 mx-0 pr-5 d-flex justify-content-between"
+        class="col-12 nav2 navbar-light py-3 mx-0 pr-5 d-flex justify-content-between"
         v-if="!showMenu"
       >
         <div class="col-12 d-flex d-md-none mb-2">
@@ -211,16 +228,18 @@
             >
           </div>
         </div>
-        <nuxt-link to="/" class="px-2 pb-3 text-light">Home</nuxt-link>
-        <nuxt-link to="/tor" class="px-2 pb-3 text-light">Tours</nuxt-link>
-        <nuxt-link to="/service-category" class="px-2 pb-3 text-light"
+        <nuxt-link to="/" class="px-2 pb-3 mobile-navbar">Home</nuxt-link>
+        <nuxt-link to="/tor" class="px-2 pb-3 mobile-navbar">Tours</nuxt-link>
+        <nuxt-link to="/service-category" class="px-2 pb-3 mobile-navbar"
           >Service categories</nuxt-link
         >
-        <nuxt-link to="/" class="px-2 pb-3 text-light"
+        <nuxt-link to="/top-attractions" class="px-2 pb-3 mobile-navbar"
           >Top attractions</nuxt-link
         >
-        <nuxt-link to="/galery" class="px-2 pb-3 text-light">Gallery</nuxt-link>
-        <nuxt-link to="/about" class="px-2 pb-3 text-light mb-3"
+        <nuxt-link to="/galery" class="px-2 pb-3 mobile-navbar"
+          >Gallery</nuxt-link
+        >
+        <nuxt-link to="/about" class="px-2 pb-3 mb-3 mobile-navbar"
           >About us</nuxt-link
         >
         <div class="d-flex text-light justify-content-between">
@@ -304,22 +323,50 @@ export default {
 
 <style scoped>
 .nav {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   position: fixed;
   z-index: 2;
   max-height: 112px;
 }
 
+.nuxt-link-exact-active {
+  color: rgb(255, 123, 0) !important;
+}
+
+.navbar-brand-style {
+  position: relative;
+}
+
+.navbar-brand-style::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  background-color: rgb(255, 123, 0) !important;
+  height: 2px;
+  transition: 0.3s ease width;
+}
+
+.navbar-brand-style:hover::after {
+  width: 110%;
+}
+
+.mobile-navbar {
+  color: white;
+}
 .nav2 {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.5);
+
   position: fixed;
   z-index: 2;
 }
 .nav3 {
-  background: rgba(0, 0, 0);
+  background: #555;
   position: fixed;
   z-index: 2;
-  width: 50%;
+  width: 80%;
   height: 100%;
 }
 

@@ -117,41 +117,20 @@
         </div>
       </div>
     </div>
-    <div class="col-12 row m-0 py-4 justify-content-center bgmain">
-      <div class="col-md-2 col-6 d-flex">
-        <div class="mx-2 text-light"><i class="fa-solid fa-user"></i></div>
-        <div class="mx-2">
-          <div class="text-light">+500 destinations and places</div>
-          <div style="color: #ababab">
-            The most spectacular and amazing places
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2 col-6 d-flex">
-        <div class="mx-2 text-light"><i class="fa-solid fa-user"></i></div>
-        <div class="mx-2">
-          <div class="text-light">Best price guarantee</div>
-          <div style="color: #ababab">
-            The lowest price and the highest quality service
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2 col-6 d-flex">
-        <div class="mx-2 text-light"><i class="fa-solid fa-user"></i></div>
-        <div class="mx-2">
-          <div class="text-light">Excellent customer</div>
-          <div style="color: #ababab">
-            The comfort and satisfaction of passengers is our most important
-            mission
-          </div>
-        </div>
-      </div>
-      <div class="col-md-2 col-6 d-flex">
-        <div class="mx-2 text-light"><i class="fa-solid fa-user"></i></div>
-        <div class="mx-2">
-          <div class="text-light">Super fast booking</div>
-          <div style="color: #ababab">
-            The best hotels and flights at your disposal
+    <div
+      class="col-12 row m-0 py-4 justify-content-center"
+      style="background-color: #eee"
+    >
+      <div class="container">
+        <div class="row no-gutters">
+          <div class="col-6 col-lg-3" v-for="n in 8" :key="n">
+            <div class="p-1">
+              <img
+                class="w-100 img-thumbnail"
+                src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
+                alt="Card image cap"
+              />
+            </div>
           </div>
         </div>
       </div>
