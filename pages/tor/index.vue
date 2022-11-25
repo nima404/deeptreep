@@ -21,7 +21,7 @@
     </div>
     <div
       class="col-12 py-5 row justify-content-center px-3 m-0"
-      style="background-color: rgba(0, 0, 0, 0.5)"
+      style="background-color: rgba(0, 0, 0, 0.1)"
     >
       <div
         class="d-flex border rounded mx-2 p-0 col-4"

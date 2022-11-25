@@ -2,6 +2,7 @@
   <div>
     <div
       class="navbar navbar-light fixed-top navbar-expand-md d-md-flex d-none col-12 pt-3 px-5 nav"
+      :class="{ 'scrolled-header': scrolled }"
     >
       <div
         class="d-none justify-content-center text-light thirdNav d-md-flex"
@@ -135,6 +136,7 @@
     <div class="d-md-none" :class="{ nav3: showMenu }">
       <div
         class="col-12 nav2 navbar-light py-1 d-flex mx-0 __next-auth-theme-lightd-flex justify-content-between"
+        :class="{ 'scrolled-header': scrolled }"
         v-if="!showMenu"
       >
         <div class="col-6 d-flex d-md-non align-items-center">
@@ -274,10 +276,17 @@ export default {
       userInfo: {},
       cateMenu: false,
       categories: {},
+      scrolled: false,
     };
   },
 
   async mounted() {
+    // scroll event
+    window.addEventListener("scroll", (e) => {
+      const value = window.scrollY;
+      this.scrolled = value >= 500;
+    });
+    // auth
     if (this.$auth.strategy.token.status().valid() == true) {
       const userInfo = await this.$axios.get("api/usersmodel/user-info/");
       this.userInfo = userInfo.data.results[0];
@@ -322,6 +331,7 @@ export default {
   position: fixed;
   z-index: 2;
   max-height: 112px;
+  transition: 0.3s ease background;
 }
 
 .nuxt-link-exact-active:not(.login-link) {
@@ -353,6 +363,7 @@ export default {
 }
 .nav2 {
   background: rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease background;
 
   position: fixed;
   z-index: 2;
@@ -365,6 +376,11 @@ export default {
   height: 100%;
 }
 
+.scrolled-header {
+  background-color: #eee !important;
+  border-bottom: 1px solid #999;
+}
+
 .thirdNav div {
   cursor: pointer;
 }
@@ -375,6 +391,7 @@ export default {
 ::-webkit-scrollbar {
   width: 2px;
 }
+
 .cateMenu {
   max-height: 200px;
   overflow-y: scroll;

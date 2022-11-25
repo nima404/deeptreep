@@ -141,7 +141,7 @@
     >
       <div
         class="col-12 py-5 row justify-content-center px-3 mx-0"
-        style="background-color: rgba(0, 0, 0, 0.5)"
+        style="background-color: rgba(255, 255, 255, 0.5)"
       >
         <div
           class="d-flex border rounded mx-2 p-0 col-4"
@@ -500,6 +500,47 @@
                   >
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-5">
+      <h4 class="mb-4">we support :</h4>
+      <div class="row">
+        <div class="col-4">
+          <div class="card text-center border-0 h-100 bg-light">
+            <img
+              src="/american-express.png"
+              class="card-img-top"
+              alt="american express"
+            />
+            <div class="card-body">
+              <h5 class="card-title">american express</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card text-center border-0 h-100 bg-light">
+            <img
+              src="/master-card.png"
+              class="card-img-top"
+              alt="american express"
+            />
+            <div class="card-body">
+              <h5 class="card-title">master card</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card text-center border-0 h-100 bg-light">
+            <img
+              src="/visa-card.png"
+              class="card-img-top"
+              alt="american express"
+            />
+            <div class="card-body">
+              <h5 class="card-title">visa card</h5>
             </div>
           </div>
         </div>
