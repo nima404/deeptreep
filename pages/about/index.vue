@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="container p-5 d-flex">
-      <div class="col-6">
+      <div class="col-12">
         <h2>Your desired title</h2>
         <p class="mt-4 text-muted">
           The travel industry has undoubtedly boomed in the last decade, and the
@@ -53,36 +53,6 @@
           America, Australia, the Middle East, and Africa, inclusive of tours,
           experiences, and accommodations.
         </p>
-      </div>
-      <div class="col-6">
-        <div class="d-flex justify-content-between">
-          <div>branding</div>
-          <div>90%</div>
-        </div>
-        <div class="mb-4 lines">
-          <div class="percent" style="width: 90%"></div>
-        </div>
-        <div class="d-flex justify-content-between">
-          <div>Graphic Design</div>
-          <div>100%</div>
-        </div>
-        <div class="mb-4 lines">
-          <div class="percent" style="width: 100%"></div>
-        </div>
-        <div class="d-flex justify-content-between">
-          <div>social marketing</div>
-          <div>85%</div>
-        </div>
-        <div class="mb-4 lines">
-          <div class="percent" style="width: 85%"></div>
-        </div>
-        <div class="d-flex justify-content-between">
-          <div>Programming</div>
-          <div>90%</div>
-        </div>
-        <div class="mb-4 lines">
-          <div class="percent" style="width: 90%"></div>
-        </div>
       </div>
     </div>
     <div class="row mx-0" style="background-color: #e3e3e3">

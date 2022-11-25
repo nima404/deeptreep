@@ -10,17 +10,18 @@
         <!-- <nuxt-link to="/category" class="px-2 pb-3 text-light"
         >category</nuxt-link
       > -->
-        <nuxt-link to="/galery" class="px-2 pb-3 text-light">Galery</nuxt-link>
         <!-- <nuxt-link to="/pricetable" class="px-2 pb-3 text-light"
         >pricetable</nuxt-link
       > -->
-        <nuxt-link to="/services" class="px-2 pb-3 text-light"
-          >Services</nuxt-link
-        >
         <nuxt-link to="/service-category" class="px-2 pb-3 text-light"
           >Service categories</nuxt-link
         >
         <!-- <nuxt-link to="/weblog" class="px-2 pb-3 text-light">weblog</nuxt-link> -->
+        <nuxt-link to="/" class="px-2 pb-3 text-light"
+          >Top attractions</nuxt-link
+        >
+        <nuxt-link to="/galery" class="px-2 pb-3 text-light">Gallery</nuxt-link>
+
         <nuxt-link to="/about" class="px-2 pb-3 text-light">About</nuxt-link>
       </div>
       <div
@@ -212,13 +213,13 @@
         </div>
         <nuxt-link to="/" class="px-2 pb-3 text-light">Home</nuxt-link>
         <nuxt-link to="/tor" class="px-2 pb-3 text-light">Tours</nuxt-link>
-        <nuxt-link to="/galery" class="px-2 pb-3 text-light">Galery</nuxt-link>
-        <nuxt-link to="/services" class="px-2 pb-3 text-light"
-          >Services</nuxt-link
-        >
         <nuxt-link to="/service-category" class="px-2 pb-3 text-light"
           >Service categories</nuxt-link
         >
+        <nuxt-link to="/" class="px-2 pb-3 text-light"
+          >Top attractions</nuxt-link
+        >
+        <nuxt-link to="/galery" class="px-2 pb-3 text-light">Gallery</nuxt-link>
         <nuxt-link to="/about" class="px-2 pb-3 text-light mb-3"
           >About</nuxt-link
         >

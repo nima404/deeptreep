@@ -12,8 +12,34 @@
           <ValidationProvider
             v-slot="{ errors }"
             vid="role"
-            rules="required"
+            :rules="`required|is:${captchaCode}`"
+            name="captcha"
             v-if="step == 1"
+          >
+            <div ref="captcha"></div>
+            <input
+              type="text"
+              class="col-12"
+              v-model="captchaInput"
+              placeholder="captcha"
+            />
+            <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
+            <div class="col-12 px-0 mt-3 d-flex justify-content-end">
+              <div
+                class="btn btn-info col-3"
+                v-if="captchaCode == captchaInput"
+                @click="step++"
+              >
+                next
+              </div>
+            </div>
+          </ValidationProvider>
+
+          <ValidationProvider
+            v-slot="{ errors }"
+            vid="role"
+            rules="required"
+            v-if="step == 2"
           >
             <div>role:</div>
             <select v-model="formdata.role" class="col-12" style="height: 38px">
@@ -23,6 +49,7 @@
               <option value="service">service</option>
             </select>
             <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
+
             <div class="col-12 px-0 mt-3 d-flex justify-content-end">
               <div
                 class="btn btn-info col-3"
@@ -37,7 +64,7 @@
             v-slot="{ errors }"
             vid="role"
             rules="required|email"
-            v-if="step == 2"
+            v-if="step == 3"
           >
             <div>email:</div>
             <input type="email" v-model="formdata.email" class="col-12" />
@@ -65,7 +92,7 @@
             vid="role"
             name="password"
             rules="required|min:4"
-            v-if="step == 3"
+            v-if="step == 4"
           >
             <div class="mb-2">
               <div>password:</div>
@@ -127,7 +154,7 @@
             v-slot="{ errors }"
             vid="role"
             rules="required"
-            v-if="step == 4"
+            v-if="step == 5"
           >
             <div>address:</div>
             <textarea
@@ -156,6 +183,9 @@
 </template>
 
 <script>
+import { Captcha } from "simple-captcha-generator";
+const captcha = new Captcha();
+
 export default {
   name: "login",
   layout: "auth",
@@ -164,6 +194,8 @@ export default {
       message: false,
       step: 1,
       myHeight: window.innerHeight + "px",
+      captchaCode: captcha.currentString,
+      captchaInput: "",
       formdata: {
         email: "",
         password: "",
@@ -180,15 +212,14 @@ export default {
   },
 
   async mounted() {
-    try {
-      await this.$recaptcha.init();
-    } catch (e) {
-      console.error(e);
-    }
-  },
-
-  beforeDestroy() {
-    this.$recaptcha.destroy();
+    var canv = document.createElement("canvas");
+    canv.id = "captcha";
+    canv.width = 100;
+    canv.height = 50;
+    var ctx = canv.getContext("2d");
+    ctx.font = "25px Georgia";
+    ctx.strokeText(this.captchaCode, 0, 30);
+    this.$refs.captcha.appendChild(canv);
   },
 
   methods: {
@@ -197,38 +228,32 @@ export default {
     },
     async register() {
       try {
-        const token = await this.$recaptcha.execute("login");
-        console.log("ReCaptcha token:", token);
-
         if (this.formdata.password !== this.formdata.confrimPassword) {
           return;
         }
-        try {
-          const bodyFormData = new FormData();
-          for (const property in this.formdata) {
-            bodyFormData.append(property, this.formdata[property]);
-          }
-          const res = await this.$axios.$post(
-            "/api/usersmodel/register/",
-            bodyFormData
-          );
-          console.log(res);
-          this.message = true;
-          const res2 = await this.$axios.post(
-            "api/usersmodel/send-authentication-email/",
-            {
-              email: this.formdata.email,
-            }
-          );
-          console.log(res2);
-          setTimeout(() => {
-            this.$router.push("/panel/confirmemail");
-          }, 2000);
-        } catch (error) {
-          console.log(error);
+
+        const bodyFormData = new FormData();
+        for (const property in this.formdata) {
+          bodyFormData.append(property, this.formdata[property]);
         }
+        const res = await this.$axios.$post(
+          "/api/usersmodel/register/",
+          bodyFormData
+        );
+        console.log(res);
+        this.message = true;
+        const res2 = await this.$axios.post(
+          "api/usersmodel/send-authentication-email/",
+          {
+            email: this.formdata.email,
+          }
+        );
+        console.log(res2);
+        setTimeout(() => {
+          this.$router.push("/panel/confirmemail");
+        }, 2000);
       } catch (error) {
-        console.log("Login error:", error);
+        console.log(error);
       }
     },
   },
