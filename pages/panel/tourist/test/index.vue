@@ -472,33 +472,35 @@
       <button class="btn btn-success mt-3" @click="send">send</button>
     </div>
     <div v-else class="row justify-content-center">
-      <div class="col-12 col-sm-6 col-lg-5">
+      <div class="col-12">
         <div class="card shadow">
           <div class="card-body">
             <h5 class="card-title">test grade</h5>
             <p class="card-text">
-              <div class="border-bottom py-2 d-flex justify-content-between"><span>Q1</span> <span>{{ test.q1 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between">
-        <span>Q2</span>
-        <span>{{ test.q2 }}</span>
+              <div class="border-bottom py-2 d-flex justify-content-between flex-column flex-lg-row"><span>
+                1.To understand interest in city/nature
+              </span> <span class="text-primary">{{ translateQ1(test.q1.split('A')[1])}}</span></div>
+      <div class="border-bottom py-2 d-flex justify-content-between flex-column flex-lg-row">
+        <span>2.To understand the interest in the seasons</span>
+        <span class="text-primary">{{ translateQ1(test.q2.split('A')[1]) }}</span>
       </div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q3</span> <span>{{ test.q3 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q4</span> <span>{{ test.q4 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q5</span> <span>{{ test.q5 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q6</span> <span>{{ test.q6 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q7</span> <span>{{ test.q7 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q8</span> <span>{{ test.q8 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q9</span> <span>{{ test.q9 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q10</span> <span>{{ test.q10 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q11</span> <span>{{ test.q11 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q12</span> <span>{{ test.q12 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q13</span> <span>{{ test.q13 }}</span></div>
-      <div class="border-bottom py-2 d-flex justify-content-between"><span>Q14</span> <span>{{ test.q14 }}</span></div>
-      <div class="py-2 d-flex justify-content-between"><span>Q15</span> <span>{{ test.q15 }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>3.To understand the interest in regular action</span> <span class="text-primary">{{ translateQ1(test.q3.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>4.To understand the preferred mode of travel from a human perspective</span> <span class="text-primary">{{ translateQ1(test.q4.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>5.To understand the interest in the travel vehicle</span> <span class="text-primary">{{ translateQ1(test.q5.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>6.To understand the type of music you like</span> <span class="text-primary">{{ translateQ1(test.q6.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>7.To understand the type of relationship with animals</span> <span class="text-primary">{{ translateQ1(test.q7.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>8.To understand the type of relationship of local people</span> <span class="text-primary">{{ translateQ1(test.q8.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>9.To understand the type of favorite food</span> <span class="text-primary">{{ translateQ1(test.q9.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>10.To understand the type of evening entertainment</span> <span class="text-primary">{{ translateQ1(test.q10.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>11.To understand the type of nightlife</span> <span class="text-primary">{{ translateQ1(test.q11.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>12.To understand interest or lack of interest in emotional-risky actions</span> <span class="text-primary">{{ translateQ1(test.q12.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>13.To understand overview or detail</span> <span class="text-primary">{{ translateQ1(test.q13.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>14.To understand the speed interest in visits</span> <span class="text-primary">{{ translateQ1(test.q14.split('A')[1]) }}</span></div>
+      <div class="py-2 d-flex flex-column flex-lg-row justify-content-between"><span>15.To understand how control is applied</span> <span class="text-primary">{{ translateQ1(test.q15.split('A')[1]) }}</span></div>
             </p>
           </div>
         </div>
-        <button class="btn btn-danger mt-3 w-100" @click="onTestAgain">test again</button>
+        <button class="btn btn-info mt-3 w-100" @click="onTestAgain">test again</button>
 
       </div>
 
@@ -548,6 +550,160 @@ export default {
     };
   },
   methods: {
+    translateQ1(answer){
+      if(answer == "1"){
+        return "Modern urban space"
+      }else if(answer == "2"){
+        return "Ancient urban space"
+      }else if(answer == "3"){
+        return "Nature"
+      }
+    },
+    translateQ2(answer){
+      if(answer == "1"){
+        return "Winter"
+      }else if(answer == "2"){
+        return "Spring/Summer"
+      }else if(answer == "3"){
+        return "Autumn"
+      }
+    },
+    translateQ3(answer){
+      if(answer == "1"){
+        return "Shopping center"
+      }else if(answer == "2"){
+        return "Concert"
+      }else if(answer == "3"){
+        return "Sport"
+      }else if(answer == "4"){
+        return "Resting on the beach"
+      }
+    },
+    translateQ4(answer){
+      if(answer == "1"){
+        return "Family traveling"
+      }else if(answer == "2"){
+        return "Lonely traveler"
+      }else if(answer == "3"){
+        return "Traveling couple"
+      }else if(answer == "4"){
+        return "Traveling group"
+      }
+    },
+    translateQ5(answer){
+      if(answer == "1"){
+        return "Normal car"
+      }else if(answer == "2"){
+        return "Airplane"
+      }else if(answer == "3"){
+        return "Train"
+      }else if(answer == "4"){
+        return "Camper and van"
+      }else if(answer == "5"){
+        return "Ship"
+      }
+    },
+    translateQ6(answer){
+      if(answer == "1"){
+        return "Classical music concert"
+      }else if(answer == "2"){
+        return "Rock/Metal concert"
+      }else if(answer == "3"){
+        return "Folk concert"
+      }else if(answer == "4"){
+        return "Jazz concert(Open air)"
+      }
+    },
+    translateQ7(answer){
+      if(answer == "1"){
+        return "Normal park with animals"
+      }else if(answer == "2"){
+        return "Zoo"
+      }else if(answer == "3"){
+        return "Hunting"
+      }else if(answer == "4"){
+        return "Fishing"
+      }
+    },
+    translateQ8(answer){
+      if(answer == "1"){
+        return "Photo with local people"
+      }else if(answer == "2"){
+        return "Traveler in local dress"
+      }
+      else if(answer == "3"){
+        return "City square view from hotel room"
+      }
+    },
+    translateQ9(answer){
+      if(answer == "1"){
+        return "Classic restaurant"
+      }else if(answer == "2"){
+        return "Local food"
+      }else if(answer == "3"){
+        return "Fast food"
+      }else if(answer == "4"){
+        return "Street junk food"
+      }
+    },
+    translateQ10(answer){
+      if(answer == "1"){
+        return "Walking"
+      }else if(answer == "2"){
+        return "Coffee shop"
+      }else if(answer == "3"){
+        return "Museum"
+      }else if(answer == "4"){
+        return "Pub"
+      }
+    },
+    translateQ11(answer){
+      if(answer == "1"){
+        return "Dance club"
+      }else if(answer == "2"){
+        return "Couple on the beach"
+      }else if(answer == "3"){
+        return "Hotel’s roof garden with drinks and candles"
+      }else if(answer == "4"){
+        return "Wine bar"
+      }
+    },
+    translateQ12(answer){
+      if(answer == "1"){
+        return "Bungee jumping"
+      }else if(answer == "2"){
+        return ":Off-road trip"
+      }else if(answer == "3"){
+        return "Amusement park"
+      }else if(answer == "4"){
+        return "Disneyland"
+      }
+    },
+    translateQ13(answer){
+      if(answer == "1"){
+        return "Wide view"
+      }else if(answer == "2"){
+        return "Medium shot view"
+      }else if(answer == "3"){
+        return "Close-up"
+      }
+    },
+    translateQ14(answer){
+      if(answer == "1"){
+        return "Fast"
+      }else if(answer == "2"){
+        return "Normal"
+      }else if(answer == "3"){
+        return "Slow"
+      }
+    },
+    translateQ15(answer){
+      if(answer == "1"){
+        return "I don’t enjoy being surprised"
+      }else if(answer == "2"){
+        return "I enjoy being surprised"
+      }
+    },
     async onTestAgain(){
       try {
         const res = await this.$axios.delete(
