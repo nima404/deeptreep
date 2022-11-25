@@ -2,16 +2,27 @@
   <div>
     <ValidationObserver ref="form" v-slot="{ handleSubmit }">
       <form action="#" @submit.prevent="handleSubmit(edit)">
-        <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
-          <label for="" class="col-12 mt-2">first name:</label>
-          <input type="text" class="col-12" v-model="user.first_name" />
-          <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
-        </ValidationProvider>
-        <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
-          <label for="" class="col-12 mt-2">last name:</label>
-          <input type="text" class="col-12" v-model="user.last_name" />
-          <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
-        </ValidationProvider>
+        <div class="row">
+          <div class="col-5">
+            <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
+              <label for="" class="col-12 mt-2">first name:</label>
+              <input type="text" class="col-12" v-model="user.first_name" />
+              <span class="text-xs text-danger col-12 p-0">{{
+                errors[0]
+              }}</span>
+            </ValidationProvider>
+          </div>
+          <div class="col-6">
+            <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
+              <label for="" class="col-12 mt-2">last name:</label>
+              <input type="text" class="col-12" v-model="user.last_name" />
+              <span class="text-xs text-danger col-12 p-0">{{
+                errors[0]
+              }}</span>
+            </ValidationProvider>
+          </div>
+        </div>
+
         <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
           <label for="" class="col-12 mt-2">gender:</label>
           <select class="col-12" style="height: 38px" v-model="user.gender">
@@ -31,9 +42,7 @@
           />
           <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
         </ValidationProvider>
-        <label for="" class="col-12 mt-2">image:</label>
-        <input type="file" class="col-12" ref="fileInput" />
-        <button class="btn btn-warning mt-3">edit</button>
+        <button class="btn btn-warning mt-3">Done</button>
       </form>
     </ValidationObserver>
   </div>

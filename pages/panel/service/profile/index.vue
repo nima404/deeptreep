@@ -1,41 +1,30 @@
 <template>
   <div>
-    <img class="col-3" :src="user.image" />
-    <table class="table">
-      <tr>
-        <td class="col-12">id:</td>
-        <td class="col-12">{{ user.id }}</td>
-      </tr>
-      <tr>
-        <td class="col-12">wallet:</td>
-        <td class="col-12">{{ user.wallet }}</td>
-      </tr>
-      <tr>
-        <td class="col-12">first name:</td>
-        <td class="col-12">{{ user.first_name || "" }}</td>
-      </tr>
-      <tr>
-        <td class="col-12">last name:</td>
-        <td class="col-12">{{ user.last_name || "" }}</td>
-      </tr>
-      <tr>
-        <td class="col-12">gender:</td>
-        <td class="col-12">{{ user.gender }}</td>
-      </tr>
-      <tr>
-        <td class="col-12">role:</td>
-        <td class="col-12">{{ user.role }}</td>
-      </tr>
-      <tr>
-        <td class="col-12">email:</td>
-        <td class="col-12">{{ user.email }}</td>
-      </tr>
-      <tr>
-        <td class="col-12">address:</td>
-        <td class="col-12">{{ user.address }}</td>
-      </tr>
-    </table>
-    <nuxt-link class="btn btn-info" to="/panel/service/profile/edit"
+    <div class="card" style="background-color: #eee">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4">
+            <img
+              :src="user.image || '/default.jpg'"
+              class="rounded border w-100"
+            />
+          </div>
+          <div class="col-8">
+            <h1>
+              {{ user.first_name }}
+              {{ user.last_name }}
+            </h1>
+            <p>email : {{ user.email }}</p>
+            <p>gander : {{ user.gender }}</p>
+            <p>wallet : {{ user.wallet }}</p>
+            <p>role : {{ user.role }}</p>
+            <p>address : {{ user.address }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nuxt-link class="btn btn-info mt-2 w-100" to="/panel/service/profile/edit"
       >edit</nuxt-link
     >
   </div>
