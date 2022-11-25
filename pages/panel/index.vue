@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col-12 d-flex justify-content-center align-items-center bgmain"
+    class="col-12 d-flex justify-content-center align-items-center"
     :style="{ height: myHeight }"
   >
     <div class="col-md-4 col-10 border rounded shadow bg-light p-4">

@@ -55,126 +55,91 @@
         </p>
       </div>
     </div>
-    <div class="row mx-0" style="background-color: #e3e3e3">
-      <img src="IMG_7478.jpg" alt="" class="col-6 p-0" />
-      <div class="col-6 text-muted py-4">
-        <div class="col-md-8 col-12">
-          <h3>Your desired title</h3>
-          <p class="my-4">
-            Furthermore, the company will also provide companion finder service
-            by introducing travellers to people who intend to travel to the same
-            area at the same time and have the same spirit and goals as them by
-            executing matchmaking technology. "Deep Treep Memorial" service will
-            let travellers capture their travel journey by tour guides by taking
-            photos and videos of passengers. The Company will create its data
-            centre: "Deep Treep Experience", wherein they will collect data from
-            the number of tourists from a city and country based on day, month,
-            season and year. It will also record customer feedback to be
-            accumulated in the dedicated database, which will help the system
-            algorithm perform predictions based on the experiences of similar
-            people. With its mission to deliver a client-centred solution and
-            elevate guests' experience, it will also offer "Deep Treep Courses"
-            to local guides to let them understand the customer's interests and
-            personalities better. It will allow them to provide customers with
-            more accurate travel plans based on their needs, resulting in higher
-            customer satisfaction and higher ratings for the service providers.
-            The Company will primarily target travellers between the ages of 30
-            and 60 (mainly families), and it will also target the travellers
-            from Generation Y or millennial groups who want to understand their
-            travel process better and recognise the value and necessity of
-            guides in the travel process. It will also target tech-savvy local
-            guides who wish to provide a deep travel experience to customers.
-            The Company will also affiliate itself with travel contractors like
-            rental cars, accommodation, entertainment centres, restaurants and
-            bars, shopping centres, and entertainment equipment rentals to offer
-            the ease of a one-stop solution to its customers. Initially, Deep
-            Treep will establish its presence in London by the third quarter of
-            2022. The Company aims to expand the coverage of its application to
-            the global market after setting a strong foothold in the UK market.
-            Amin Kouhafkan (CEO) will oversee the company’s operations in the
-            wake of his rich experience. The founder holds valuable experience,
-            knowledge, and skill in marketing and project management, allowing
-            the company to respond effectively to customer demands and remain
-            agile through a volatile business environment.
-          </p>
-          <div class="row mx-0">
-            <div class="col-6">
-              <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
-              The title of the desired list 1
-            </div>
-            <div class="col-6">
-              <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
-              The title of the desired list 2
-            </div>
-            <div class="col-6">
-              <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
-              The title of the desired list 3
-            </div>
-            <div class="col-6">
-              <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
-              The title of the desired list 4
-            </div>
-            <div class="col-6">
-              <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
-              The title of the desired list 5
-            </div>
-            <div class="col-6">
-              <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
-              The title of the desired list 6
-            </div>
-            <div class="col-6">
-              <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
-              The title of the desired list 7
-            </div>
-            <div class="col-6">
-              <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
-              The title of the desired list 8
+    <div class="row mx-0">
+      <!-- <img src="IMG_7478.jpg" alt="" class="col-6 p-0" /> -->
+      <div class="col-12 text-muted">
+        <div class="d-flex justify-content-center about-content">
+          <div
+            class="col-md-7 p-4 about-content-text text-white rounded text-justify"
+          >
+            <h3>Your desired title</h3>
+            <p class="my-4">
+              Furthermore, the company will also provide companion finder
+              service by introducing travellers to people who intend to travel
+              to the same area at the same time and have the same spirit and
+              goals as them by executing matchmaking technology. "Deep Treep
+              Memorial" service will let travellers capture their travel journey
+              by tour guides by taking photos and videos of passengers. The
+              Company will create its data centre: "Deep Treep Experience",
+              wherein they will collect data from the number of tourists from a
+              city and country based on day, month, season and year. It will
+              also record customer feedback to be accumulated in the dedicated
+              database, which will help the system algorithm perform predictions
+              based on the experiences of similar people. With its mission to
+              deliver a client-centred solution and elevate guests' experience,
+              it will also offer "Deep Treep Courses" to local guides to let
+              them understand the customer's interests and personalities better.
+              It will allow them to provide customers with more accurate travel
+              plans based on their needs, resulting in higher customer
+              satisfaction and higher ratings for the service providers. The
+              Company will primarily target travellers between the ages of 30
+              and 60 (mainly families), and it will also target the travellers
+              from Generation Y or millennial groups who want to understand
+              their travel process better and recognise the value and necessity
+              of guides in the travel process. It will also target tech-savvy
+              local guides who wish to provide a deep travel experience to
+              customers. The Company will also affiliate itself with travel
+              contractors like rental cars, accommodation, entertainment
+              centres, restaurants and bars, shopping centres, and entertainment
+              equipment rentals to offer the ease of a one-stop solution to its
+              customers. Initially, Deep Treep will establish its presence in
+              London by the third quarter of 2022. The Company aims to expand
+              the coverage of its application to the global market after setting
+              a strong foothold in the UK market. Amin Kouhafkan (CEO) will
+              oversee the company’s operations in the wake of his rich
+              experience. The founder holds valuable experience, knowledge, and
+              skill in marketing and project management, allowing the company to
+              respond effectively to customer demands and remain agile through a
+              volatile business environment.
+            </p>
+            <div class="row mx-0">
+              <div class="col-6">
+                <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
+                The title of the desired list 1
+              </div>
+              <div class="col-6">
+                <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
+                The title of the desired list 2
+              </div>
+              <div class="col-6">
+                <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
+                The title of the desired list 3
+              </div>
+              <div class="col-6">
+                <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
+                The title of the desired list 4
+              </div>
+              <div class="col-6">
+                <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
+                The title of the desired list 5
+              </div>
+              <div class="col-6">
+                <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
+                The title of the desired list 6
+              </div>
+              <div class="col-6">
+                <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
+                The title of the desired list 7
+              </div>
+              <div class="col-6">
+                <i class="fa-sharp fa-solid fa-circle-check mr-2"></i>
+                The title of the desired list 8
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="row mx-0">
-      <div class="col-6 d-flex justify-content-end align-items-center">
-        <div class="col-md-6 col-12 text-muted">
-          <p class="my-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
-          <p class="my-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua
-          </p>
-          <button
-            class="rounded text-light px-4 py-2"
-            style="background-color: #c3c3c3; border: none"
-          >
-            List of our services
-          </button>
-        </div>
-      </div>
-      <div class="col-6 py-5" style="background-color: black">
-        <div class="col-md-6 col-12 py-5">
-          <h3>Your desired trial title</h3>
-          <p class="my-3 mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
-          <h3>Your desired trial title</h3>
-          <p class="my-3 mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
-          <h3>Your desired trial title</h3>
-          <p class="my-3 mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
-        </div>
-      </div>
-    </div> -->
     <div style="background-color: #f3f3f3">
       <div class="container">
         <h2 class="text-center pt-5 mb-5">Meet our team members</h2>
@@ -245,5 +210,17 @@ export default {
   background-color: black;
   border-radius: 50px;
   height: 5px;
+}
+
+.about-content {
+  /* style="background: url('/IMG_7478.jpg') no-repeat cover" */
+  background-image: url("/IMG_7478.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-content-text {
+  background-color: rgba(0, 0, 0, 0.763);
 }
 </style>
