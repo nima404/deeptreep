@@ -67,13 +67,6 @@ export default {
         bodyFormData.append("last_name", this.user.last_name);
         bodyFormData.append("gender", this.user.gender || "");
         bodyFormData.append("address", this.user.address);
-        bodyFormData.append(
-          "show_me_for_tourleader",
-          this.user.show_me_for_tourleader
-        );
-        if (this.$refs.fileInput.files[0] != undefined) {
-          bodyFormData.append("image", this.$refs.fileInput.files[0]);
-        }
         const res = await this.$axios.put(
           "api/usersmodel/user-update/",
           bodyFormData

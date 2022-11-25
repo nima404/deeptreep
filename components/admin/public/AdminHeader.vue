@@ -3,12 +3,20 @@
     class="col-12 header d-flex align-items-center px-4 justify-content-between"
   >
     <div class="d-flex align-items-center">
-      <div class="profile ml-3 border px-0">
+      <div class="profile ml-3 border px-0 position-relative">
         <img
           :src="userInfo.image || '/default.jpg'"
           alt=""
-          class="col-12 px-0"
+          class="col-12 px-0 rounded-circle"
         />
+
+        <label
+          class="position-absolute badge rounded-pill bg-info text-light pointer"
+          style="bottom: 0; left: 0"
+          for="file-input"
+        >
+          <i class="fa fa-pen"></i>
+        </label>
       </div>
       <div>{{ userInfo.first_name + " " + userInfo.last_name }}</div>
     </div>
@@ -26,6 +34,14 @@
         <option value="ar">Arabic</option>
       </select>
     </div>
+
+    <!-- input -->
+    <input
+      type="file"
+      class="col-12 p-0 d-none"
+      @change="fileInputUpload"
+      id="file-input"
+    />
   </div>
 </template>
 
@@ -41,6 +57,20 @@ export default {
     const userInfo = await this.$axios.get("api/usersmodel/user-info/");
     this.userInfo = userInfo.data.results[0];
     console.log(userInfo.data.results[0]);
+  },
+  methods: {
+    async fileInputUpload(event) {
+      const bodyFormData = new FormData();
+      if (event.target.files[0] != undefined) {
+        bodyFormData.append("image", event.target.files[0]);
+
+        const res = await this.$axios.put(
+          "api/usersmodel/user-update/",
+          bodyFormData
+        );
+        console.log(res);
+      }
+    },
   },
   watch: {
     lang() {
@@ -79,7 +109,7 @@ export default {
   height: 60px;
   border-radius: 50%;
   background-size: cover;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   justify-content: center;
 }
