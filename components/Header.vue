@@ -82,7 +82,7 @@
           >
             <nuxt-link
               to="/panel"
-              class="text-light ml-2 btn bgorange d-flex justify-content-center align-items-center py-1"
+              class="text-light ml-2 btn bgorange d-flex justify-content-center align-items-center py-1 login-link"
             >
               <i class="fa fa-lock mr-2"></i>
               <span class="ms-2">login</span></nuxt-link
@@ -134,22 +134,17 @@
     <!--secmenu-->
     <div class="d-md-none" :class="{ nav3: showMenu }">
       <div
-        class="col-12 nav2 navbar-light py-3 mx-0 pr-5 d-flex justify-content-between"
+        class="col-12 nav2 navbar-light py-1 d-flex mx-0 __next-auth-theme-lightd-flex justify-content-between"
         v-if="!showMenu"
       >
-        <div class="col-12 d-flex d-md-none mb-2">
+        <div class="col-6 d-flex d-md-non align-items-center">
           <i
             class="fa fa-bars text-light pointer"
             @click="showMenu = true"
             style="font-size: 2rem"
           ></i>
         </div>
-        <img
-          src="logo.png"
-          alt=""
-          style="position: absolute; right: 20px"
-          width="30px"
-        />
+        <img src="/logo.png" alt="deep treep" width="70" height="70" />
       </div>
       <div
         class="d-flex flex-column flex-sm-row justify-content-between col-12 d-md-none"
@@ -184,7 +179,7 @@
               >
             </div>
             <div
-              class="ml-4"
+              class="ml-4 login-link"
               v-if="$auth.strategy.token.status().valid() == false"
             >
               <i class="fa fa-lock textorange ml-2"></i>
@@ -329,7 +324,7 @@ export default {
   max-height: 112px;
 }
 
-.nuxt-link-exact-active {
+.nuxt-link-exact-active:not(.login-link) {
   color: rgb(255, 123, 0) !important;
 }
 
