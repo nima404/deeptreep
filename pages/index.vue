@@ -35,7 +35,7 @@
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"
-                src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
+                src="/head-treasure-flower-disk-flowers-inflorescence-ray.webp"
                 alt="Card image cap"
               />
               <div class="card-body">
@@ -81,7 +81,7 @@
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"
-                src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
+                src="/head-treasure-flower-disk-flowers-inflorescence-ray.webp"
                 alt="Card image cap"
               />
               <div class="card-body">
@@ -127,7 +127,7 @@
             <div class="p-1">
               <img
                 class="w-100 img-thumbnail"
-                src="https://cdn.britannica.com/45/5645-050-B9EC0205/head-treasure-flower-disk-flowers-inflorescence-ray.jpg"
+                src="/head-treasure-flower-disk-flowers-inflorescence-ray.webp"
                 alt="Card image cap"
               />
             </div>
