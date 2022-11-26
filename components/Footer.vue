@@ -3,8 +3,8 @@
     <div class="col-12 row footer m-0 pt-5">
       <div class="col-md-7 col-12 d-flex justify-content-end border-right pb-5">
         <div class="col-lg-4 col-6">
-          <div class="text-dark">Contacts</div>
-          <div class="border-left border-secondary pl-2">
+          <div class="text-dark border-bottom pb-1">Contacts</div>
+          <div>
             <div class="text-dark my-3">Address: London, UK</div>
             <div class="text-dark my-3">phone: +989126660041</div>
             <div class="text-dark my-3">Deeptreeps@gmail.com</div>
@@ -19,7 +19,9 @@
           </div>
         </div>
         <div class="col-lg-4 col-6">
-          <div class="row text-dark">Categories of tours</div>
+          <div class="row text-dark border-bottom pb-1">
+            Categories of tours
+          </div>
           <div class="row justify-content-between">
             <nuxt-link
               to="tor?country=africa"
@@ -109,9 +111,7 @@
       class="col-12 text-center py-3 border-top"
       style="background-color: #eee"
     >
-      <p class="text-secondary">
-        Designed and implemented by the powerful dotweb team
-      </p>
+      <p class="text-secondary">All rights reserved by DeepTreep group</p>
     </div>
   </div>
 </template>

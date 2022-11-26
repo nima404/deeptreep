@@ -564,7 +564,7 @@
           <div
             class="col-md-4 my-2 my-md-0 col-12 bgorange pointer text-center text-light py-2 input2"
           >
-            share
+            subscribe
           </div>
         </div>
         <div class="d-flex textorange my-3">
@@ -674,7 +674,7 @@
         <div
           class="col-12 col-sm-4 text-center py-4 px-5 text-secondary d-flex align-items-center"
         >
-          Why book?
+          Why DeepTreep ?
         </div>
         <div
           class="col-12 col-sm-8 py-4 d-flex"

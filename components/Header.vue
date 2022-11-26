@@ -43,6 +43,11 @@
             >
           </li>
           <li class="nav-item d-flex align-items-center">
+            <nuxt-link to="/news" class="navbar-brand navbar-brand-style"
+              >News</nuxt-link
+            >
+          </li>
+          <li class="nav-item d-flex align-items-center">
             <nuxt-link to="/about" class="navbar-brand navbar-brand-style"
               >About us</nuxt-link
             >
@@ -242,6 +247,9 @@
         >
         <nuxt-link to="/galery" class="px-2 pb-3 mobile-navbar"
           >Gallery</nuxt-link
+        >
+        <nuxt-link to="/news" class="px-2 pb-3 mb-3 mobile-navbar"
+          >News</nuxt-link
         >
         <nuxt-link to="/about" class="px-2 pb-3 mb-3 mobile-navbar"
           >About us</nuxt-link

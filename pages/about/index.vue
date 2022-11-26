@@ -95,7 +95,8 @@
               customers. Initially, Deep Treep will establish its presence in
               London by the third quarter of 2022. The Company aims to expand
               the coverage of its application to the global market after setting
-              a strong foothold in the UK market. Amin Kouhafkan (CEO) will
+              a strong foothold in the UK market.
+              <span class="text-warning">Amin Kouhafkan (CEO)</span> will
               oversee the company’s operations in the wake of his rich
               experience. The founder holds valuable experience, knowledge, and
               skill in marketing and project management, allowing the company to
