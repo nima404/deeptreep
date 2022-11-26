@@ -505,47 +505,7 @@
         </div>
       </div>
     </div>
-    <div class="container py-5">
-      <h4 class="mb-4">we support :</h4>
-      <div class="row">
-        <div class="col-4">
-          <div class="card text-center border-0 h-100 bg-light">
-            <img
-              src="/american-express.png"
-              class="card-img-top"
-              alt="american express"
-            />
-            <div class="card-body">
-              <h5 class="card-title">american express</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card text-center border-0 h-100 bg-light">
-            <img
-              src="/master-card.png"
-              class="card-img-top"
-              alt="american express"
-            />
-            <div class="card-body">
-              <h5 class="card-title">master card</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="card text-center border-0 h-100 bg-light">
-            <img
-              src="/visa-card.png"
-              class="card-img-top"
-              alt="american express"
-            />
-            <div class="card-body">
-              <h5 class="card-title">visa card</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div class="container py-5">
       <div class="d-flex align-items-center">
         <i class="fa-regular fa-location-dot textmain"></i>
@@ -655,35 +615,86 @@
         <img src="IMG_7474.jpg" alt="" class="rounded" style="width: 24%" />
       </div>
     </div>
-    <div class="px-5 d-flex" style="background-color: #eee">
-      <div
-        class="col-md-4 col-2 text-center py-4 px-5 text-secondary d-flex align-items-center justify-content-end"
-      >
-        Why book?
+
+    <div class="px-5 d-flex border-bottom" style="background-color: #eee">
+      <div class="row w-100">
+        <div
+          class="col-12 col-sm-4 text-center py-4 px-5 text-secondary d-flex align-items-center"
+        >
+          we can support :
+        </div>
+        <div
+          class="col-12 col-sm-8 py-4 d-flex"
+          style="background-color: rgba(255, 255, 255, 0.5)"
+        >
+          <div class="d-flex align-items-center mx-3">
+            <img
+              src="/american-express.png"
+              class="img-thumbnail mr-2"
+              width="70"
+              height="70"
+              alt="american express"
+            />
+            <strong>american express</strong>
+          </div>
+          <div class="d-flex align-items-center mx-3">
+            <img
+              src="/master-card.png"
+              class="img-thumbnail mr-2"
+              width="70"
+              height="70"
+              alt="master card"
+            />
+            <strong>master card</strong>
+          </div>
+          <div class="d-flex align-items-center mx-3">
+            <img
+              src="/visa-card.png"
+              class="img-thumbnail mr-2"
+              width="70"
+              height="70"
+              alt="visa card"
+            />
+            <strong>visa card</strong>
+          </div>
+        </div>
       </div>
-      <div
-        class="col-md-8 col-10 py-4 d-flex"
-        style="background-color: rgba(255, 255, 255, 0.5)"
-      >
-        <div class="d-flex mx-3">
-          <h4 class="mr-2"><i class="fa-solid fa-thumbs-up text-dark"></i></h4>
-          <div>
-            <div class="text-dark">+40,000 customers</div>
-            <div class="text-dark">Comfort and satisfaction of passengers</div>
-          </div>
+    </div>
+    <div class="px-5 d-flex" style="background-color: #eee">
+      <div class="row w-100">
+        <div
+          class="col-12 col-sm-4 text-center py-4 px-5 text-secondary d-flex align-items-center"
+        >
+          Why book?
         </div>
-        <div class="d-flex mx-3">
-          <h4 class="mr-2"><i class="fa-solid fa-medal text-dark"></i></h4>
-          <div>
-            <div class="text-dark">Awards won</div>
-            <div class="text-dark">Travel tour awards and honors</div>
+        <div
+          class="col-12 col-sm-8 py-4 d-flex"
+          style="background-color: rgba(255, 255, 255, 0.5)"
+        >
+          <div class="d-flex mx-3">
+            <h4 class="mr-2">
+              <i class="fa-solid fa-thumbs-up text-dark"></i>
+            </h4>
+            <div>
+              <div class="text-dark">+40,000 customers</div>
+              <div class="text-dark">
+                Comfort and satisfaction of passengers
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="d-flex mx-3">
-          <h4 class="mr-2"><i class="fa-solid fa-lock text-dark"></i></h4>
-          <div>
-            <div class="text-dark">Secure payment</div>
-            <div class="text-dark">Best price guarantee</div>
+          <div class="d-flex mx-3">
+            <h4 class="mr-2"><i class="fa-solid fa-medal text-dark"></i></h4>
+            <div>
+              <div class="text-dark">Awards won</div>
+              <div class="text-dark">Travel tour awards and honors</div>
+            </div>
+          </div>
+          <div class="d-flex mx-3">
+            <h4 class="mr-2"><i class="fa-solid fa-lock text-dark"></i></h4>
+            <div>
+              <div class="text-dark">Secure payment</div>
+              <div class="text-dark">Best price guarantee</div>
+            </div>
           </div>
         </div>
       </div>
