@@ -21,6 +21,10 @@ body {
   overflow-x: hidden;
   width: 100vw;
 }
+
+.bg-gray {
+  background-color: #eee !important;
+}
 a {
   text-decoration: none !important;
 }

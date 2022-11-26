@@ -25,6 +25,13 @@
           </li>
           <li class="nav-item d-flex align-items-center">
             <nuxt-link
+              to="/service-category"
+              class="navbar-brand navbar-brand-style"
+              >Service categories</nuxt-link
+            >
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <nuxt-link
               to="/top-attractions"
               class="navbar-brand navbar-brand-style"
               >Top attractions</nuxt-link
@@ -240,8 +247,11 @@
           >About us</nuxt-link
         >
         <div class="d-flex text-light justify-content-between">
-          <div class="mr-4"><i class="fa fa-phone mr-2"></i>09121992129</div>
-          <div><i class="fa fa-envelope mr-2"></i>dotweb@info.com</div>
+          <div class="mr-4"><i class="fa fa-phone mr-2"></i>+989126660041</div>
+          <div><i class="fa fa-envelope mr-2"></i>Deeptreeps@gmail.com</div>
+          <!-- <div>
+            <i class="fa fa-envelope mr-2"></i>Deeptreep.service@gmail.com
+          </div> -->
         </div>
         <div class="d-flex justify-content-between mt-3">
           <nuxt-link to="/">
@@ -279,7 +289,6 @@ export default {
       scrolled: false,
     };
   },
-
   async mounted() {
     // scroll event
     window.addEventListener("scroll", (e) => {
@@ -296,6 +305,9 @@ export default {
   },
 
   watch: {
+    $route() {
+      this.showMenu = false;
+    },
     lang() {
       if (this.lang == "en") {
         this.$store.commit("lang/English");

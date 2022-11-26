@@ -166,7 +166,7 @@
         v-if="$auth.strategy.token.status().valid() == true"
       >
         <button class="btn col-4 col-sm-3 btn-info mx-1" @click="sScores">
-          by scores
+          search
         </button>
         <button class="btn col-4 col-sm-3 btn-info mx-1" @click="sTest">
           by maintest
@@ -180,7 +180,7 @@
         v-if="$auth.strategy.token.status().valid() == false"
       >
         <button class="btn col-12 btn-info mx-1" @click="sScores">
-          by scores
+          search
         </button>
       </div>
     </div>

@@ -286,7 +286,7 @@
           v-if="$auth.strategy.token.status().valid() == true"
         >
           <button class="btn col-4 col-sm-3 btn-info mx-1" @click="sScores">
-            by scores
+            search
           </button>
           <button class="btn col-4 col-sm-3 btn-info mx-1" @click="sTest">
             by maintest
@@ -300,7 +300,7 @@
           v-if="$auth.strategy.token.status().valid() == false"
         >
           <button class="btn col-12 btn-info mx-1" @click="sScores">
-            by scores
+            search
           </button>
         </div>
       </div>
@@ -527,26 +527,29 @@
     <div class="row m-0 justify-content-center"></div>
     <div class="container py-5 d-flex flex-wrap">
       <div class="col-md-6 col-12">
-        <h4 class="d-flex align-items-center">
+        <h4 class="bg-gray p-2 rounded px-3 mb-4">
           <i class="fa-sharp fa-solid fa-list textmain mr-2"></i>
-          <span>List of service categories </span>
+          <span class="text-secondary">List of service categories </span>
         </h4>
-        <div class="row mt-4 textorange">
+        <div class="row textorange">
           <div
             class="col-6 my-2"
             v-for="category in categories.results"
             :key="category.id"
           >
-            <nuxt-link :to="`/services?category=${category.name}`">
+            <nuxt-link
+              class="border rounded w-100 p-1 d-block text-center category-links"
+              :to="`/services?category=${category.name}`"
+            >
               {{ category.name }}
             </nuxt-link>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-12">
-        <h4 class="my-3">
-          <i class="fa fa-envelope textmain mr-2 mb-3"></i>subscribe to
-          newsletter
+        <h4 class="bg-gray p-2 rounded px-3 mb-4">
+          <i class="fa fa-envelope textmain mr-3"></i>
+          <span class="text-secondary"> subscribe to newsletter </span>
         </h4>
         <div class="text-muted my-3">
           Benefit from special member discounts with us
@@ -564,7 +567,7 @@
             share
           </div>
         </div>
-        <div class="d-flex text-muted my-3">
+        <div class="d-flex textorange my-3">
           <i class="fa-brands mx-2 pointer fa-snapchat"></i>
           <i class="fa-brands mx-2 pointer fa-instagram"></i>
           <i class="fa-brands mx-2 pointer fa-twitter"></i>
@@ -616,7 +619,10 @@
       </div>
     </div>
 
-    <div class="px-5 d-flex border-bottom" style="background-color: #eee">
+    <div
+      class="px-5 d-flex border-bottom border-top"
+      style="background-color: #eee"
+    >
       <div class="row w-100">
         <div
           class="col-12 col-sm-4 text-center py-4 px-5 text-secondary d-flex align-items-center"
@@ -660,7 +666,10 @@
         </div>
       </div>
     </div>
-    <div class="px-5 d-flex" style="background-color: #eee">
+    <div
+      class="px-5 d-flex border-bottom"
+      style="background-color: #eee; border-width: 2px !important"
+    >
       <div class="row w-100">
         <div
           class="col-12 col-sm-4 text-center py-4 px-5 text-secondary d-flex align-items-center"
@@ -935,6 +944,10 @@ export default {
 .input2 {
   border: none;
   border-radius: 50px;
+}
+
+.category-links:hover {
+  color: orange;
 }
 
 .primary-button {
