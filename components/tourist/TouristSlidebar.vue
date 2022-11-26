@@ -40,7 +40,16 @@
         <span class="d-block d-sm-inline-block text-center">
           <i class="fa-regular fa-tent"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block">test</span>
+        <span class="ms-1 d-none d-sm-inline-block">main test</span>
+      </nuxt-link>
+      <nuxt-link
+        to="/panel/tourist/hartman"
+        class="py-2 px-4 w-100 right-to-left-animation border-bottom"
+      >
+        <span class="d-block d-sm-inline-block text-center">
+          <i class="fa-regular fa-pen"></i>
+        </span>
+        <span class="ms-1 d-none d-sm-inline-block">hartman test</span>
       </nuxt-link>
       <button
         class="py-2 px-4 w-100 right-to-left-animation border-0 border-bottom text-left bg-transparent"
