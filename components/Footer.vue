@@ -10,11 +10,24 @@
             <div class="text-dark my-3">Deeptreeps@gmail.com</div>
             <div class="text-dark my-3">Deeptreep.service@gmail.com</div>
             <div class="d-flex textorange">
-              <i class="fa-brands fa-vimeo-v mx-2 pointer"></i>
-              <i class="fa-brands fa-pinterest-p mx-2 pointer"></i>
-              <i class="fa-brands fa-linkedin-in mx-2 pointer"></i>
-              <i class="fa-brands fa-twitter mx-2 pointer"></i>
-              <i class="fa-brands fa-facebook-f mx-2 pointer"></i>
+              <a href="" class="textorange">
+                <i class="fa-brands fa-vimeo-v mx-2 pointer"></i>
+              </a>
+              <a href="https://pin.it/Uvu8GjP" class="textorange">
+                <i class="fa-brands fa-pinterest-p mx-2 pointer"></i>
+              </a>
+              <a href="" class="textorange">
+                <i class="fa-brands fa-linkedin-in mx-2 pointer"></i>
+              </a>
+              <a href="www.twitter.com/@deep_treep" class="textorange">
+                <i class="fa-brands fa-twitter mx-2 pointer"></i>
+              </a>
+              <a href="https://instagram.com/deep_treep" class="textorange">
+                <i class="fa-brands fa-instagram mx-2 pointer"></i>
+              </a>
+              <a href="" class="textorange">
+                <i class="fa-brands fa-facebook-f mx-2 pointer"></i>
+              </a>
             </div>
           </div>
         </div>
