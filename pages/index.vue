@@ -618,10 +618,10 @@
       style="background-image: url('IMG_7484.jpg'); background-size: contain"
       class="py-5"
     >
-      <div class="container py-5">
+      <div class="container py-5 d-flex justify-content-center">
         <div
-          class="col-6 rounded py-3"
-          style="background-color: rgba(255, 255, 255, 0.7)"
+          class="col-6 rounded py-5"
+          style="background-color: rgba(255, 255, 255, 0.75)"
         >
           <h4>
             <span class="text-dark mr-2">special discount </span
@@ -642,8 +642,7 @@
     <div class="container py-5">
       <div class="d-flex align-items-center">
         <h4 class="mr-2">
-          <i class="fa-regular mr-2 fa-lightbulb textmain"></i>The latest and
-          newest articles
+          <i class="fa-regular mr-2 fa-lightbulb textmain"></i>Latest News
         </h4>
         <!-- <span class="textorange"> / Review all articles</span> -->
       </div>

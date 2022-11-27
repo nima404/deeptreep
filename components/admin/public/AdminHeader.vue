@@ -18,7 +18,9 @@
           <i class="fa fa-pen"></i>
         </label>
       </div>
-      <div>{{ userInfo.first_name + " " + userInfo.last_name }}</div>
+      <div>
+        {{ (userInfo.first_name || "") + " " + (userInfo.last_name || "") }}
+      </div>
     </div>
     <div class="d-flex">
       <select

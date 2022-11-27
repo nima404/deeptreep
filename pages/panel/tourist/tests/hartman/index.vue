@@ -85,7 +85,8 @@ export default {
           "/api/psychologicalTesting/hasrtman-delete/",
         );
         console.log(res);
-        this.$router.push("/panel/tourist/tests");
+        this.test = null
+        // this.$router.push("/panel/tourist/tests");
       } catch (error) {
         console.log(error);
       }

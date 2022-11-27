@@ -80,13 +80,19 @@ export default {
   layout: "tourist",
   mounted() {
     if (
-      !this.userInfo.hart_man_a ||
-      !this.userInfo.hart_man_b ||
-      !this.userInfo.hart_man_c ||
+      !this.userInfo.hart_man_a &&
+      !this.userInfo.hart_man_b &&
+      !this.userInfo.hart_man_c &&
       !this.userInfo.hart_man_d
     ) {
       return;
     }
+    console.log(
+      this.userInfo.hart_man_a,
+      this.userInfo.hart_man_b,
+      this.userInfo.hart_man_c,
+      this.userInfo.hart_man_d
+    );
     var canvas = document.getElementById("can");
     var ctx = canvas.getContext("2d");
     var lastend = 0;
@@ -98,11 +104,16 @@ export default {
     ];
     var myTotal = 0;
     var myColor = ["blue", "red", "green", "yellow"];
-    var labels = ["A", "B", "C", "D"];
 
     for (var e = 0; e < data.length; e++) {
       myTotal += data[e];
     }
+    var labels = [
+      Math.floor((this.userInfo.hart_man_a / myTotal) * 100) + "%",
+      Math.floor((this.userInfo.hart_man_b / myTotal) * 100) + "%",
+      Math.floor((this.userInfo.hart_man_c / myTotal) * 100) + "%",
+      Math.floor((this.userInfo.hart_man_d / myTotal) * 100) + "%",
+    ];
 
     // make the chart 10 px smaller to fit on canvas
     var off = 10;

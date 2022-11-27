@@ -482,21 +482,21 @@
               </span> <span class="text-primary">{{ translateQ1(test.q1.split('A')[1])}}</span></div>
       <div class="border-bottom py-2 d-flex justify-content-between flex-column flex-lg-row">
         <span>2.To understand the interest in the seasons</span>
-        <span class="text-primary">{{ translateQ1(test.q2.split('A')[1]) }}</span>
+        <span class="text-primary">{{ translateQ12(test.q2.split('A')[1]) }}</span>
       </div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>3.To understand the interest in regular action</span> <span class="text-primary">{{ translateQ1(test.q3.split('A')[1]) }}</span></div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>4.To understand the preferred mode of travel from a human perspective</span> <span class="text-primary">{{ translateQ1(test.q4.split('A')[1]) }}</span></div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>5.To understand the interest in the travel vehicle</span> <span class="text-primary">{{ translateQ1(test.q5.split('A')[1]) }}</span></div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>6.To understand the type of music you like</span> <span class="text-primary">{{ translateQ1(test.q6.split('A')[1]) }}</span></div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>7.To understand the type of relationship with animals</span> <span class="text-primary">{{ translateQ1(test.q7.split('A')[1]) }}</span></div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>8.To understand the type of relationship of local people</span> <span class="text-primary">{{ translateQ1(test.q8.split('A')[1]) }}</span></div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>9.To understand the type of favorite food</span> <span class="text-primary">{{ translateQ1(test.q9.split('A')[1]) }}</span></div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>10.To understand the type of evening entertainment</span> <span class="text-primary">{{ translateQ1(test.q10.split('A')[1]) }}</span></div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>11.To understand the type of nightlife</span> <span class="text-primary">{{ translateQ1(test.q11.split('A')[1]) }}</span></div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>12.To understand interest or lack of interest in emotional-risky actions</span> <span class="text-primary">{{ translateQ1(test.q12.split('A')[1]) }}</span></div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>13.To understand overview or detail</span> <span class="text-primary">{{ translateQ1(test.q13.split('A')[1]) }}</span></div>
-      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>14.To understand the speed interest in visits</span> <span class="text-primary">{{ translateQ1(test.q14.split('A')[1]) }}</span></div>
-      <div class="py-2 d-flex flex-column flex-lg-row justify-content-between"><span>15.To understand how control is applied</span> <span class="text-primary">{{ translateQ1(test.q15.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>3.To understand the interest in regular action</span> <span class="text-primary">{{ translateQ3(test.q3.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>4.To understand the preferred mode of travel from a human perspective</span> <span class="text-primary">{{ translateQ4(test.q4.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>5.To understand the interest in the travel vehicle</span> <span class="text-primary">{{ translateQ5(test.q5.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>6.To understand the type of music you like</span> <span class="text-primary">{{ translateQ6(test.q6.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>7.To understand the type of relationship with animals</span> <span class="text-primary">{{ translateQ7(test.q7.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>8.To understand the type of relationship of local people</span> <span class="text-primary">{{ translateQ8(test.q8.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>9.To understand the type of favorite food</span> <span class="text-primary">{{ translateQ9(test.q9.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>10.To understand the type of evening entertainment</span> <span class="text-primary">{{ translateQ10(test.q10.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>11.To understand the type of nightlife</span> <span class="text-primary">{{ translateQ11(test.q11.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>12.To understand interest or lack of interest in emotional-risky actions</span> <span class="text-primary">{{ translateQ12(test.q12.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>13.To understand overview or detail</span> <span class="text-primary">{{ translateQ13(test.q13.split('A')[1]) }}</span></div>
+      <div class="border-bottom py-2 d-flex flex-column flex-lg-row justify-content-between"><span>14.To understand the speed interest in visits</span> <span class="text-primary">{{ translateQ14(test.q14.split('A')[1]) }}</span></div>
+      <div class="py-2 d-flex flex-column flex-lg-row justify-content-between"><span>15.To understand how control is applied</span> <span class="text-primary">{{ translateQ15(test.q15.split('A')[1]) }}</span></div>
             </p>
           </div>
         </div>
@@ -707,7 +707,8 @@ export default {
           "/api/psychologicalTesting/maintest-delete/",
         );
         console.log(res);
-        this.$router.push("/panel/tourist/tests");
+        this.test = null
+        // this.$router.push("/panel/tourist/tests");
       } catch (error) {
         console.log(error);
       }

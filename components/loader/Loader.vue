@@ -3,7 +3,7 @@
     <div class="loading">
       <div class="d-flex align-items-center logo-container">
         <img src="/logo.png" alt="logo" class="search-logo mr-5" />
-        <i class="fa fa-plane"></i>
+        <i class="fa fa-plane plane-loading"></i>
       </div>
     </div>
   </div>
@@ -33,12 +33,15 @@ export default {
   padding: 1rem;
   color: #17a2b8;
   text-align: center;
-  font-size: 6rem;
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.plane-loading {
+  font-size: 50px !important;
 }
 .loading {
   animation: spin 2s ease-in-out infinite;

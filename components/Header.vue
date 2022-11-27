@@ -89,10 +89,7 @@
             <i class="fa-solid fa-user textorange ml-2"></i>
             <nuxt-link to="/panel/signup" class="text-light">sign up</nuxt-link>
           </div> -->
-          <div
-            class="ml-2"
-            v-if="$auth.strategy.token.status().valid() == false"
-          >
+          <div class="ml-2" v-if="!$auth.loggedIn">
             <nuxt-link
               to="/panel"
               class="text-light ml-2 btn bgorange d-flex justify-content-center align-items-center py-1 login-link"
@@ -104,37 +101,25 @@
           <nuxt-link
             to="/panel/tourist"
             class="btn bgorange text-light"
-            v-if="
-              $auth.strategy.token.status().valid() == true &&
-              userInfo.rele == 'rourist'
-            "
+            v-if="$auth.loggedIn && userInfo.role == 'tourist'"
             >panel</nuxt-link
           >
           <nuxt-link
             to="/panel/touristLeader"
             class="btn bgorange text-light"
-            v-if="
-              $auth.strategy.token.status().valid() == true &&
-              userInfo.role == 'tour-leader'
-            "
+            v-if="$auth.loggedIn == true && userInfo.role == 'tour-leader'"
             >panel</nuxt-link
           >
           <nuxt-link
             to="/panel/admin"
             class="btn bgorange text-light"
-            v-if="
-              $auth.strategy.token.status().valid() == true &&
-              userInfo.role == 'leader-tour-manager'
-            "
+            v-if="$auth.loggedIn && userInfo.role == 'leader-tour-manager'"
             >panel</nuxt-link
           >
           <nuxt-link
             to="/panel/service"
             class="btn bgorange text-light"
-            v-if="
-              $auth.strategy.token.status().valid() == true &&
-              userInfo.role == 'service'
-            "
+            v-if="$auth.loggedIn && userInfo.role == 'service'"
             >panel</nuxt-link
           >
         </div>
@@ -188,53 +173,38 @@
           </select>
 
           <div class="d-flex my-3 justify-content-between pr-2">
-            <div v-if="$auth.strategy.token.status().valid() == false">
+            <div v-if="!$auth.loggedIn">
               <i class="fa-solid fa-user textorange ml-2"></i>
               <nuxt-link to="/panel/signup" class="text-light"
                 >sign up</nuxt-link
               >
             </div>
-            <div
-              class="ml-4 login-link"
-              v-if="$auth.strategy.token.status().valid() == false"
-            >
+            <div class="ml-4 login-link" v-if="!$auth.loggedIn">
               <i class="fa fa-lock textorange ml-2"></i>
               <nuxt-link to="/panel" class="text-light">login</nuxt-link>
             </div>
             <nuxt-link
               to="/panel/tourist"
               class="btn bgorange text-light"
-              v-if="
-                $auth.strategy.token.status().valid() == true &&
-                userInfo.role == 'tourist'
-              "
+              v-if="$auth.loggedIn && userInfo.role == 'tourist'"
               >panel</nuxt-link
             >
             <nuxt-link
               to="/panel/touristLeader"
               class="btn bgorange text-light"
-              v-if="
-                $auth.strategy.token.status().valid() == true &&
-                userInfo.role == 'tour-leader'
-              "
+              v-if="$auth.loggedIn && userInfo.role == 'tour-leader'"
               >panel</nuxt-link
             >
             <nuxt-link
               to="/panel/admin"
               class="btn btn-info"
-              v-if="
-                $auth.strategy.token.status().valid() == true &&
-                userInfo.role == 'leader-tour-manager'
-              "
+              v-if="$auth.loggedIn && userInfo.role == 'leader-tour-manager'"
               >panel</nuxt-link
             >
             <nuxt-link
               to="/panel/service"
               class="btn bgorange text-light"
-              v-if="
-                $auth.strategy.token.status().valid() == true &&
-                userInfo.role == 'service'
-              "
+              v-if="$auth.loggedIn && userInfo.role == 'service'"
               >panel</nuxt-link
             >
           </div>
@@ -300,13 +270,14 @@ export default {
     };
   },
   async mounted() {
+    console.log(this.$auth.loggedIn);
     // scroll event
     window.addEventListener("scroll", (e) => {
       const value = window.scrollY;
       this.scrolled = value >= 500;
     });
     // auth
-    if (this.$auth.strategy.token.status().valid() == true) {
+    if (this.$auth.loggedIn) {
       const userInfo = await this.$axios.get("api/usersmodel/user-info/");
       this.userInfo = userInfo.data.results[0];
     }
