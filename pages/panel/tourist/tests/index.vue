@@ -36,7 +36,7 @@
       </div>
     </div>
 
-    <div class="card bg-light">
+    <div class="card bg-light mb-3">
       <div class="card-body">
         <div class="row">
           <div class="col-6">
@@ -63,6 +63,41 @@
                 <p class="text-danger">not found test</p>
                 <nuxt-link
                   to="/panel/tourist/tests/hartman"
+                  class="btn btn-info"
+                  >start the test</nuxt-link
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card bg-light">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <div
+              class="d-flex justify-content-center align-items-center h-100 font-weight-bold"
+            >
+              Descriptive test
+            </div>
+          </div>
+          <div class="col-6">
+            <div
+              class="d-flex flex-column justify-content-center align-items-start"
+            >
+              <div v-if="descriptiveTest">
+                <nuxt-link
+                  to="/panel/tourist/tests/descriptive"
+                  class="btn btn-secondary"
+                  >detail</nuxt-link
+                >
+              </div>
+              <div v-else>
+                <p class="text-danger">not found test</p>
+                <nuxt-link
+                  to="/panel/tourist/tests/descriptive"
                   class="btn btn-info"
                   >start the test</nuxt-link
                 >
@@ -103,7 +138,7 @@ export default {
       this.userInfo.hart_man_d,
     ];
     var myTotal = 0;
-    var myColor = ["blue", "red", "green", "yellow"];
+    var myColor = ["red", "green", "yellow", "blue"];
 
     for (var e = 0; e < data.length; e++) {
       myTotal += data[e];
@@ -147,10 +182,17 @@ export default {
   async asyncData({ $axios }) {
     let hartmanTest = null;
     let mainTest = null;
+    let descriptiveTest = null;
     let userInfo = {};
     try {
       const test = await $axios.get("/api/psychologicalTesting/hasrtman/");
       hartmanTest = test?.data?.results?.[0];
+    } catch (error) {}
+    try {
+      const test = await $axios.get(
+        "/api/psychologicalTesting/descriptive-questions/"
+      );
+      descriptiveTest = test?.data?.results?.[0];
     } catch (error) {}
     try {
       const res = await $axios.get("/api/usersmodel/user-info/");
@@ -164,6 +206,7 @@ export default {
       hartmanTest,
       mainTest,
       userInfo,
+      descriptiveTest,
     };
   },
 };

@@ -1,7 +1,7 @@
 <template>
   <div class="shadow h-100">
     <ul
-      class="d-flex flex-column h-100 p-0 w-100"
+      class="d-flex flex-column vh-100 p-0 w-100"
       style="position: sticky; top: 0px"
     >
       <li class="text-center py-3 border-bottom bgmain text-light">

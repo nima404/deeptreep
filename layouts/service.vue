@@ -14,6 +14,7 @@
       </main>
     </div>
     <ExitModal />
+    <Footer />
   </div>
 </template>
 
