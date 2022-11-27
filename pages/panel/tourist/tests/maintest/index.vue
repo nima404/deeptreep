@@ -537,16 +537,13 @@ export default {
   },
 
   async asyncData({ $axios }) {
-    let user = {};
     let test = {};
     try {
-      user = await $axios.get("api/usersmodel/user-info/");
       test = await $axios.get("/api/psychologicalTesting/maintest/");
     } catch {}
 
     return {
       test: test?.data?.results[0] || null,
-      user: user?.data?.results[0]?.id || {},
     };
   },
   methods: {
@@ -710,7 +707,7 @@ export default {
           "/api/psychologicalTesting/maintest-delete/",
         );
         console.log(res);
-        this.$router.push("/panel/tourist/profile");
+        this.$router.push("/panel/tourist/tests");
       } catch (error) {
         console.log(error);
       }
@@ -726,7 +723,7 @@ export default {
           bodyFormData
         );
         console.log(res);
-        this.$router.push("/panel/tourist/profile");
+        this.$router.push("/panel/tourist/tests");
       } catch (error) {
         console.log(error);
       }

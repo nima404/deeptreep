@@ -17,7 +17,7 @@
             <p>email : {{ user.email }}</p>
             <p>gander : {{ user.gender }}</p>
             <p>wallet : {{ user.wallet }}</p>
-            <p>test : {{ user.main_test_result }}</p>
+            <!-- <p>test : {{ user.main_test_result }}</p> -->
             <p>role : {{ user.role }}</p>
             <p>address : {{ user.address }}</p>
           </div>
