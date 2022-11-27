@@ -60,7 +60,7 @@
       <div class="col-12 text-muted">
         <div class="d-flex justify-content-center about-content">
           <div
-            class="col-md-7 p-4 about-content-text text-white rounded text-justify"
+            class="col-md-7 p-4 about-content-text text-dark rounded text-justify"
           >
             <h3>Your desired title</h3>
             <p class="my-4">
@@ -198,6 +198,6 @@ export default {
 }
 
 .about-content-text {
-  background-color: rgba(0, 0, 0, 0.763);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 </style>

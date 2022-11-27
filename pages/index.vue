@@ -9,12 +9,11 @@
       "
     >
       <div
-        class="h-100 pb-5 pt-3 d-flex justify-content-center align-items-center"
-        style="background-color: rgba(0, 0, 0, 0.4)"
+        class="h-100 pb-5 pt-3 d-flex justify-content-end align-items-center"
       >
-        <div class="container d-flex justify-content-center">
+        <div class="px-5 d-flex justify-content-end">
           <div
-            class="col-12 col-sm-6 rounded p-5"
+            class="col-12 col-md-5 rounded p-5"
             style="background-color: rgba(0, 0, 0, 0.4)"
           >
             <h1>Deep treep</h1>
@@ -35,7 +34,7 @@
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"
-                src="/head-treasure-flower-disk-flowers-inflorescence-ray.webp"
+                src="/main-image-left.jpg"
                 alt="Card image cap"
               />
               <div class="card-body">
@@ -81,7 +80,7 @@
             <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
               <img
                 class="card-img-top"
-                src="/head-treasure-flower-disk-flowers-inflorescence-ray.webp"
+                src="/main-image-right.jpg"
                 alt="Card image cap"
               />
               <div class="card-body">
@@ -122,12 +121,12 @@
       style="background-color: #eee"
     >
       <div class="container">
-        <div class="row no-gutters">
-          <div class="col-6 col-lg-3" v-for="n in 8" :key="n">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-6 col-lg-3" v-for="(item, i) in imagesGroup" :key="i">
             <div class="p-1">
               <img
                 class="w-100 img-thumbnail"
-                src="/head-treasure-flower-disk-flowers-inflorescence-ray.webp"
+                :src="item"
                 alt="Card image cap"
               />
             </div>
@@ -506,6 +505,16 @@
       </div>
     </div>
 
+    <div class="col-12 px-0 py-5">
+      <div class="px-5">
+        <img
+          src="/photo_2022-11-27_11-51-26.jpg"
+          alt=""
+          class="w-100 img-thumbnail"
+        />
+      </div>
+    </div>
+
     <div class="container py-5">
       <div class="d-flex align-items-center">
         <i class="fa-regular fa-location-dot textmain"></i>
@@ -582,22 +591,25 @@
       </div>
     </div>
     <div
-      style="background-image: url('IMG_7484.jpg'); background-size: cover"
+      style="background-image: url('IMG_7484.jpg'); background-size: contain"
       class="py-5"
     >
       <div class="container py-5">
-        <div class="col-6">
+        <div
+          class="col-6 rounded py-3"
+          style="background-color: rgba(255, 255, 255, 0.7)"
+        >
           <h4>
-            <span class="text-light mr-2">special discount </span
+            <span class="text-dark mr-2">special discount </span
             ><span class="textorange">10-30%</span>
           </h4>
-          <div class="text-light my-3"></div>
-          <div class="text-light my-3">
+          <div class="text-dark my-3"></div>
+          <div class="text-dark my-3">
             Special offers with the cheapest prices, discounts on tour
             purchases, hotel reservations, tickets Planes, last minute tours,
             cheap tickets
           </div>
-          <button class="btn my-2 text-ceter p-2 px-4 bg-light input2">
+          <button class="btn my1-2 text-ceter p-2 px-4 bgorange input2">
             Go on amazing tours
           </button>
         </div>
@@ -722,6 +734,18 @@ export default {
       country: "",
       city: "",
       userInfo: {},
+      imagesGroup: [
+        "/image-group1.jpg",
+        "/image-group2.jpg",
+        "/image-group3.jpg",
+        "/image-group4.jpg",
+        "/image-group5.jpg",
+        "/image-group6.jpg",
+        "/image-group7.jpg",
+        "/image-group8.jpg",
+        "/image-group9.jpg",
+        "/image-group10.jpg",
+      ],
     };
   },
   async mounted() {
