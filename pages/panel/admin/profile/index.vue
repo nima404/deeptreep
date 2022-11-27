@@ -14,11 +14,21 @@
               {{ user.first_name }}
               {{ user.last_name }}
             </h1>
-            <p>email : {{ user.email }}</p>
-            <p>gander : {{ user.gender }}</p>
-            <p>wallet : {{ user.wallet }}</p>
-            <p>role : {{ user.role }}</p>
-            <p>address : {{ user.address }}</p>
+            <p class="bg-light rounded py-1 px-3">
+              email : <span class="text-primary">{{ user.email }} </span>
+            </p>
+            <p class="bg-light rounded py-1 px-3">
+              gander : <span class="text-primary">{{ user.gender }} </span>
+            </p>
+            <p class="bg-light rounded py-1 px-3">
+              wallet : <span class="text-primary">{{ user.wallet }} </span>
+            </p>
+            <p class="bg-light rounded py-1 px-3">
+              role : <span class="text-primary">{{ user.role }} </span>
+            </p>
+            <p class="bg-light rounded py-1 px-3">
+              address : <span class="text-primary">{{ user.address }} </span>
+            </p>
           </div>
         </div>
       </div>

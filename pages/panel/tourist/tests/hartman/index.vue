@@ -44,9 +44,9 @@
       <p class="text-danger" v-show="notAnswerYet">you did not answer some questions !</p>
     </div>
     <div v-else>
-        <div class="card shadow">
+        <div class="card overflow-hidden shadow">
+          <h5 class="card-body bg-info text-light text-center mb-0">hartman result</h5>
           <div class="card-body">
-            <h5 class="card-title">hartman result</h5>
             <p class="card-text">
               <div class="border-bottom py-2 d-flex justify-content-between flex-column flex-lg-row" v-for="(question, i) in questions" :key="i">
                 <span>

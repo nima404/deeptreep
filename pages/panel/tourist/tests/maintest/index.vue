@@ -10,21 +10,21 @@
           src="/Q1A1.jpg"
           @click="formData.q1 = 'Q1A1'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q1 == 'Q1A1' }"
         />
         <img
           src="/Q1A2.jpg"
           @click="formData.q1 = 'Q1A2'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q1 == 'Q1A2' }"
         />
         <img
           src="/Q1A3.jpg"
           @click="formData.q1 = 'Q1A3'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q1 == 'Q1A3' }"
         />
       </div>
@@ -37,21 +37,21 @@
           src="/Q2A1.jpg"
           @click="formData.q2 = 'Q2A1'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q2 == 'Q2A1' }"
         />
         <img
           src="/Q2A2.jpg"
           @click="formData.q2 = 'Q2A2'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q2 == 'Q2A2' }"
         />
         <img
           src="/Q2A3.jpg"
           @click="formData.q2 = 'Q2A3'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q2 == 'Q2A3' }"
         />
       </div>
@@ -64,28 +64,28 @@
           src="/Q3A1.jpg"
           @click="formData.q3 = 'Q3A1'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q3 == 'Q3A1' }"
         />
         <img
           src="/Q3A2.jpg"
           @click="formData.q3 = 'Q3A2'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q3 == 'Q3A2' }"
         />
         <img
           src="/Q3A3.jpg"
           @click="formData.q3 = 'Q3A3'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q3 == 'Q3A3' }"
         />
         <img
           src="/Q3A4.jpg"
           @click="formData.q3 = 'Q3A4'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q3 == 'Q3A4' }"
         />
       </div>
@@ -98,28 +98,28 @@
           src="/Q4A1.jpg"
           @click="formData.q4 = 'Q4A1'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q4 == 'Q4A1' }"
         />
         <img
           src="/Q4A2.jpg"
           @click="formData.q4 = 'Q4A2'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q4 == 'Q4A2' }"
         />
         <img
           src="/Q4A3.jpg"
           @click="formData.q4 = 'Q4A3'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q4 == 'Q4A3' }"
         />
         <img
           src="/Q4A4.jpg"
           @click="formData.q4 = 'Q4A5'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q4 == 'Q4A5' }"
         />
       </div>
@@ -127,40 +127,40 @@
         Q5.Which of the following images do you prefer? To understand the
         interest in the travel vehicle
       </div>
-      <div class="row mt-2 mb-5 justify-content-between">
+      <div class="row mt-2 mb-5">
         <img
           src="/Q5A1.jpg"
           @click="formData.q5 = 'Q5A1'"
           alt=""
-          class="col-2 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q5 == 'Q5A1' }"
         />
         <img
           src="/Q5A2.jpg"
           @click="formData.q5 = 'Q5A2'"
           alt=""
-          class="col-2 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q5 == 'Q5A2' }"
         />
         <img
           src="/Q5A3.jpg"
           @click="formData.q5 = 'Q5A3'"
           alt=""
-          class="col-2 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q5 == 'Q5A3' }"
         />
         <img
           src="/Q5A4.jpg"
           @click="formData.q5 = 'Q5A4'"
           alt=""
-          class="col-2 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q5 == 'Q5A4' }"
         />
         <img
           src="/Q5A5.jpg"
           @click="formData.q5 = 'Q5A5'"
           alt=""
-          class="col-2 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q5 == 'Q5A5' }"
         />
       </div>
@@ -173,28 +173,28 @@
           src="/Q6A1.jpg"
           @click="formData.q6 = 'Q6A1'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q6 == 'Q6A1' }"
         />
         <img
           src="/Q6A2.jpg"
           @click="formData.q6 = 'Q6A2'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q6 == 'Q6A2' }"
         />
         <img
           src="/Q6A3.jpg"
           @click="formData.q6 = 'Q6A3'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q6 == 'Q6A3' }"
         />
         <img
           src="/Q6A4.jpg"
           @click="formData.q6 = 'Q6A4'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q6 == 'Q6A4' }"
         />
       </div>
@@ -207,28 +207,28 @@
           src="/Q7A1.jpg"
           @click="formData.q7 = 'Q7A1'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q7 == 'Q7A1' }"
         />
         <img
           src="/Q7A2.jpg"
           @click="formData.q7 = 'Q7A2'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q7 == 'Q7A2' }"
         />
         <img
           src="/Q7A3.jpg"
           @click="formData.q7 = 'Q7A3'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q7 == 'Q7A3' }"
         />
         <img
           src="/Q7A4.jpg"
           @click="formData.q7 = 'Q7A4'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q7 == 'Q7A4' }"
         />
       </div>
@@ -241,21 +241,21 @@
           src="/Q8A1.jpg"
           @click="formData.q8 = 'Q8A1'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q8 == 'Q8A1' }"
         />
         <img
           src="/Q8A2.jpg"
           @click="formData.q8 = 'Q8A2'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q8 == 'Q8A2' }"
         />
         <img
           src="/Q8A3.jpg"
           @click="formData.q8 = 'Q8A3'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q8 == 'Q8A3' }"
         />
       </div>
@@ -268,28 +268,28 @@
           src="/Q9A1.jpg"
           @click="formData.q9 = 'Q9A1'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q9 == 'Q9A1' }"
         />
         <img
           src="/Q9A2.jpg"
           @click="formData.q9 = 'Q9A2'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q9 == 'Q9A2' }"
         />
         <img
           src="/Q9A3.jpg"
           @click="formData.q9 = 'Q9A3'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q9 == 'Q9A3' }"
         />
         <img
           src="/Q9A4.jpg"
           @click="formData.q9 = 'Q9A4'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q9 == 'Q9A4' }"
         />
       </div>
@@ -302,28 +302,28 @@
           src="/Q10A1.jpg"
           @click="formData.q10 = 'Q10A1'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q10 == 'Q10A1' }"
         />
         <img
           src="/Q10A2.jpg"
           @click="formData.q10 = 'Q10A2'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q10 == 'Q10A2' }"
         />
         <img
           src="/Q10A3.jpg"
           @click="formData.q10 = 'Q10A3'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q10 == 'Q10A3' }"
         />
         <img
           src="/Q10A4.jpg"
           @click="formData.q10 = 'Q10A4'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q10 == 'Q10A4' }"
         />
       </div>
@@ -336,28 +336,28 @@
           src="/Q11A1.jpg"
           @click="formData.q11 = 'Q11A1'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q11 == 'Q11A1' }"
         />
         <img
           src="/Q11A2.jpg"
           @click="formData.q11 = 'Q11A2'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q11 == 'Q11A2' }"
         />
         <img
           src="/Q11A3.jpg"
           @click="formData.q11 = 'Q11A3'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q11 == 'Q11A3' }"
         />
         <img
           src="/Q11A4.webp"
           @click="formData.q11 = 'Q11A4'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q11 == 'Q11A4' }"
         />
       </div>
@@ -370,28 +370,28 @@
           src="/Q12A1.webp"
           @click="formData.q12 = 'Q12A1'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q12 == 'Q12A1' }"
         />
         <img
           src="/Q12A2.webp"
           @click="formData.q12 = 'Q12A2'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q12 == 'Q12A2' }"
         />
         <img
           src="/Q12A3.jpg"
           @click="formData.q12 = 'Q12A3'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q12 == 'Q12A3' }"
         />
         <img
           src="/Q12A4.jpg"
           @click="formData.q12 = 'Q12A4'"
           alt=""
-          class="col-3 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q12 == 'Q12A4' }"
         />
       </div>
@@ -404,21 +404,21 @@
           src="/Q13A1.jpg"
           @click="formData.q13 = 'Q13A1'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q13 == 'Q13A1' }"
         />
         <img
           src="/Q13A2.jpg"
           @click="formData.q13 = 'Q13A2'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q13 == 'Q13A2' }"
         />
         <img
           src="/Q13A3.jpg"
           @click="formData.q13 = 'Q13A3'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q13 == 'Q13A3' }"
         />
       </div>
@@ -431,21 +431,21 @@
           src="/Q14A1.jpg"
           @click="formData.q14 = 'Q14A1'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q14 == 'Q14A1' }"
         />
         <img
           src="/Q14A2.jpg"
           @click="formData.q14 = 'Q14A2'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q14 == 'Q14A2' }"
         />
         <img
           src="/Q14A3.jpg"
           @click="formData.q14 = 'Q14A3'"
           alt=""
-          class="col-4 p-2 pointer"
+          class="p-2 pointer test-page-img"
           :class="{ active: formData.q14 == 'Q14A3' }"
         />
       </div>
@@ -456,14 +456,14 @@
       <div class="row mt-2 mb-5">
         <div
           @click="formData.q15 = 'Q15A1'"
-          class="col-6 p-2 pointer"
+          class="p-2 pointer"
           :class="{ active: formData.q15 == 'Q15A1' }"
         >
           I don&#39;t enjoy being surprised
         </div>
         <div
           @click="formData.q15 = 'Q15A2'"
-          class="col-6 p-2 pointer"
+          class="p-2 pointer"
           :class="{ active: formData.q15 == 'Q15A2' }"
         >
           I enjoy being surprised
@@ -473,9 +473,9 @@
     </div>
     <div v-else class="row justify-content-center">
       <div class="col-12">
-        <div class="card shadow">
+        <div class="card overflow-hidden shadow">
+          <h5 class="card-body bg-info text-light text-center mb-0">main test result</h5>
           <div class="card-body">
-            <h5 class="card-title">test grade</h5>
             <p class="card-text">
               <div class="border-bottom py-2 d-flex justify-content-between flex-column flex-lg-row"><span>
                 1.To understand interest in city/nature
@@ -736,5 +736,10 @@ export default {
 <style scoped>
 .active {
   border: solid green 3px;
+}
+
+.test-page-img{
+  width:200px;
+  height:200px;
 }
 </style>

@@ -22,7 +22,7 @@
         {{ (userInfo.first_name || "") + " " + (userInfo.last_name || "") }}
       </div>
     </div>
-    <div class="d-flex">
+    <div class="d-flex align-items-center">
       <select
         v-model="lang"
         class="border rounded px-2 mx-2 pointer form-control form-control-sm"
@@ -35,6 +35,10 @@
         <option value="sp">Spanish</option>
         <option value="ar">Arabic</option>
       </select>
+
+      <nuxt-link class="" to="/">
+        <img src="/logo.png" alt="deep treep" width="70" height="70" />
+      </nuxt-link>
     </div>
 
     <!-- input -->
