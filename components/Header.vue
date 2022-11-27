@@ -70,21 +70,21 @@
             <option value="sp">Sp</option>
             <option value="ar">Ar</option>
           </select>
-          <nuxt-link to="/">
+          <a href="https://instagram.com/deep_treep">
             <i class="fa-brands fa-instagram textorange mx-1"></i>
-          </nuxt-link>
-          <nuxt-link to="/">
+          </a>
+          <a href="https://twitter.com/@deep_treep">
             <i class="fa-brands fa-twitter textorange mx-1"></i>
-          </nuxt-link>
-          <nuxt-link to="/">
+          </a>
+          <a href="/">
             <i class="fa-brands fa-skype textorange mx-1"></i>
-          </nuxt-link>
-          <nuxt-link to="/">
+          </a>
+          <a href="https://pin.it/Uvu8GjP">
             <i class="fa-brands fa-pinterest-p textorange mx-1"></i>
-          </nuxt-link>
-          <nuxt-link to="/">
+          </a>
+          <a href="/">
             <i class="fa-brands fa-linkedin-in textorange mx-1 mr-2"></i>
-          </nuxt-link>
+          </a>
           <!-- <div v-if="$auth.strategy.token.status().valid() == false">
             <i class="fa-solid fa-user textorange ml-2"></i>
             <nuxt-link to="/panel/signup" class="text-light">sign up</nuxt-link>
@@ -158,7 +158,9 @@
             style="font-size: 2rem"
           ></i>
         </div>
-        <img src="/logo.png" alt="deep treep" width="70" height="70" />
+        <nuxt-link class="navbar-brand" to="/">
+          <img src="/logo.png" alt="deep treep" width="70" height="70" />
+        </nuxt-link>
       </div>
       <div
         class="d-flex flex-column flex-sm-row justify-content-between col-12 d-md-none"
@@ -262,21 +264,21 @@
           </div> -->
         </div>
         <div class="d-flex justify-content-between mt-3">
-          <nuxt-link to="/">
+          <a href="https://instagram.com/deep_treep">
             <i class="fa-brands fa-instagram textorange mx-2"></i>
-          </nuxt-link>
-          <nuxt-link to="/">
+          </a>
+          <a href="https://twitter.com/@deep_treep">
             <i class="fa-brands fa-twitter textorange mx-2"></i>
-          </nuxt-link>
-          <nuxt-link to="/">
+          </a>
+          <a href="/">
             <i class="fa-brands fa-skype textorange mx-2"></i>
-          </nuxt-link>
-          <nuxt-link to="/">
+          </a>
+          <a href="https://pin.it/Uvu8GjP">
             <i class="fa-brands fa-pinterest-p textorange mx-2"></i>
-          </nuxt-link>
-          <nuxt-link to="/">
+          </a>
+          <a href="/">
             <i class="fa-brands fa-linkedin-in textorange mx-2 mr-4"></i>
-          </nuxt-link>
+          </a>
         </div>
       </div>
     </div>

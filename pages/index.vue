@@ -134,13 +134,10 @@
         </div>
       </div>
     </div>
-    <div
-      class="col-12 p-0"
-      style="background-image: url('IMG_7427.jpg'); background-size: cover"
-    >
+    <div class="col-12 p-0 bg-gray">
       <div
         class="col-12 py-5 row justify-content-center px-3 mx-0"
-        style="background-color: rgba(255, 255, 255, 0.5)"
+        style="background-color: rgba(0, 0, 0, 0.1)"
       >
         <div
           class="d-flex border rounded mx-2 p-0 col-4"
@@ -305,9 +302,10 @@
       </div>
       <div
         class="py-5 col-12 d-flex align-items-center justify-content-between px-0"
+        style="background-color: rgba(0, 0, 0, 0.08)"
       >
         <div class="p-5 col-12">
-          <div class="d-flex align-items-center col-12 text-light">
+          <div class="d-flex align-items-center col-12 text-dark">
             <h3>The most popular tour packages</h3>
             <span class="textorange ml-2 pointer" @click="alltours"
               >/ Show all tours</span
@@ -315,7 +313,7 @@
           </div>
           <div class="row justify-content-between col-12 mt-4">
             <div
-              class="p-2 col-md-3 col-6"
+              class="p-2 col-12 col-sm-6"
               v-for="tour in tours.results"
               :key="tour.id"
             >
@@ -330,7 +328,7 @@
                   class="col-12 h-50 p-0 rounded-top"
                 />
                 <div class="p-3">
-                  <div class="d-flex justify-content-between mb-2">
+                  <div class="d-flex justify-content-start mb-2">
                     {{ tour.country_en + "-" + tour.city_en }}
                   </div>
                   <h4 class="text-info my-2">
@@ -344,7 +342,7 @@
                   </div>
                   <nuxt-link
                     :to="`/tor/${tour.id}`"
-                    class="btn text-light bgorange"
+                    class="btn text-light bgorange w-100"
                     >more</nuxt-link
                   >
                 </div>
@@ -577,16 +575,42 @@
           </div>
         </div>
         <div class="d-flex textorange my-3">
-          <i class="fa-brands mx-2 pointer fa-snapchat"></i>
-          <i class="fa-brands mx-2 pointer fa-instagram"></i>
-          <i class="fa-brands mx-2 pointer fa-twitter"></i>
-          <i class="fa-brands mx-2 pointer fa-skype"></i>
-          <i class="fa-brands mx-2 pointer fa-pinterest-p"></i>
-          <i class="fa-brands mx-2 pointer fa-linkedin-in"></i>
-          <i class="fa-brands mx-2 pointer fa-google-plus-g"></i>
-          <i class="fa-brands mx-2 pointer fa-flickr"></i>
-          <i class="fa-brands mx-2 pointer fa-facebook-f"></i>
-          <i class="fa-solid mx-2 pointer fa-envelope"></i>
+          <a href="" class="textorange">
+            <i class="fa-brands mx-2 fa-snapchat"></i>
+          </a>
+
+          <a href="https://instagram.com/deep_treep" class="textorange">
+            <i class="fa-brands mx-2 fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/@deep_treep" class="textorange">
+            <i class="fa-brands mx-2 fa-twitter"></i>
+          </a>
+          <a href="" class="textorange">
+            <i class="fa-brands mx-2 fa-skype"></i>
+          </a>
+
+          <a href="https://pin.it/Uvu8GjP" class="textorange">
+            <i class="fa-brands mx-2 fa-pinterest-p"></i>
+          </a>
+          <a href="" class="textorange">
+            <i class="fa-brands mx-2 fa-linkedin-in"></i>
+          </a>
+
+          <a href="" class="textorange">
+            <i class="fa-brands mx-2 fa-google-plus-g"></i>
+          </a>
+
+          <a href="" class="textorange">
+            <i class="fa-brands mx-2 fa-flickr"></i>
+          </a>
+
+          <a href="" class="textorange">
+            <i class="fa-brands mx-2 fa-facebook-f"></i>
+          </a>
+
+          <a href="" class="textorange">
+            <i class="fa-solid mx-2 fa-envelope"></i>
+          </a>
         </div>
       </div>
     </div>

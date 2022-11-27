@@ -19,7 +19,7 @@
               <a href="" class="textorange">
                 <i class="fa-brands fa-linkedin-in mx-2 pointer"></i>
               </a>
-              <a href="www.twitter.com/@deep_treep" class="textorange">
+              <a href="https://twitter.com/@deep_treep" class="textorange">
                 <i class="fa-brands fa-twitter mx-2 pointer"></i>
               </a>
               <a href="https://instagram.com/deep_treep" class="textorange">
@@ -35,77 +35,59 @@
           <div class="row text-dark border-bottom pb-1">
             Categories of tours
           </div>
-          <div class="row justify-content-between">
-            <nuxt-link
-              to="tor?country=africa"
-              class="col-3 my-3 mx-1 pic text-center p-0 text-light"
-              style="background-image: url('africa.jpg')"
-            >
-              <div
-                class="col-12 h-100 py-3 d-flex align-items-center justify-content-center"
-                style="background-color: rgba(0, 0, 0, 0.6)"
-              >
-                Africa
+          <div class="row no-gutters justify-content-start">
+            <!-- europe -->
+            <nuxt-link to="tor?country=europe" class="col-3 m-1 p-0">
+              <div class="card bg-transparent text-center text-dark">
+                <img src="/Europe.jpg" class="card-img-top" alt="Europe" />
+                <div class="text-truncate" style="font-size: 12px">Europe</div>
               </div>
             </nuxt-link>
-            <nuxt-link
-              to="tor?country=asia"
-              class="col-3 my-3 mx-1 pic text-center p-0 text-light"
-              style="background-image: url('IMG_7416.jpg')"
-            >
-              <div
-                class="col-12 h-100 py-3 d-flex align-items-center justify-content-center"
-                style="background-color: rgba(0, 0, 0, 0.6)"
-              >
-                Asia
+            <!-- asia -->
+            <nuxt-link to="tor?country=asia" class="col-3 m-1 p-0">
+              <div class="card bg-transparent text-center text-dark">
+                <img src="/Asia.jpg" class="card-img-top" alt="Asia" />
+                <div class="text-truncate" style="font-size: 12px">Asia</div>
               </div>
             </nuxt-link>
-            <nuxt-link
-              to="tor?country=argentina"
-              class="col-3 my-3 mx-1 pic text-center p-0 text-light"
-              style="background-image: url('IMG_7466.jpg')"
-            >
-              <div
-                class="col-12 h-100 py-3 d-flex align-items-center justify-content-center"
-                style="background-color: rgba(0, 0, 0, 0.6)"
-              >
-                Argentina
+            <!-- North America -->
+            <nuxt-link to="tor?country=north america" class="col-3 m-1 p-0">
+              <div class="card bg-transparent text-center text-dark">
+                <img
+                  src="/North-America.jpg"
+                  class="card-img-top"
+                  alt="North America"
+                />
+                <div class="text-truncate" style="font-size: 12px">
+                  North America
+                </div>
               </div>
             </nuxt-link>
-            <nuxt-link
-              to="tor?country=europe"
-              class="col-3 my-3 mx-1 pic text-center p-0 text-light"
-              style="background-image: url('IMG_7417.jpg')"
-            >
-              <div
-                class="col-12 h-100 py-3 d-flex align-items-center justify-content-center"
-                style="background-color: rgba(0, 0, 0, 0.6)"
-              >
-                Europe
+            <!-- South America -->
+            <nuxt-link to="tor?country=europe" class="col-3 m-1 p-0">
+              <div class="card bg-transparent text-center text-dark">
+                <img
+                  src="/south-america.jpg"
+                  class="card-img-top"
+                  alt="South America"
+                />
+                <div class="text-truncate" style="font-size: 12px">
+                  South America
+                </div>
               </div>
             </nuxt-link>
-            <nuxt-link
-              to="tor?country=america"
-              class="col-3 my-3 mx-1 pic text-center p-0 text-light"
-              style="background-image: url('IMG_7421.jpg')"
-            >
-              <div
-                class="col-12 h-100 py-1 d-flex align-items-center justify-content-center"
-                style="background-color: rgba(0, 0, 0, 0.6)"
-              >
-                south America
+            <!-- Africa -->
+            <nuxt-link to="tor?country=africa" class="col-3 m-1 p-0">
+              <div class="card bg-transparent text-center text-dark">
+                <img src="/Africa.jpg" class="card-img-top" alt="Africa" />
+                <div class="text-truncate" style="font-size: 12px">africa</div>
               </div>
             </nuxt-link>
-            <nuxt-link
-              to="tor?country=america"
-              class="col-3 my-3 mx-1 pic text-center p-0 text-light"
-              style="background-image: url('IMG_7427.jpg')"
-            >
-              <div
-                class="col-12 h-100 py-3 d-flex align-items-center justify-content-center"
-                style="background-color: rgba(0, 0, 0, 0.6)"
-              >
-                America
+            <!-- Oceania -->
+            <nuxt-link to="tor?country=europe" class="col-3 m-1 p-0">
+              <div class="card bg-transparent text-center text-dark">
+                <img src="/Oceania.jpg" class="card-img-top" alt="Oceania" />
+                <div class="text-truncate" style="font-size: 12px">Oceania</div>
               </div>
             </nuxt-link>
           </div>
