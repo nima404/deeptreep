@@ -9,6 +9,7 @@
 <script>
 export default {
   name: "mainLayout",
+  middleware: ["luck"],
 };
 </script>
 

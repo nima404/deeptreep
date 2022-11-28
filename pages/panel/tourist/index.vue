@@ -30,7 +30,6 @@
 <script>
 export default {
   layout: "tourist",
-
   data() {
     return {
       dis: true,

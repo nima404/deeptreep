@@ -21,7 +21,7 @@
 <script>
 export default {
   name: "AdminLayout",
-  middleware: ["auth"],
+  middleware: ["luck", "auth"],
 };
 </script>
 

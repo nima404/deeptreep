@@ -20,7 +20,7 @@
 <script>
 export default {
   name: "touristLeaderLayout",
-  middleware: ["auth"],
+  middleware: ["luck", "auth"],
 };
 </script>
 

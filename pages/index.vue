@@ -31,7 +31,7 @@
       <div class="text-center px-1 px-sm-5 pb-5">
         <div class="row pt-5 g-5 no-gutters justify-content-center">
           <div class="col-6 col-sm-5 px-1 mb-4">
-            <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="card" style="background-color: #17a2b8">
               <img
                 class="card-img-top"
                 src="/main-image-left.jpg"
@@ -77,7 +77,7 @@
             </div>
           </div>
           <div class="col-6 col-sm-5 px-1 mb-4">
-            <div class="card" style="background-color: rgba(0, 0, 0, 0.6)">
+            <div class="card" style="background-color: #17a2b8">
               <img
                 class="card-img-top"
                 src="/main-image-right.jpg"
@@ -758,14 +758,14 @@ export default {
       city: "",
       userInfo: {},
       imagesGroup: [
-        "/image-group1.jpg",
-        "/image-group2.jpg",
-        "/image-group3.jpg",
+        "/photo_2022-11-28_11-26-27.jpg",
+        "/photo_2022-11-28_11-26-22.jpg",
+        "/photo_2022-11-28_11-26-18.jpg",
         "/image-group4.jpg",
         "/image-group5.jpg",
         "/image-group6.jpg",
         "/image-group7.jpg",
-        "/image-group8.jpg",
+        "/photo_2022-11-28_11-26-13.jpg",
         "/image-group9.jpg",
         "/image-group10.jpg",
       ],
