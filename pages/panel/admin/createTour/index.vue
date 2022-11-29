@@ -5,6 +5,24 @@
         <form action="#" @submit.prevent="handleSubmit(create)">
           <div
             v-for="(item, i) in [
+              'title_en',
+              'title_gr',
+              'title_fa',
+              'title_ch',
+              'title_sp',
+              'title_ar',
+            ]"
+            :key="i"
+          >
+            <ValidationProvider v-slot="{ errors }" vid="role" rules="required">
+              <div>{{ item }}:</div>
+              <input type="text" class="col-12" v-model="tour[item]" />
+              <span class="text-xs text-danger">{{ errors[0] }}</span>
+            </ValidationProvider>
+          </div>
+
+          <div
+            v-for="(item, i) in [
               'country_en',
               'country_gr',
               'country_fa',
@@ -251,8 +269,28 @@
             <span class="text-xs text-danger">{{ errors[0] }}</span>
           </ValidationProvider>
 
-          <div>image:</div>
-          <input type="file" ref="image" class="col-12 p-0" />
+          <div class="mb-2">
+            <div>image:</div>
+            <input type="file" ref="image" class="col-12 p-0" />
+          </div>
+
+          <div>
+            <label>
+              <input type="checkbox" v-model="tour.multiـvendor" />
+              multi vendor
+            </label>
+          </div>
+
+          <div v-if="tour.multiـvendor && tour.leaders">
+            <div
+              v-for="(item, i) in tour.leaders.split(',')"
+              :key="i"
+              class="mb-1"
+            >
+              {{ item }} :
+              <input type="text" v-model="tourLeaders[i]" class="w-100 px-2" />
+            </div>
+          </div>
 
           <button class="btn btn-success mt-3">create</button>
         </form>
@@ -267,7 +305,14 @@ export default {
   layout: "admin",
   data() {
     return {
+      tourLeaders: [],
       tour: {
+        title_en: "",
+        title_gr: "",
+        title_fa: "",
+        title_ch: "",
+        title_sp: "",
+        title_ar: "",
         descriptions_en: "",
         descriptions_gr: "",
         descriptions_fa: "",
@@ -316,6 +361,7 @@ export default {
         country_ar: "",
         departureـdate: "",
         main_test_type: "A1",
+        multiـvendor: false,
       },
     };
   },
@@ -325,6 +371,7 @@ export default {
         ...this.tour,
         leaders: this.tour.leaders.split(",").map((item) => +item),
       };
+
       try {
         const bodyFormData = new FormData();
 
@@ -341,6 +388,20 @@ export default {
           "/api/leadersTourManagers/tour-create/",
           bodyFormData
         );
+        console.log(res);
+        for (let i = 0; i < this.tourLeaders.length; i++) {
+          const tourLeader = +this.tourLeaders[i];
+          const tourId = +this.tour.leaders.split(",")[i];
+
+          const resLEader = await this.$axios.$post(
+            `/api/leadersTourManagers/leader-create/${res.id}/`,
+            {
+              tour: res.id,
+              percentage: tourId,
+              tourleader: tourLeader,
+            }
+          );
+        }
         this.$router.push("/panel/admin/tours");
         console.log(res);
       } catch (error) {

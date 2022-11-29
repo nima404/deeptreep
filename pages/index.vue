@@ -320,26 +320,22 @@
               <div
                 class="my-3 my-md-0 rounded bg-light p-0"
                 v-if="$store.state.lang.lang == 'English'"
-                style="height: 400px"
               >
                 <img
                   :src="tour.image"
                   alt=""
-                  class="col-12 h-50 p-0 rounded-top"
+                  class="col-12 w-100 p-0 rounded-top"
                 />
                 <div class="p-3">
-                  <div class="d-flex justify-content-start mb-2">
-                    {{ tour.country_en + "-" + tour.city_en }}
-                  </div>
-                  <h4 class="text-info my-2">
-                    {{ tour.price + " " + tour.pay_with }}
-                  </h4>
-                  <div class="my-2">
+                  <h5 class="d-flex justify-content-start mb-2 text-center">
+                    {{ tour.title_en }}
+                  </h5>
+                  <!-- <div class="my-2">
                     <i
                       class="fa-regular fa-clock-rotate-left text-info mr-2"
                     ></i
                     ><span class="text-muted">{{ tour.duration }} days</span>
-                  </div>
+                  </div> -->
                   <nuxt-link
                     :to="`/tor/${tour.id}`"
                     class="btn text-light bgorange w-100"
