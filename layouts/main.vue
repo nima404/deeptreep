@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <Header />
-    <Nuxt />
+  <div class="main">
+    <Header class="head"/>
+    <Nuxt class="content"/>
     <Footer />
   </div>
 </template>
@@ -13,4 +13,15 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.main {
+  position: relative;
+}
+.head {
+  position: sticky;
+  top: 0;
+  z-index: 2
+}
+.content {
+}
+</style>

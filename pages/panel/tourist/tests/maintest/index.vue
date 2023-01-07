@@ -469,7 +469,7 @@
           I enjoy being surprised
         </div>
       </div>
-      <button class="btn btn-success mt-3" @click="send">send</button>
+      <button class="btn btn-success mt-3" @click="send">submit</button>
     </div>
     <div v-else class="row justify-content-center">
       <div class="col-12">
@@ -504,7 +504,7 @@
 
       </div>
 
-      
+
     </div>
   </div>
 </template>
@@ -724,7 +724,8 @@ export default {
           bodyFormData
         );
         console.log(res);
-        this.$router.push("/panel/tourist/tests");
+        this.$nuxt.refresh()
+        // this.$router.push("/panel/tourist/tests");
       } catch (error) {
         console.log(error);
       }

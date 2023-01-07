@@ -16,7 +16,7 @@
         <span class="d-block d-sm-inline-block text-center">
           <i class="fa-solid fa-user"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block">profile</span>
+        <span class="ms-1">profile</span>
       </nuxt-link>
       <nuxt-link
         to="/panel/admin/tours"
@@ -25,7 +25,7 @@
         <span class="d-block d-sm-inline-block text-center">
           <i class="fa-solid fa-plane"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block">tours</span>
+        <span class="ms-1">tours</span>
       </nuxt-link>
       <nuxt-link
         to="/panel/admin/notification"
@@ -34,7 +34,7 @@
         <span class="d-block d-sm-inline-block text-center">
           <i class="fa-solid fa-bell"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block">notification</span>
+        <span class="ms-1">notification</span>
       </nuxt-link>
       <nuxt-link
         to="/panel/admin/createTour"
@@ -43,7 +43,7 @@
         <span class="d-block d-sm-inline-block text-center">
           <i class="fa-solid fa-plus"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block">create tour</span>
+        <span class="ms-1">create tour</span>
       </nuxt-link>
       <button
         class="py-2 px-4 w-100 right-to-left-animation border-0 border-bottom text-left bg-transparent"
@@ -52,7 +52,7 @@
         <span class="d-block d-sm-inline-block text-center">
           <i class="fa-solid fa-sign-out"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block">sign out</span>
+        <span class="ms-1 text-danger">sign out</span>
       </button>
       <!-- <nuxt-link
         to="/panel/admin/picture"
@@ -61,7 +61,7 @@
         <span class="d-block d-sm-inline-block text-center">
           <i class="fa-solid fa-plus"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block">create picture</span>
+        <span class="ms-1 text-danger">create picture</span>
       </nuxt-link> -->
     </ul>
   </div>
@@ -86,5 +86,8 @@ export default {
 <style scoped>
 span {
   color: black !important;
+}
+span.text-danger {
+  color: #dc3545 !important;
 }
 </style>

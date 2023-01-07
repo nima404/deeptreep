@@ -1,8 +1,6 @@
 <template>
   <div
-    class="col-12 d-flex justify-content-center align-items-center"
-    :style="{ height: myHeight }"
-  >
+    class="col-12 d-flex justify-content-center align-items-center">
     <div class="col-md-4 col-10 border rounded shadow bg-light p-4">
       <ValidationObserver v-if="!message" ref="form" v-slot="{ handleSubmit }">
         <form action="#" @submit.prevent="handleSubmit(login)">
@@ -87,17 +85,20 @@ export default {
     window.addEventListener("resize", this.myEventHandler);
   },
   async mounted() {
-    var canv = document.createElement("canvas");
-    canv.id = "captcha";
-    canv.width = 100;
-    canv.height = 50;
-    var ctx = canv.getContext("2d");
-    ctx.font = "25px Georgia";
-    ctx.strokeText(this.captchaCode, 0, 30);
-    this.$refs.captcha.appendChild(canv);
+    this.mountCaptcha()
   },
 
   methods: {
+    mountCaptcha(){
+      var canv = document.createElement("canvas");
+      canv.id = "captcha";
+      canv.width = 100;
+      canv.height = 50;
+      var ctx = canv.getContext("2d");
+      ctx.font = "25px Georgia";
+      ctx.strokeText(this.captchaCode, 0, 30);
+      this.$refs.captcha.appendChild(canv);
+    },
     myEventHandler(e) {
       this.myHeight = window.innerHeight + "px";
     },

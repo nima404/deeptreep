@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="navbar navbar-light fixed-top navbar-expand-md d-md-flex d-none col-12 pt-3 px-5 nav"
+      class="navbar navbar-light navbar-expand-md d-md-flex d-none col-12 pt-3 px-5 nav"
       :class="{ 'scrolled-header': scrolled }"
     >
       <div
@@ -321,8 +321,6 @@ export default {
 <style scoped>
 .nav {
   background: rgba(255, 255, 255, 0.5);
-  position: fixed;
-  z-index: 2;
   max-height: 112px;
   transition: 0.3s ease background;
 }
@@ -358,7 +356,6 @@ export default {
   background: rgba(255, 255, 255, 0.5);
   transition: 0.3s ease background;
 
-  position: fixed;
   z-index: 2;
 }
 .nav3 {

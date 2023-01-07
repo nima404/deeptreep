@@ -1,8 +1,8 @@
 <template>
   <div class="col-12 p-0" style="background-color: #eee">
     <div class="col-12 row footer m-0 pt-5">
-      <div class="col-md-7 col-12 d-flex justify-content-end border-right pb-5">
-        <div class="col-lg-4 col-6">
+      <div class="col-md-7 col-12 d-flex justify-content-end border-md-right pb-5">
+        <div class="col-lg-4 col-12">
           <div class="text-dark border-bottom pb-1">Contacts</div>
           <div>
             <div class="text-dark my-3">Address: London, UK</div>
@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-6">
+        <div class="col-lg-4 col-12">
           <div class="row text-dark border-bottom pb-1">
             Categories of tours
           </div>

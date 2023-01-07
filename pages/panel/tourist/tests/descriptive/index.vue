@@ -17,17 +17,17 @@
       <p class="text-danger" v-show="notAnswerYet">you did not answer some questions !</p>
     </div>
     <div v-else>
-        <div class="card overflow-hidden shadow">
-          <h5 class="card-body bg-info text-light text-center mb-0">descriptive result</h5>
-          <div class="card-body">
-            <p class="card-text">
-              <div class="border-bottom py-2 d-flex justify-content-between flex-column flex-lg-row" v-for="(question, i) in questions" :key="i">
-                <span>
-                  {{i+1}}. {{question.text}}
-                </span> 
-                <span class="text-primary">{{test[question.key]}}</span>
-              </div>
-            </p>
+      <div class="card overflow-hidden shadow">
+        <h5 class="card-body bg-info text-light text-center mb-0">descriptive result</h5>
+        <div class="card-body">
+          <p class="card-text">
+            <div class="border-bottom py-2 d-flex justify-content-between flex-column flex-lg-row" v-for="(question, i) in questions" :key="i">
+              <span>
+                {{i+1}}. {{question.text}}
+              </span>
+              <span class="text-primary">{{test[question.key]}}</span>
+            </div>
+          </p>
         </div>
       </div>
       <button class="btn btn-info mt-3 w-100" @click="onTestAgain">test again</button>
@@ -86,8 +86,8 @@ export default {
           "/api/psychologicalTesting/descriptive-questions-create/",
           {...this.formData, user: this.userInfo?.id}
         );
-        console.log(res);
-        this.$router.push("/panel/tourist/tests");
+        this.$nuxt.refresh()
+        // this.$router.push("/panel/tourist/tests");
       } catch (error) {
         console.log(error);
       }

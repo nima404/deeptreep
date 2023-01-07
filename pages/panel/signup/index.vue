@@ -1,9 +1,8 @@
 <template>
   <div
-    class="col-12 d-flex justify-content-center align-items-center py-5"
-    :style="{ height: myHeight }"
+    class="col-12 d-flex justify-content-center align-items-center"
   >
-    <div class="col-md-4 col-10 border rounded shadow bg-light p-5 my-5">
+    <div class="col-md-4 col-10 border rounded shadow bg-light p-5">
       <ValidationObserver ref="form" v-slot="{ handleSubmit }" v-if="!message">
         <form action="#" @submit.prevent="handleSubmit(register)">
           <h3 class="text-center">DEEP TREEP</h3>
@@ -167,7 +166,7 @@
             <div class="col-12 d-flex justify-content-between mt-3 px-0">
               <button
                 class="btn btn-success col-12"
-                v-if="formdata.address != '' && step == 4"
+                v-if="formdata.address != '' && step != 4"
               >
                 sign up
               </button>
@@ -212,17 +211,20 @@ export default {
   },
 
   async mounted() {
-    var canv = document.createElement("canvas");
-    canv.id = "captcha";
-    canv.width = 100;
-    canv.height = 50;
-    var ctx = canv.getContext("2d");
-    ctx.font = "25px Georgia";
-    ctx.strokeText(this.captchaCode, 0, 30);
-    this.$refs.captcha.appendChild(canv);
+    this.mountCaptcha()
   },
 
   methods: {
+    mountCaptcha(){
+      var canv = document.createElement("canvas");
+      canv.id = "captcha";
+      canv.width = 100;
+      canv.height = 50;
+      var ctx = canv.getContext("2d");
+      ctx.font = "25px Georgia";
+      ctx.strokeText(this.captchaCode, 0, 30);
+      this.$refs.captcha.appendChild(canv);
+    },
     myEventHandler(e) {
       this.myHeight = window.innerHeight + "px";
     },

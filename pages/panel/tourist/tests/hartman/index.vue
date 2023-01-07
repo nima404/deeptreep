@@ -51,7 +51,7 @@
               <div class="border-bottom py-2 d-flex justify-content-between flex-column flex-lg-row" v-for="(question, i) in questions" :key="i">
                 <span>
                   {{question.number}}. {{question.text}}
-                </span> 
+                </span>
                 <span class="text-primary">{{whitchAnswer(question.number)}}</span>
               </div>
             </p>
@@ -112,7 +112,8 @@ export default {
           this.formData
         );
         console.log(res);
-        this.$router.push("/panel/tourist/tests");
+        this.$nuxt.refresh()
+        // this.$router.push("/panel/tourist/tests");
       } catch (error) {
         console.log(error);
       }
