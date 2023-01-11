@@ -41,6 +41,12 @@
           />
           <span class="text-xs text-danger col-12 p-0">{{ errors[0] }}</span>
         </ValidationProvider>
+        <div>
+          <label>
+            <input type="checkbox" v-model="user.show_me_for_tourleader" />
+            show me for tour leader
+          </label>
+        </div>
         <button class="btn btn-warning mt-3">Done</button>
       </form>
     </ValidationObserver>
@@ -67,6 +73,7 @@ export default {
         bodyFormData.append("last_name", this.user.last_name);
         bodyFormData.append("gender", this.user.gender || "");
         bodyFormData.append("address", this.user.address);
+        bodyFormData.append("show_me_for_tourleader", this.user.show_me_for_tourleader);
         const res = await this.$axios.put(
           "api/usersmodel/user-update/",
           bodyFormData

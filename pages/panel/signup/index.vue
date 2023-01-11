@@ -15,7 +15,10 @@
             name="captcha"
             v-if="step == 1"
           >
-            <div ref="captcha"></div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div ref="captcha"></div>
+              <i class="fa fa-refresh pointer" aria-hidden="true" @click="mountCaptcha()"></i>
+            </div>
             <input
               type="text"
               class="col-12"
@@ -183,7 +186,6 @@
 
 <script>
 import { Captcha } from "simple-captcha-generator";
-const captcha = new Captcha();
 
 export default {
   name: "login",
@@ -193,7 +195,7 @@ export default {
       message: false,
       step: 1,
       myHeight: window.innerHeight + "px",
-      captchaCode: captcha.currentString,
+      captchaCode: null,
       captchaInput: "",
       formdata: {
         email: "",
@@ -216,6 +218,10 @@ export default {
 
   methods: {
     mountCaptcha(){
+      if (this.$refs.captcha.hasChildNodes()) {
+        this.$refs.captcha.removeChild(this.$refs.captcha.children[0])
+      }
+      this.captchaCode = new Captcha().currentString
       var canv = document.createElement("canvas");
       canv.id = "captcha";
       canv.width = 100;

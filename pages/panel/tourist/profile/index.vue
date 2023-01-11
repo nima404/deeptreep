@@ -41,6 +41,10 @@
               address :
               <span class="text-primary"> {{ user.address }}</span>
             </p>
+            <p class="bg-light rounded py-1 px-3">
+              show me for tour leader :
+              <span class="text-primary"> {{ user.show_me_for_tourleader }}</span>
+            </p>
           </div>
         </div>
       </div>

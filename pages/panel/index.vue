@@ -27,7 +27,10 @@
           </ValidationProvider>
 
           <div>
-            <div ref="captcha"></div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div ref="captcha"></div>
+              <i class="fa fa-refresh pointer" aria-hidden="true" @click="mountCaptcha()"></i>
+            </div>
             <ValidationProvider
               v-slot="{ errors }"
               vid="role"
@@ -67,7 +70,6 @@
 
 <script>
 import { Captcha } from "simple-captcha-generator";
-const captcha = new Captcha();
 export default {
   layout: "auth",
   name: "login",
@@ -77,7 +79,7 @@ export default {
       password: "",
       email: "",
       message: false,
-      captchaCode: captcha.currentString,
+      captchaCode: null,
       captchaInput: "",
     };
   },
@@ -90,6 +92,10 @@ export default {
 
   methods: {
     mountCaptcha(){
+      if (this.$refs.captcha.hasChildNodes()) {
+        this.$refs.captcha.removeChild(this.$refs.captcha.children[0])
+      }
+      this.captchaCode = new Captcha().currentString
       var canv = document.createElement("canvas");
       canv.id = "captcha";
       canv.width = 100;
