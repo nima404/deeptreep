@@ -16,7 +16,7 @@
     <div class="container p-5 d-flex">
       <div class="col-12">
         <h2>Your desired title</h2>
-        <p class="mt-4 text-muted">
+        <p class="mt-4 text-muted text-justify">
           The travel industry has undoubtedly boomed in the last decade, and the
           way people travel is almost unrecognisable from the early 20th
           century. The tourism and travel sector is experiencing a period of

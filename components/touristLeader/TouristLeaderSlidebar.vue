@@ -9,6 +9,7 @@
           <nuxt-link to="/" class="text-white">DEEP TREEP</nuxt-link>
         </h3>
       </li>
+
       <nuxt-link
         to="/panel/touristLeader/profile"
         class="py-2 px-4 w-100 right-to-left-animation border-bottom"
@@ -16,7 +17,7 @@
         <span class="d-block d-sm-inline-block text-center">
           <i class="fa-solid fa-user"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block">profile</span>
+        <span class="ms-1">profile</span>
       </nuxt-link>
       <nuxt-link
         to="/panel/touristLeader/users"
@@ -25,16 +26,7 @@
         <span class="d-block d-sm-inline-block text-center">
           <i class="fa-solid fa-users"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block">users</span>
-      </nuxt-link>
-      <nuxt-link
-        to="/panel/touristLeader/tours"
-        class="py-2 px-4 w-100 right-to-left-animation border-bottom"
-      >
-        <span class="d-block d-sm-inline-block text-center">
-          <i class="fa-solid fa-plane"></i>
-        </span>
-        <span class="ms-1 d-none d-sm-inline-block">tours</span>
+        <span class="ms-1">users</span>
       </nuxt-link>
       <nuxt-link
         to="/panel/touristLeader/tiket"
@@ -43,9 +35,18 @@
         <span class="d-block d-sm-inline-block text-center">
           <i class="fa-regular fa-ticket"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block"
+        <span class="ms-1"
           >request travel itinerary</span
         >
+      </nuxt-link>
+      <nuxt-link
+        to="/panel/touristLeader/tours"
+        class="py-2 px-4 w-100 right-to-left-animation border-bottom"
+      >
+        <span class="d-block d-sm-inline-block text-center">
+          <i class="fa-solid fa-plane"></i>
+        </span>
+        <span class="ms-1">tours</span>
       </nuxt-link>
       <nuxt-link
         to="/panel/touristLeader/education"
@@ -54,16 +55,16 @@
         <span class="d-block d-sm-inline-block text-center">
           <i class="fa-regular fa-film"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block">education</span>
+        <span class="ms-1">education</span>
       </nuxt-link>
       <button
         class="py-2 px-4 w-100 right-to-left-animation border-0 border-bottom text-left bg-transparent"
         @click="onSignOut"
       >
-        <span class="d-block d-sm-inline-block text-center">
+        <span class="d-block d-sm-inline-block text-center text-danger">
           <i class="fa-solid fa-sign-out"></i>
         </span>
-        <span class="ms-1 d-none d-sm-inline-block">sign out</span>
+        <span class="ms-1 text-danger">sign out</span>
       </button>
     </ul>
   </div>
@@ -88,5 +89,8 @@ export default {
 <style scoped>
 span {
   color: black !important;
+}
+span.text-danger {
+  color: #dc3545 !important;
 }
 </style>

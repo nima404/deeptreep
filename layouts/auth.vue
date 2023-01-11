@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Header />
+  <div class="auth">
+    <Header class="head" />
     <div class="content">
       <Nuxt />
     </div>
@@ -18,10 +18,17 @@ export default {
 </script>
 
 <style scoped>
-.footer-container {
-  margin-top: -10vh;
+.auth {
+  position: relative;
+}
+.head {
+  position: sticky;
+  top: 0;
+  z-index: 2
 }
 
 .content {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 </style>

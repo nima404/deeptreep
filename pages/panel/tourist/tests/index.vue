@@ -43,6 +43,41 @@
             <div
               class="d-flex justify-content-center align-items-center h-100 font-weight-bold"
             >
+              Descriptive test
+            </div>
+          </div>
+          <div class="col-6">
+            <div
+              class="d-flex flex-column justify-content-center align-items-start"
+            >
+              <div v-if="descriptiveTest">
+                <nuxt-link
+                  to="/panel/tourist/tests/descriptive"
+                  class="btn btn-secondary"
+                  >detail</nuxt-link
+                >
+              </div>
+              <div v-else>
+                <p class="text-danger">not found test</p>
+                <nuxt-link
+                  to="/panel/tourist/tests/descriptive"
+                  class="btn btn-info"
+                  >start the test</nuxt-link
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card bg-light">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6">
+            <div
+              class="d-flex justify-content-center align-items-center h-100 font-weight-bold"
+            >
               Hartman test
             </div>
           </div>
@@ -63,41 +98,6 @@
                 <p class="text-danger">not found test</p>
                 <nuxt-link
                   to="/panel/tourist/tests/hartman"
-                  class="btn btn-info"
-                  >start the test</nuxt-link
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card bg-light">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-6">
-            <div
-              class="d-flex justify-content-center align-items-center h-100 font-weight-bold"
-            >
-              Descriptive test
-            </div>
-          </div>
-          <div class="col-6">
-            <div
-              class="d-flex flex-column justify-content-center align-items-start"
-            >
-              <div v-if="descriptiveTest">
-                <nuxt-link
-                  to="/panel/tourist/tests/descriptive"
-                  class="btn btn-secondary"
-                  >detail</nuxt-link
-                >
-              </div>
-              <div v-else>
-                <p class="text-danger">not found test</p>
-                <nuxt-link
-                  to="/panel/tourist/tests/descriptive"
                   class="btn btn-info"
                   >start the test</nuxt-link
                 >

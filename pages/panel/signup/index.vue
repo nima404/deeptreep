@@ -1,9 +1,8 @@
 <template>
   <div
-    class="col-12 d-flex justify-content-center align-items-center py-5"
-    :style="{ height: myHeight }"
+    class="col-12 d-flex justify-content-center align-items-center"
   >
-    <div class="col-md-4 col-10 border rounded shadow bg-light p-5 my-5">
+    <div class="col-md-4 col-10 border rounded shadow bg-light p-5">
       <ValidationObserver ref="form" v-slot="{ handleSubmit }" v-if="!message">
         <form action="#" @submit.prevent="handleSubmit(register)">
           <h3 class="text-center">DEEP TREEP</h3>
@@ -16,7 +15,10 @@
             name="captcha"
             v-if="step == 1"
           >
-            <div ref="captcha"></div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div ref="captcha"></div>
+              <i class="fa fa-refresh pointer" aria-hidden="true" @click="mountCaptcha()"></i>
+            </div>
             <input
               type="text"
               class="col-12"
@@ -167,7 +169,7 @@
             <div class="col-12 d-flex justify-content-between mt-3 px-0">
               <button
                 class="btn btn-success col-12"
-                v-if="formdata.address != '' && step == 4"
+                v-if="formdata.address != '' && step != 4"
               >
                 sign up
               </button>
@@ -184,7 +186,6 @@
 
 <script>
 import { Captcha } from "simple-captcha-generator";
-const captcha = new Captcha();
 
 export default {
   name: "login",
@@ -194,7 +195,7 @@ export default {
       message: false,
       step: 1,
       myHeight: window.innerHeight + "px",
-      captchaCode: captcha.currentString,
+      captchaCode: null,
       captchaInput: "",
       formdata: {
         email: "",
@@ -212,17 +213,24 @@ export default {
   },
 
   async mounted() {
-    var canv = document.createElement("canvas");
-    canv.id = "captcha";
-    canv.width = 100;
-    canv.height = 50;
-    var ctx = canv.getContext("2d");
-    ctx.font = "25px Georgia";
-    ctx.strokeText(this.captchaCode, 0, 30);
-    this.$refs.captcha.appendChild(canv);
+    this.mountCaptcha()
   },
 
   methods: {
+    mountCaptcha(){
+      if (this.$refs.captcha.hasChildNodes()) {
+        this.$refs.captcha.removeChild(this.$refs.captcha.children[0])
+      }
+      this.captchaCode = new Captcha().currentString
+      var canv = document.createElement("canvas");
+      canv.id = "captcha";
+      canv.width = 100;
+      canv.height = 50;
+      var ctx = canv.getContext("2d");
+      ctx.font = "25px Georgia";
+      ctx.strokeText(this.captchaCode, 0, 30);
+      this.$refs.captcha.appendChild(canv);
+    },
     myEventHandler(e) {
       this.myHeight = window.innerHeight + "px";
     },

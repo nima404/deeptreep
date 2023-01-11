@@ -1,8 +1,6 @@
 <template>
   <div
-    class="col-12 d-flex justify-content-center align-items-center"
-    :style="{ height: myHeight }"
-  >
+    class="col-12 d-flex justify-content-center align-items-center">
     <div class="col-md-4 col-10 border rounded shadow bg-light p-4">
       <ValidationObserver v-if="!message" ref="form" v-slot="{ handleSubmit }">
         <form action="#" @submit.prevent="handleSubmit(login)">
@@ -29,7 +27,10 @@
           </ValidationProvider>
 
           <div>
-            <div ref="captcha"></div>
+            <div class="d-flex align-items-center justify-content-between">
+              <div ref="captcha"></div>
+              <i class="fa fa-refresh pointer" aria-hidden="true" @click="mountCaptcha()"></i>
+            </div>
             <ValidationProvider
               v-slot="{ errors }"
               vid="role"
@@ -69,7 +70,6 @@
 
 <script>
 import { Captcha } from "simple-captcha-generator";
-const captcha = new Captcha();
 export default {
   layout: "auth",
   name: "login",
@@ -79,7 +79,7 @@ export default {
       password: "",
       email: "",
       message: false,
-      captchaCode: captcha.currentString,
+      captchaCode: null,
       captchaInput: "",
     };
   },
@@ -87,17 +87,24 @@ export default {
     window.addEventListener("resize", this.myEventHandler);
   },
   async mounted() {
-    var canv = document.createElement("canvas");
-    canv.id = "captcha";
-    canv.width = 100;
-    canv.height = 50;
-    var ctx = canv.getContext("2d");
-    ctx.font = "25px Georgia";
-    ctx.strokeText(this.captchaCode, 0, 30);
-    this.$refs.captcha.appendChild(canv);
+    this.mountCaptcha()
   },
 
   methods: {
+    mountCaptcha(){
+      if (this.$refs.captcha.hasChildNodes()) {
+        this.$refs.captcha.removeChild(this.$refs.captcha.children[0])
+      }
+      this.captchaCode = new Captcha().currentString
+      var canv = document.createElement("canvas");
+      canv.id = "captcha";
+      canv.width = 100;
+      canv.height = 50;
+      var ctx = canv.getContext("2d");
+      ctx.font = "25px Georgia";
+      ctx.strokeText(this.captchaCode, 0, 30);
+      this.$refs.captcha.appendChild(canv);
+    },
     myEventHandler(e) {
       this.myHeight = window.innerHeight + "px";
     },

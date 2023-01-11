@@ -528,85 +528,87 @@
       </p>
     </div>
     <div class="row m-0 justify-content-center"></div>
-    <div class="container py-5 d-flex flex-wrap">
-      <div class="col-md-6 col-12">
-        <h4 class="bg-gray p-2 rounded px-3 mb-4">
-          <i class="fa-sharp fa-solid fa-list textmain mr-2"></i>
-          <span class="text-secondary">List of service categories </span>
-        </h4>
-        <div class="row textorange">
-          <div
-            class="col-6 my-2"
-            v-for="category in categories.results"
-            :key="category.id"
-          >
-            <nuxt-link
-              class="border rounded w-100 p-1 d-block text-center category-links"
-              :to="`/services?category=${category.name}`"
+    <div class="bg-gray">
+      <div class="container py-5 d-flex flex-wrap">
+        <div class="col-md-6 col-12">
+          <h4 class="bg-gray p-2 rounded px-3 mb-4">
+            <i class="fa-sharp fa-solid fa-list textmain mr-2"></i>
+            <span class="text-secondary">List of service categories </span>
+          </h4>
+          <div class="row textorange">
+            <div
+              class="col-6 my-2"
+              v-for="category in categories.results"
+              :key="category.id"
             >
-              {{ category.name }}
-            </nuxt-link>
+              <nuxt-link
+                class="border rounded w-100 p-1 d-block text-center category-links"
+                :to="`/services?category=${category.name}`"
+              >
+                {{ category.name }}
+              </nuxt-link>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-12">
-        <h4 class="bg-gray p-2 rounded px-3 mb-4">
-          <i class="fa fa-envelope textmain mr-3"></i>
-          <span class="text-secondary"> subscribe to newsletter </span>
-        </h4>
-        <div class="text-muted my-3">
-          Benefit from special member discounts with us
-        </div>
-        <div class="row col-12 p-0 justify-content-between my-3 ml-1 ml-md-0">
-          <input
-            type="text"
-            class="col-md-7 my-2 my-md-0 col-12 p-2 px-4 input2"
-            placeholder="your email address"
-            style="background-color: #e3e3e3"
-          />
-          <div
-            class="col-md-4 my-2 my-md-0 col-12 bgorange pointer text-center text-light py-2 input2"
-          >
-            subscribe
+        <div class="col-md-6 col-12">
+          <h4 class="bg-gray p-2 rounded px-3 mb-4">
+            <i class="fa fa-envelope textmain mr-3"></i>
+            <span class="text-secondary"> subscribe to newsletter </span>
+          </h4>
+          <div class="text-muted my-3">
+            Benefit from special member discounts with us
           </div>
-        </div>
-        <div class="d-flex textorange my-3">
-          <a href="" class="textorange">
-            <i class="fa-brands mx-2 fa-snapchat"></i>
-          </a>
+          <div class="row col-12 p-0 justify-content-between my-3 ml-1 ml-md-0">
+            <input
+              type="text"
+              class="col-md-7 my-2 my-md-0 col-12 p-2 px-4 input2"
+              placeholder="your email address"
+              style="background-color: #e3e3e3"
+            />
+            <div
+              class="col-md-4 my-2 my-md-0 col-12 bgorange pointer text-center text-light py-2 input2"
+            >
+              subscribe
+            </div>
+          </div>
+          <div class="d-flex textorange my-3">
+            <a href="" class="textorange">
+              <i class="fa-brands mx-2 fa-snapchat"></i>
+            </a>
 
-          <a href="https://instagram.com/deep_treep" class="textorange">
-            <i class="fa-brands mx-2 fa-instagram"></i>
-          </a>
-          <a href="https://twitter.com/@deep_treep" class="textorange">
-            <i class="fa-brands mx-2 fa-twitter"></i>
-          </a>
-          <a href="" class="textorange">
-            <i class="fa-brands mx-2 fa-skype"></i>
-          </a>
+            <a href="https://instagram.com/deep_treep" class="textorange">
+              <i class="fa-brands mx-2 fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/@deep_treep" class="textorange">
+              <i class="fa-brands mx-2 fa-twitter"></i>
+            </a>
+            <a href="" class="textorange">
+              <i class="fa-brands mx-2 fa-skype"></i>
+            </a>
 
-          <a href="https://pin.it/Uvu8GjP" class="textorange">
-            <i class="fa-brands mx-2 fa-pinterest-p"></i>
-          </a>
-          <a href="" class="textorange">
-            <i class="fa-brands mx-2 fa-linkedin-in"></i>
-          </a>
+            <a href="https://pin.it/Uvu8GjP" class="textorange">
+              <i class="fa-brands mx-2 fa-pinterest-p"></i>
+            </a>
+            <a href="" class="textorange">
+              <i class="fa-brands mx-2 fa-linkedin-in"></i>
+            </a>
 
-          <a href="" class="textorange">
-            <i class="fa-brands mx-2 fa-google-plus-g"></i>
-          </a>
+            <a href="" class="textorange">
+              <i class="fa-brands mx-2 fa-google-plus-g"></i>
+            </a>
 
-          <a href="" class="textorange">
-            <i class="fa-brands mx-2 fa-flickr"></i>
-          </a>
+            <a href="" class="textorange">
+              <i class="fa-brands mx-2 fa-flickr"></i>
+            </a>
 
-          <a href="" class="textorange">
-            <i class="fa-brands mx-2 fa-facebook-f"></i>
-          </a>
+            <a href="" class="textorange">
+              <i class="fa-brands mx-2 fa-facebook-f"></i>
+            </a>
 
-          <a href="" class="textorange">
-            <i class="fa-solid mx-2 fa-envelope"></i>
-          </a>
+            <a href="" class="textorange">
+              <i class="fa-solid mx-2 fa-envelope"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
